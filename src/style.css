@@ -62,7 +62,30 @@ body {
   opacity: 0.6;
   margin-bottom: 8px;
 }
-#legend .lg-group { font-size: 10px; opacity: 0.5; margin: 7px 0 2px; letter-spacing: 1px; }
+/* 域群组头是整组开关：三态（全显 / 部分隐 / 全隐）靠透明度与箭头方向区分 */
+#legend .lg-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin: 7px 0 2px;
+  padding: 1px 4px;
+  text-align: left;
+  color: inherit;
+  opacity: 0.5;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#legend .lg-group i { font-style: normal; font-size: 9px; opacity: 0.7; }
+#legend .lg-group:hover { opacity: 0.9; background: rgba(90, 140, 255, 0.14); }
+#legend .lg-group.part { opacity: 0.75; border-color: var(--line); }
+#legend .lg-group.off { opacity: 0.32; }
+#legend .lg-group.off i { transform: rotate(180deg); }
 #legend .lg-item {
   display: flex;
   align-items: center;

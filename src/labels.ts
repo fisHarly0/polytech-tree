@@ -322,6 +322,7 @@ export function buildNameLabels(placed: PlacedNode[]): {
     order.length = 0
     for (let i = 0; i < placed.length; i++) {
       if (keep && !keep(i)) continue
+      if (focus && focus[i] < 0) continue // 聚焦时集外只留形体，名字一并收掉
       const p = placed[i]
       // 相机空间深度：在相机背后或比近裁剪面近的剔除
       _proj.copy(p.position).applyMatrix4(camera.matrixWorldInverse)

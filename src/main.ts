@@ -58,11 +58,12 @@ legend.innerHTML = `
     <button class="lg-toggle" id="legendToggle" title="折叠/展开图例">▾</button></div>
   <div class="lg-body">
   ${['A', 'B', 'C', 'D'].map(g => `
-    <div class="lg-group">${GROUP_NAMES[g]}</div>
+    <button class="lg-group" data-group="${g}" title="整组开关：组内有隐藏时全显，否则全隐">${GROUP_NAMES[g]}<i>▾</i></button>
     ${CATEGORY_NAMES.map((name, i) => CATEGORY_GROUPS[i] === g ? `
       <button class="lg-item lg-cat" data-cat="${i}" title="点击隐藏该领域（含其连线），再点恢复">
         <span class="lg-dot" style="background:${CATEGORY_HEX[i]};color:${CATEGORY_HEX[i]}"></span><span>${name}</span><b>${catCount[i]}</b>
       </button>` : '').join('')}`).join('')}
+  <div class="lg-hint">点领域名隐藏该领域（含连线）· 点组名整组开关</div>
   <button class="lg-reset" id="catReset">全部显示</button>
   <div class="lg-sep"></div>
   <div class="lg-title">形状 = 重要度（面数）</div>
@@ -106,9 +107,22 @@ const KINDS = ['原理', '工艺', '器物', '制度', '媒介'] as const
 kindFilter.innerHTML = KINDS.map((k, i) =>
   `<button class="lg-kind" data-kind="${k}">${k}<b>${placed.filter(p => p.node.kind === k).length}</b></button>`).join('')
 
+// 域群 → 该组下的领域索引。键必须是 categories.json 的组字母（A/B/C/D），
+// 图例的 data-group 用的就是这个字母
+const CATS_BY_GROUP: Record<string, number[]> = Object.fromEntries(
+  ['A', 'B', 'C', 'D'].map(g =>
+    [g, CATEGORY_NAMES.map((_, i) => i).filter(i => CATEGORY_GROUPS[i] === g)]))
+
 function syncPanelState() {
   legend.querySelectorAll('.lg-cat').forEach(el =>
     el.classList.toggle('off', hiddenCats.has(Number((el as HTMLElement).dataset.cat))))
+  // 组头三态：全隐 / 部分隐 / 全显，免得整组灰着却看不出组里还剩几个领域
+  legend.querySelectorAll('.lg-group').forEach(el => {
+    const cats = CATS_BY_GROUP[(el as HTMLElement).dataset.group!] ?? []
+    const hidden = cats.filter(c => hiddenCats.has(c)).length
+    el.classList.toggle('off', hidden === cats.length)
+    el.classList.toggle('part', hidden > 0 && hidden < cats.length)
+  })
   document.getElementById('catReset')!.classList.toggle('idle', hiddenCats.size === 0)
   kindFilter.querySelectorAll('.lg-kind').forEach(el =>
     el.classList.toggle('on', activeKinds.has((el as HTMLElement).dataset.kind!)))
@@ -132,10 +146,14 @@ function applyVisualState() {
 }
 
 legend.addEventListener('click', e => {
-  const el = (e.target as HTMLElement).closest?.('.lg-cat, .lg-reset') as HTMLElement | null
+  const el = (e.target as HTMLElement).closest?.('.lg-cat, .lg-group, .lg-reset') as HTMLElement | null
   if (!el) return
   if (el.classList.contains('lg-reset')) hiddenCats.clear()
-  else {
+  else if (el.classList.contains('lg-group')) {
+    const cats = CATS_BY_GROUP[el.dataset.group!] ?? []
+    const anyHidden = cats.some(c => hiddenCats.has(c))
+    for (const c of cats) anyHidden ? hiddenCats.delete(c) : hiddenCats.add(c)
+  } else {
     const c = Number(el.dataset.cat)
     hiddenCats.has(c) ? hiddenCats.delete(c) : hiddenCats.add(c)
   }
