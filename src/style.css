@@ -105,7 +105,7 @@ body {
   padding: 1px 4px;
   cursor: pointer;
 }
-#legend .lg-cat b {
+#legend .lg-cat b, #legend .lg-imp b {
   margin-left: auto;
   font-weight: 400;
   font-size: 10px;
@@ -113,6 +113,13 @@ body {
   font-variant-numeric: tabular-nums;
 }
 #legend .lg-cat:hover { background: rgba(90, 140, 255, 0.14); }
+/* 重要度独显：点中的那一档亮起来，其余四档随画面一起隐去 */
+#legend .lg-imp:hover { background: rgba(90, 140, 255, 0.14); }
+#legend .lg-imp.on {
+  opacity: 1;
+  border-color: rgba(57, 203, 208, 0.6);
+  background: rgba(57, 203, 208, 0.14);
+}
 /* 隐藏态：划掉名字、点淡色块，一眼看出这一格已被收起来 */
 #legend .lg-cat.off { opacity: 0.38; }
 #legend .lg-cat.off span:not(.lg-dot) { text-decoration: line-through; }

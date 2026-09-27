@@ -53,6 +53,7 @@ scene.add(edges.lines)
 // ───── UI：图例（领域可隐藏）+ 名称显示上限 ─────
 const legend = document.getElementById('legend')!
 const catCount = CATEGORY_NAMES.map((_, i) => placed.filter(p => p.node.category === i).length)
+const IMPLbl = ['基石', '领域支柱', '领域内重要', '改良与细分', '长尾补充']
 legend.innerHTML = `
   <div class="lg-head"><div class="lg-title">领域图例</div>
     <button class="lg-toggle" id="legendToggle" title="折叠/展开图例">▾</button></div>
@@ -67,11 +68,11 @@ legend.innerHTML = `
   <button class="lg-reset" id="catReset">全部显示</button>
   <div class="lg-sep"></div>
   <div class="lg-title">形状 = 重要度（面数）</div>
-  <div class="lg-item">20 面 基石</div>
-  <div class="lg-item">12 面 领域支柱</div>
-  <div class="lg-item">8 面 领域内重要</div>
-  <div class="lg-item">6 面 改良与细分</div>
-  <div class="lg-item">4 面 长尾补充</div>
+  ${[1, 2, 3, 4, 5].map(l => `
+    <button class="lg-item lg-imp" data-level="${l}" title="点击只看该档（独显），再点恢复全部">
+      <span>${facesOf(l)} 面 ${IMPLbl[l - 1]}</span><b>${placed.filter(p => p.node.importance === l).length}</b>
+    </button>`).join('')}
+  <div class="lg-hint">点一档 = 只看这一档；再点恢复</div>
   <div class="lg-sep"></div>
   <div class="lg-title">名称显示上限</div>
   <div class="lg-limit">
@@ -92,9 +93,10 @@ legendToggle.addEventListener('click', () => {
   legendToggle.textContent = collapsed ? '▸' : '▾'
 })
 
-// ───── 可见性状态：领域掩码 ∧ kind 掩码 + 点击聚焦，三处渲染共用一次下发 ─────
+// ───── 可见性状态：领域掩码 ∧ kind 掩码 ∧ 重要度独显 + 点击聚焦，三处渲染共用一次下发 ─────
 const hiddenCats = new Set<number>()
 const activeKinds = new Set<string>()
+let soloImp: number | null = null // 独显某档重要度（null = 不限档）
 let selected: number | null = null
 const focusBuf = new Int8Array(placed.length)
 let focusDepth: Int8Array | null = null
@@ -123,7 +125,9 @@ function syncPanelState() {
     el.classList.toggle('off', hidden === cats.length)
     el.classList.toggle('part', hidden > 0 && hidden < cats.length)
   })
-  document.getElementById('catReset')!.classList.toggle('idle', hiddenCats.size === 0)
+  document.getElementById('catReset')!.classList.toggle('idle', hiddenCats.size === 0 && soloImp === null)
+  legend.querySelectorAll('.lg-imp').forEach(el =>
+    el.classList.toggle('on', Number((el as HTMLElement).dataset.level) === soloImp))
   kindFilter.querySelectorAll('.lg-kind').forEach(el =>
     el.classList.toggle('on', activeKinds.has((el as HTMLElement).dataset.kind!)))
 }
@@ -132,7 +136,9 @@ function applyVisualState() {
   const kindsOn = activeKinds.size > 0
   for (let i = 0; i < placed.length; i++) {
     const n = placed[i].node
-    nodeVis[i] = !hiddenCats.has(n.category) && (!kindsOn || activeKinds.has(n.kind)) ? 1 : 0
+    nodeVis[i] = !hiddenCats.has(n.category) &&
+      (!kindsOn || activeKinds.has(n.kind)) &&
+      (soloImp === null || n.importance === soloImp) ? 1 : 0
   }
   // 选中项所属领域被隐藏时聚焦自动失效
   if (selected !== null && !nodeVis[selected]) { selected = null; focusDepth = null }
@@ -146,10 +152,13 @@ function applyVisualState() {
 }
 
 legend.addEventListener('click', e => {
-  const el = (e.target as HTMLElement).closest?.('.lg-cat, .lg-group, .lg-reset') as HTMLElement | null
+  const el = (e.target as HTMLElement).closest?.('.lg-cat, .lg-group, .lg-imp, .lg-reset') as HTMLElement | null
   if (!el) return
-  if (el.classList.contains('lg-reset')) hiddenCats.clear()
-  else if (el.classList.contains('lg-group')) {
+  if (el.classList.contains('lg-reset')) { hiddenCats.clear(); soloImp = null }
+  else if (el.classList.contains('lg-imp')) {
+    const l = Number(el.dataset.level)
+    soloImp = soloImp === l ? null : l // 独显：再点同一档即恢复
+  } else if (el.classList.contains('lg-group')) {
     const cats = CATS_BY_GROUP[el.dataset.group!] ?? []
     const anyHidden = cats.some(c => hiddenCats.has(c))
     for (const c of cats) anyHidden ? hiddenCats.delete(c) : hiddenCats.add(c)
