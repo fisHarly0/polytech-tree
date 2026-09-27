@@ -27,11 +27,14 @@ void main() {
   gl_FragColor = vec4(vColor, a);
 }`
 
-interface EdgeRec { start: number; dur: number; base: number }
+interface EdgeRec { start: number; dur: number; base: number; from: number; to: number }
 
 /**
  * 真实依赖边：prereqs 中每条依赖连一条弧线（前置节点 → 当前节点），
  * 控制点向塔轴内收，颜色取目标节点（当前科技）的领域色。
+ *
+ * 除漫游生长外，每条边还有一个 0/1 遮罩位：两端节点不同时"在场"就不画，
+ * 于是隐去某领域、或点击聚焦到某个子图时，画面里不会留下伸向隐形节点的半截线。
  *
  * 漫游期间逐条生长：前置一显现就从它起笔，沿弧向目标延伸，抵达终点那一刻正好是目标
  * 科技显现的时刻 —— 故生长时长等于两端显现时刻之差。前置比目标更晚显现的"倒挂"边
@@ -43,8 +46,10 @@ export function buildEdges(placed: PlacedNode[], revealAt: Float32Array): {
   beginTour: () => void
   /** 漫游中每帧推进（t 为漫游时钟，单调） */
   update: (t: number) => void
-  /** 退出漫游 / 环绕模式：恢复全部可见 */
+  /** 退出漫游 / 环绕模式：恢复遮罩允许的可见集 */
   fillAll: () => void
+  /** 连线遮罩：active[节点] 非 0 才算在场，两端都在场才画（null = 全放行） */
+  setActive: (active: Uint8Array | null) => void
 } {
   const idxById = new Map(placed.map((p, i) => [p.node.id, i]))
   const byId = new Map(placed.map(p => [p.node.id, p]))
@@ -57,10 +62,12 @@ export function buildEdges(placed: PlacedNode[], revealAt: Float32Array): {
   const a = new THREE.Vector3(), b = new THREE.Vector3()
 
   for (const node of placed) {
-    const arrive = revealAt[idxById.get(node.node.id)!]
+    const to = idxById.get(node.node.id)!
+    const arrive = revealAt[to]
     for (const prereqId of node.node.prereqs) {
       const from = byId.get(prereqId)
       if (!from) continue // 数据已验证无悬空，防御性跳过
+      const fromIdx = idxById.get(prereqId)!
       p0.copy(from.position)
       p1.copy(node.position)
 
@@ -83,8 +90,8 @@ export function buildEdges(placed: PlacedNode[], revealAt: Float32Array): {
       }
       // 抵达时刻固定为目标节点的显现时刻；爬行过程压缩到 GROW_MAX 内 ——
       // 实测前置→目标的间隔中位 13s、p90 55s，照原样爬肉眼看不出在动
-      const span = Math.max(0, Math.min(arrive - revealAt[idxById.get(prereqId)!], GROW_MAX))
-      recs.push({ start: arrive - span, dur: span, base })
+      const span = Math.max(0, Math.min(arrive - revealAt[fromIdx], GROW_MAX))
+      recs.push({ start: arrive - span, dur: span, base, from: fromIdx, to })
     }
   }
 
@@ -106,25 +113,28 @@ export function buildEdges(placed: PlacedNode[], revealAt: Float32Array): {
 
   // 0 = 未起笔，1 = 延伸中，2 = 已抵达。漫游时钟单调，故不需要回退
   const state = new Uint8Array(recs.length).fill(2)
+  // 遮罩位：两端节点都在场才画，与漫游生长共用这一个乘子
+  const vis = new Uint8Array(recs.length).fill(1)
 
   const writeEdge = (e: number, p: number) => {
     const base = recs[e].base
+    const m = vis[e] ? 1 : 0
     for (let k = 0; k < SEG; k++) {
-      const v = Math.min(1, Math.max(0, p * SEG - k))
+      const v = Math.min(1, Math.max(0, p * SEG - k)) * m
       alpha[base + k * 2] = v
       alpha[base + k * 2 + 1] = v
     }
   }
 
-  const setAll = (v: number, st: number) => {
-    alpha.fill(v)
-    state.fill(st)
+  /** 按当前遮罩把每条边重画到它此刻的进度（环绕模式下都已抵达，即整条） */
+  const redraw = () => {
+    for (let e = 0; e < recs.length; e++) writeEdge(e, state[e] === 2 ? 1 : 0)
     alphaAttr.needsUpdate = true
   }
 
   return {
     lines,
-    beginTour: () => setAll(0, 0),
+    beginTour: () => { state.fill(0); redraw() },
     update: (t: number) => {
       let dirty = false
       for (let e = 0; e < recs.length; e++) {
@@ -138,7 +148,14 @@ export function buildEdges(placed: PlacedNode[], revealAt: Float32Array): {
       }
       if (dirty) alphaAttr.needsUpdate = true
     },
-    fillAll: () => setAll(1, 2),
+    fillAll: () => { state.fill(2); redraw() },
+    setActive: (active: Uint8Array | null) => {
+      for (let e = 0; e < recs.length; e++) {
+        const { from, to } = recs[e]
+        vis[e] = !active || (active[from] && active[to]) ? 1 : 0
+      }
+      redraw() // 遮罩只在环绕模式下变更（漫游中图例不可点），故不必保留生长进度
+    },
   }
 }
 

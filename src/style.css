@@ -70,6 +70,45 @@ body {
   font-size: 12px;
   margin: 5px 0;
 }
+/* 领域行可点：button 要自己拿回字形与左对齐，其余沿用 .lg-item 的排布 */
+#legend button.lg-item {
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 1px 4px;
+  cursor: pointer;
+}
+#legend .lg-cat b {
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 10px;
+  opacity: 0.5;
+  font-variant-numeric: tabular-nums;
+}
+#legend .lg-cat:hover { background: rgba(90, 140, 255, 0.14); }
+/* 隐藏态：划掉名字、点淡色块，一眼看出这一格已被收起来 */
+#legend .lg-cat.off { opacity: 0.38; }
+#legend .lg-cat.off span:not(.lg-dot) { text-decoration: line-through; }
+#legend .lg-cat.off .lg-dot { box-shadow: none; }
+#legend .lg-reset {
+  width: 100%;
+  margin-top: 6px;
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 3px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  background: rgba(60, 100, 200, 0.18);
+  color: inherit;
+  border: 1px solid var(--line);
+}
+#legend .lg-reset:hover { background: rgba(90, 140, 255, 0.32); }
+#legend .lg-reset.idle { opacity: 0.35; pointer-events: none; }
 #legend .lg-dot {
   width: 10px;
   height: 10px;
