@@ -1,0 +1,286 @@
+{
+  "category": "materials",
+  "shard": "gB",
+  "count": 33,
+  "items": [
+    {
+      "id": "ingan_quantum_well_led",
+      "name": "氮化铟镓多量子阱",
+      "tier": 1,
+      "kind": "器物",
+      "channel": ["基石存疑"],
+      "doubt": "T1 基石却 pf=0、零下游；名为器件有源区结构，wikiEn 指块材页"
+    },
+    {
+      "id": "solid_electrolyte",
+      "name": "固体电解质",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "材料大类总称，与 LLZO 条目父子重叠；rf=0 缺支柱依据"
+    },
+    {
+      "id": "recycling",
+      "name": "材料回收",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": ["支柱存疑"],
+      "doubt": "偏产业/环保实践；1970 取自地球日运动，年份已降批次断言"
+    },
+    {
+      "id": "phase_shift_photomask",
+      "name": "相移掩模",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": ["支柱存疑"],
+      "doubt": "光刻关键环节却 rf=0、零下游，与同域光刻条目无 prereq"
+    },
+    {
+      "id": "photonic_crystal_structure",
+      "name": "光子晶体",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "1987 为带隙理论提出，偏科学原理；kind=器物与定义不合"
+    },
+    {
+      "id": "sige_heterostructure_epi",
+      "name": "硅锗异质结",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "desc 述外延工艺却标器物；wikiEn 指向硅锗材料泛页"
+    },
+    {
+      "id": "ybco_high_tc_superconductor",
+      "name": "钇钡铜氧超导体",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "属超导材料发现事件；年份批次断言，与 REBCO 带材条目重叠"
+    },
+    {
+      "id": "epoxy_negative_thick_resist",
+      "name": "环氧负性厚光刻胶",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "名述通用胶类，wikiEn/nameEn 锁定 SU-8 单一商品牌号"
+    },
+    {
+      "id": "ingaas_strained_quantum_well",
+      "name": "铟镓砷量子阱",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "单一材料系外延结构，wikiEn 为材料泛页；rf=0 称支柱无据"
+    },
+    {
+      "id": "igzo_oxide_channel",
+      "name": "铟镓锌氧化物",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "year=1995 是氧化物 TFT 概念年，自述 IGZO 2004 才定型"
+    },
+    {
+      "id": "metal_organic_framework",
+      "name": "金属有机框架",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "一大类配位多孔材料总称，非单项技术；rf=2、零下游"
+    },
+    {
+      "id": "tantalum_nitride_barrier",
+      "name": "氮化钽扩散阻挡层",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": ["支柱存疑"],
+      "doubt": "单一化合物阻挡膜；kind=工艺而 desc 落在薄膜材料本身"
+    },
+    {
+      "id": "gamma_titanium_aluminide",
+      "name": "γ 钛铝金属间化合物",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "具体合金体系配某型涡轮叶片，偏牌号；rf=0、零下游"
+    },
+    {
+      "id": "metamaterial",
+      "name": "超材料",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "一类人工微结构设计范式而非某项技术；年取 2000，根在 1968 理论"
+    },
+    {
+      "id": "low_k_interlayer_dielectric",
+      "name": "低介电常数层间介质",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": ["支柱存疑"],
+      "doubt": "kind=工艺但对象是介质材料家族（氟硅玻璃等）；rf=0"
+    },
+    {
+      "id": "microcapsule_self_healing_polymer",
+      "name": "微胶囊自修复聚合物",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "wikiEn 指向自修复材料大主题，与条名范围不一致"
+    },
+    {
+      "id": "aluminium_nitride_piezo_film",
+      "name": "氮化铝压电薄膜",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "单一化合物薄膜材料；rf=0、零下游，支柱依据缺"
+    },
+    {
+      "id": "nmc_layered_cathode",
+      "name": "镍锰钴三元正极",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "镍钴锰配比属具体正极配方；年份标学术争议后取主流值"
+    },
+    {
+      "id": "strained_silicon_channel",
+      "name": "应变硅沟道",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": ["支柱存疑"],
+      "doubt": "自述 90nm 后量产通用工艺，却 rf=0、零下游，指标相反"
+    },
+    {
+      "id": "covalent_organic_framework",
+      "name": "共价有机框架",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "多孔材料大类总称；2005 仅实验室首次结晶骨架，年份降批次断言"
+    },
+    {
+      "id": "rebco_coated_conductor_tape",
+      "name": "稀土钡铜氧超导带材",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": ["支柱存疑"],
+      "doubt": "kind=工艺而条目是带材成品形态；与 YBCO 材料条目重叠"
+    },
+    {
+      "id": "llzo_garnet_solid_electrolyte",
+      "name": "石榴石型固态电解质",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "单一材料成员，与 solid_electrolyte 父子重复收录"
+    },
+    {
+      "id": "boron_nitride_nanosheet",
+      "name": "氮化硼纳米片",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "石墨烯同构的单一二维材料，作衬底/势垒配角；rf=0、零下游"
+    },
+    {
+      "id": "lithium_sulfur_cathode_system",
+      "name": "锂硫电极体系",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "自陈穿梭难题未解，仍在研体系；kind=器物而名为体系"
+    },
+    {
+      "id": "algan_gan_hemt_channel",
+      "name": "铝镓氮异质结",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "desc 核心是界面二维电子气物性，kind=器物；wikiEn 为材料泛页"
+    },
+    {
+      "id": "mos2_monolayer_channel",
+      "name": "二硫化钼单层沟道",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "自述为后硅沟道候选，2011 仅为实验证明；年份批次断言"
+    },
+    {
+      "id": "mxene_2d_carbide",
+      "name": "MXene 二维碳化物",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "一大族过渡金属碳氮化物总称，非单项材料技术；rf=0"
+    },
+    {
+      "id": "gallium_oxide_bulk_crystal",
+      "name": "氧化镓单晶",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "单晶锭偏产物，真正的技术是熔体长晶法；rf=0、零下游"
+    },
+    {
+      "id": "silicene_epi_layer",
+      "name": "硅烯",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "自述须依托衬底存在，属衬底上制得的新物质；年份批次断言"
+    },
+    {
+      "id": "phosphorene_2d_channel",
+      "name": "磷烯",
+      "tier": 2,
+      "kind": "器物",
+      "channel": ["支柱存疑"],
+      "doubt": "自述遇水氧退化限制工艺窗口，2014 为剥离实验，尚无落地"
+    },
+    {
+      "id": "czochralski_process",
+      "name": "直拉单晶法",
+      "tier": 3,
+      "kind": "工艺",
+      "channel": ["疑被低估"],
+      "doubt": "通道成立：dd=224 为硅/锗衬底等共同前置，现档 T3 不相称"
+    },
+    {
+      "id": "ochre",
+      "name": "赭石颜料",
+      "tier": 3,
+      "kind": "工艺",
+      "channel": ["疑被低估"],
+      "doubt": "条目是天然矿物原料，技术内容仅研磨制色；年份取世纪中值"
+    },
+    {
+      "id": "borosilicate_glass",
+      "name": "硼硅酸盐玻璃",
+      "tier": 4,
+      "kind": "器物",
+      "channel": ["疑被低估"],
+      "doubt": "dd=21（细胞培养、血清学等下游依赖）与 T4 位置不相称"
+    }
+  ],
+  "boundary": [
+    { "id": "recycling", "why": "偏产业/社会运动实践" },
+    { "id": "photonic_crystal_structure", "why": "带隙理论属科学原理" },
+    { "id": "metamaterial", "why": "设计范式非具体技术" },
+    { "id": "ybco_high_tc_superconductor", "why": "材料发现属科学进展" },
+    { "id": "metal_organic_framework", "why": "材料大类总称" },
+    { "id": "covalent_organic_framework", "why": "材料大类总称" },
+    { "id": "mxene_2d_carbide", "why": "材料族总称" },
+    { "id": "solid_electrolyte", "why": "大类总称且与子目重叠" },
+    { "id": "silicene_epi_layer", "why": "衬底上实验新物质" },
+    { "id": "phosphorene_2d_channel", "why": "实验室材料无应用" },
+    { "id": "mos2_monolayer_channel", "why": "自述候选，未落地" },
+    { "id": "nmc_layered_cathode", "why": "具体三元配比配方" },
+    { "id": "ochre", "why": "天然矿物原料为主" }
+  ]
+}
