@@ -149,6 +149,7 @@ function applyVisualState() {
   nameLabels.setFilter(isVisible)
   nameLabels.setFocus(focusDepth)
   edges.setActive(edgeActive)
+  edges.setEmphasis(focusDepth !== null) // 聚焦时子图的线提亮
 }
 
 legend.addEventListener('click', e => {

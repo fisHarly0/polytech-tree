@@ -5,6 +5,8 @@ import { ERA_COUNT } from './data'
 
 const SEG = 8 // 每条弧线的分段数
 const GROW_MAX = 1.6 // 单条边可见爬行的最长时长（秒）
+const OPACITY = 0.3        // 常态：四千多条线同时要看得见，单条只能压得很低
+const FOCUS_OPACITY = 0.62 // 聚焦时只剩子图那几十条，抬上来才读得出因果走向
 
 const VERT = `
 attribute vec3 aColor;
@@ -50,6 +52,8 @@ export function buildEdges(placed: PlacedNode[], revealAt: Float32Array): {
   fillAll: () => void
   /** 连线遮罩：active[节点] 非 0 才算在场，两端都在场才画（null = 全放行） */
   setActive: (active: Uint8Array | null) => void
+  /** 聚焦时把剩下的线提亮（子图外本就无可见性可言） */
+  setEmphasis: (on: boolean) => void
 } {
   const idxById = new Map(placed.map((p, i) => [p.node.id, i]))
   const byId = new Map(placed.map(p => [p.node.id, p]))
@@ -155,6 +159,9 @@ export function buildEdges(placed: PlacedNode[], revealAt: Float32Array): {
         vis[e] = !active || (active[from] && active[to]) ? 1 : 0
       }
       redraw() // 遮罩只在环绕模式下变更（漫游中图例不可点），故不必保留生长进度
+    },
+    setEmphasis: (on: boolean) => {
+      (lines.material as THREE.ShaderMaterial).uniforms.uOpacity.value = on ? FOCUS_OPACITY : OPACITY
     },
   }
 }
