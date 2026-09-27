@@ -43,3 +43,8 @@ __pycache__/
 /data/dedupe-review-queue.json
 /data/boundary-decision-*.json
 /data/*-audit.json
+
+# 复查工具的派生指标缓存（可由 scripts/adjud_lib.mjs --dump 重生成）
+data/adjud/metrics.json
+# 代理自测产生的裁决分片，不是真实裁决
+data/adjud/*.selftest.json
