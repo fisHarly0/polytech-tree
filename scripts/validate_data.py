@@ -18,6 +18,9 @@ OUTDIR = os.environ.get("ALLTECH_OUT") or DATA
 # 规范 §3.1 v2 全部 15 字段。year_span/year_note 允许为 null/空串但键必须存在。
 REQUIRED = ["id", "name", "nameEn", "wikiEn", "aliases", "year", "year_basis", "year_span",
             "year_note", "era", "category", "kind", "importance", "prereqs", "related", "desc"]
+# 收录边界复查（review4）引入的可选标记：判为"非科技但保留"的条目才带这个键。
+OPTIONAL = {"boundary"}
+BOUNDARY_VALUES = {"非科技保留"}
 YEAR_BASIS = {"exact", "decade", "century", "circa", "range_midpoint", "scholarly_disputed",
               "convention_floor", "batch_asserted"}
 
@@ -85,11 +88,13 @@ def main():
     for t in techs:
         rid = t.get("id", "?")
         missing = [k for k in REQUIRED if k not in t]
-        extra = [k for k in t if k not in REQUIRED]
+        extra = [k for k in t if k not in REQUIRED and k not in OPTIONAL]
         if missing:
             err(f"{rid}: 缺字段 {missing}")
         if extra:
             warn(f"{rid}: 多余字段 {extra}")
+        if "boundary" in t and t["boundary"] not in BOUNDARY_VALUES:
+            err(f"{rid}: 非法 boundary={t['boundary']}（允许 {sorted(BOUNDARY_VALUES)}）")
         ids.add(rid)
 
         if t.get("era") not in eras:

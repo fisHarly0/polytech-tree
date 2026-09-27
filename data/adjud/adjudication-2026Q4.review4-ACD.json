@@ -1,0 +1,286 @@
+{
+  "shard": "review4-ACD",
+  "owner": "mainline",
+  "criteria_version": "v1",
+  "records": [
+    {
+      "id": "p_vs_np_problem",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "当前节点是尚未解决的复杂性问题本身；需决定是否收录问题对象，不能借NP完全性理论代替其内容。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "metaverse",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "当前描述主要是2021年概念热潮；虽可包含多种虚拟世界技术，尚未指明本节点独立的可复用机制，需裁定是否收录该概念对象。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "acta_diurna",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "当前指恺撒时代具体政务公告，未说明独立可继承的发布方法；建议作为新闻史载体非科技保留。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "jikji",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "节点是现存金属活字印本《直指》，证据为文献存世和印制记录而非独立方法；建议非科技保留。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "waldseemuller_map",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "1507年具体世界地图主要体现地理认识与首次命名的作品内容，需用户决定作为地图载体保留；建议留。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "spam_email",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "当前描述仅为DEC首次群发广告事件，未明确独立的群发或反垃圾方法；建议移出此事件节点。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "proclus_parallel_postulate",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "当前主要是注释中讨论第五公设和历史证明尝试，尚未固定为独立可复用的方法节点；建议非科技保留为数学史论述。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "continuum_hypothesis",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "科技",
+      "importance": "维持",
+      "reason": "条目核心为连续统基数猜想，附带后来的独立性结果；问题与结果范围混合，建议算但需用户确认按独立性知识节点收录。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "fermat_last_theorem",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "节点明确限定为费马大定理的提出与悬而未决历史，不能借后来证明方法定档；是否保留命题提出节点须用户裁定。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "listing_topology_naming",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "资料确认1847年著作包含早期拓扑思想，但本节点明确以命名事件为中心且混入1858年带发现；是否把命名史单独作为科技节点须裁定，不能借全拓扑学定档。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "riemann_hypothesis",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "当前节点是尚待证明的ζ零点命题，影响与条件推论不能自动等同已建立的方法；是否单独收录猜想由用户裁定。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "brocards_problem",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "条目是阶乘加一为平方的开放求解问题，现内容未给出独立通用解法；是否保留问题节点须用户裁定。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "artin_primitive_roots_conjecture",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "当前节点是固定整数作原根的猜想命题；相关证明方法不能自动算成该命题自身，需用户决定是否作为研究问题保留。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "lehmers_totient_problem",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "当前内容是询问特定合数是否存在，未以独立方法或已证结论为节点；需用户决定研究问题是否非科技保留。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "cramers_conjecture",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "当前内容是素数间隙上界的猜想命题，未把概率模型及其方法作为节点；需用户裁定是否按研究问题保留。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "agoh_giuga_conjecture",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "节点以素性等价猜想为内容，证明进展并不等于已建立的素性判定算法；需用户裁定猜想是否作为研究对象保留。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "invariant_subspace_problem",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "名称以一般不变子空间问题为节点，描述又混入Banach反例；需用户决定保留问题载体，不能把全体算子理论算作其贡献。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "abc_conjecture",
+      "batch": "review4-A",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "节点本身是互素整数大小与根基之间的猜想，条件推论不能自动视为已建立基础；请用户决定研究命题是否非科技保留。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "silk_road",
+      "batch": "review4-C",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "当前条目是欧亚贸易通道，未说明独立的运输或贸易组织方法；要按历史交流网络保留吗？",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "arab_agricultural_revolution",
+      "batch": "review4-C",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "当前描述概括作物与灌溉技术的传播，未固定为一套可复用方法；要保留这类农业史概括吗？",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "columbian_exchange",
+      "batch": "review4-C",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "描述的是跨大陆物种迁移过程，而非具体驯化、运输或治理技术；要作为历史过程保留吗？",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "voyager_golden_record",
+      "batch": "review4-C",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "主要承载地球声音图像，也有播放和定位说明：是否按文化载体保留，或把其编码沟通设计算作科技？",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "solar_grid_parity",
+      "batch": "review4-C",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "当前条目只描述光伏成本达到经济阈值的历史状态，是否仍作为科技节点保留？",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "domesday_book",
+      "batch": "review4-D",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "当前范围更接近1086年的特定财政调查记录，尚未独立界定调查方法。是否把记录本身算作科技？",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "spice_trade",
+      "batch": "review4-D",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "当前仅记载早期香料贸易存在，未定义独立的交易、物流或保藏机制。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "tale_of_genji",
+      "batch": "review4-D",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "当前对象是具体小说；按作品载体保留，还是将其示范的叙事方法算作科技？",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "don_quixote",
+      "batch": "review4-D",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "当前对象是具体小说；按作品载体保留，还是将其示范的叙事方法算作科技？",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "social_stratification",
+      "batch": "review4-D",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "当前描述的是等级固化的社会结果，未明确某套分层规则或分析理论。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "pax_mongolica",
+      "batch": "review4-D",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "当前主要表达历史时期及商道通行状况，尚未界定区别于驿站、法令等条目的独立机制。",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "pliny_natural_history",
+      "batch": "review4-D",
+      "channels": [],
+      "boundary": "非科技保留",
+      "importance": "维持",
+      "reason": "当前强调这部自然知识汇编，是否作为文献载体保留，还是按其知识组织实践算科技？",
+      "ts": "2026-09-27T02:49:07.674Z"
+    },
+    {
+      "id": "literacy",
+      "batch": "review4-D",
+      "channels": [],
+      "boundary": "移出",
+      "importance": "维持",
+      "reason": "当前描述读写普及的社会状态；是否收录这一状态，还是明确按读写能力算科技？",
+      "ts": "2026-09-27T02:49:07.674Z"
+    }
+  ]
+}
