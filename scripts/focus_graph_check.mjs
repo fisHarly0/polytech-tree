@@ -35,9 +35,14 @@ expect('2 跳 p90', q(two).p90, 39)
 expect('2 跳 max', q(two).max, 184)
 // 2 跳集必然包含 1 跳集
 for (let i = 0; i < g.count; i++) if (two[i] < one[i]) { fail.push(`节点 ${ids[i]} 的 2 跳集小于 1 跳集`); break }
-// 孤立节点（1 跳为 0）聚焦后只剩自己，界面不能因此报错
-const isolated = one.filter(n => n === 0).length
-console.log(`节点 ${g.count} · 弧线 ${g.edges.length} · 零邻居 ${isolated}`)
+// 孤立节点（1 跳为 0）聚焦后只剩自己：界面表现是"整塔压暗、只留一个白点"
+const iso = one.findIndex(n => n === 0)
+const isoDepth = kHopDepth(g, iso, 2, new Int8Array(g.count))
+let isoSet = 0
+for (const v of isoDepth) if (v >= 0) isoSet++
+expect('零邻居节点的聚焦集', isoSet, 1)
+expect('零邻居节点自身跳数', isoDepth[iso], 0)
+console.log(`节点 ${g.count} · 弧线 ${g.edges.length} · 零邻居 ${one.filter(n => n === 0).length}`)
 console.log(`1 跳集 ${JSON.stringify(q(one))}`)
 console.log(`2 跳集 ${JSON.stringify(q(two))}`)
 if (fail.length) {
