@@ -1,0 +1,2770 @@
+{
+ "contract": "docs/superpowers/specs/2026-09-27-adjud-tooling-contract.md §4",
+ "metrics_source": "E:\\AIproject\\ALLTech\\data\\adjud\\metrics.json",
+ "median_scope_for_pillar_channel": "domain",
+ "total": 387,
+ "counts": {
+  "基石尾组": 64,
+  "支柱尾组": 208,
+  "疑被低估": 23,
+  "原理零引用": 100,
+  "孤岛媒介制度": 7,
+  "高档无溯源": 5,
+  "判据专项": 0
+ },
+ "by_domain": {
+  "agriculture_food": 6,
+  "algorithms_cs": 15,
+  "chemistry": 30,
+  "computing_systems": 4,
+  "construction": 7,
+  "culture_media": 7,
+  "daily_life": 2,
+  "earth_space": 10,
+  "economy": 49,
+  "education_knowledge": 6,
+  "energy_power": 6,
+  "governance": 39,
+  "info_media": 10,
+  "life_medicine": 15,
+  "logic_foundations": 12,
+  "manufacturing": 36,
+  "materials": 31,
+  "math_pure": 48,
+  "military": 1,
+  "physics": 46,
+  "space_exploration": 4,
+  "transport": 3
+ },
+ "items": [
+  {
+   "id": "hand_axe",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "stone_blade",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(manufacturing)下游数 90 ≥ 本域 75 分位 6 且绝对值 > 50"
+  },
+  {
+   "id": "microlith",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(manufacturing)下游数 88 ≥ 本域 75 分位 6 且绝对值 > 50"
+  },
+  {
+   "id": "tally_stick",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(info_media)下游数 159 ≥ 本域 75 分位 2 且绝对值 > 50"
+  },
+  {
+   "id": "textile",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(manufacturing)下游数 67 ≥ 本域 75 分位 6 且绝对值 > 50"
+  },
+  {
+   "id": "sickle",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(agriculture_food)下游数 87 ≥ 本域 75 分位 2 且绝对值 > 50"
+  },
+  {
+   "id": "hut",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(daily_life)下游数 135 ≥ 本域 75 分位 0 且绝对值 > 50"
+  },
+  {
+   "id": "taboo_prohibition",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "clay_token",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(info_media)下游数 113 ≥ 本域 75 分位 2 且绝对值 > 50"
+  },
+  {
+   "id": "charcoal",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(energy_power)下游数 147 ≥ 本域 75 分位 3 且绝对值 > 50"
+  },
+  {
+   "id": "concrete",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(construction)下游数 7 ≤ 本域 P1 档 20 分位 7（本域 P1 共 5 条）"
+  },
+  {
+   "id": "gift_economy",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "secondary_products_revolution",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "hydraulic_society",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "egyptian_hieroglyphs",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(info_media)下游数 2 ≤ 本域 P1 档 20 分位 16（本域 P1 共 18 条）"
+  },
+  {
+   "id": "marriage",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(governance)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 16 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "indus_script",
+   "channels": [
+    "孤岛媒介制度"
+   ],
+   "why": "[孤岛媒介制度] kind=媒介；rf=0 且 out_deg=0（零被引、零出边）"
+  },
+  {
+   "id": "laws_eshnunna",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "palace_economy",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "chinese_ritual_bronzes",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "similar_triangles",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "athenian_democracy",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(governance)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 16 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "tribune_of_plebs",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "humorism",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "aristotelian_logic",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(logic_foundations)下游数 66 ≥ 本域 75 分位 14 且绝对值 > 50"
+  },
+  {
+   "id": "greatest_common_divisor",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(math_pure)下游数 0 ≤ 本域 P1 档 20 分位 1（本域 P1 共 39 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "state_monopoly",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "ever_normal_granary",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "ptolemy_trigonometry",
+   "channels": [
+    "高档无溯源"
+   ],
+   "why": "[高档无溯源] importance=2（P1/P2 高档）；wikiEn 为空"
+  },
+  {
+   "id": "solidus",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "zu_geng_principle",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "germanic_thing_assembly",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "kaiyuan_tongbao",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "byzantine_theme_system",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "taiho_code",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "hawala_remit",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "baojia_mutual_responsibility",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "khayyam_cubic_equations",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "exchequer_accounting",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "trial_by_jury",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(governance)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 16 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "mamluk_soldier_slavery",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "assize_of_bread",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "pax_mongolica",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "trial_of_pyx",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "checkers",
+   "channels": [
+    "孤岛媒介制度"
+   ],
+   "why": "[孤岛媒介制度] kind=制度；rf=0 且 out_deg=0（零被引、零出边）"
+  },
+  {
+   "id": "golf",
+   "channels": [
+    "孤岛媒介制度"
+   ],
+   "why": "[孤岛媒介制度] kind=制度；rf=0 且 out_deg=0（零被引、零出边）"
+  },
+  {
+   "id": "columbian_exchange",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(agriculture_food)下游数 1 ≤ 本域 P1 档 20 分位 1（本域 P1 共 6 条）"
+  },
+  {
+   "id": "bankruptcy_discharge",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "sovereignty_principle",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(governance)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 16 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "single_whip_law",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "bruno_infinite_universe",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "algebraic_fraction",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "don_quixote",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(culture_media)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 12 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "bank_of_amsterdam",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "congruence_of_squares",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "fermat_principle_least_time",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(physics)下游数 55 ≥ 本域 75 分位 6 且绝对值 > 50"
+  },
+  {
+   "id": "viviani_theorem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "fundamental_theorem_of_calculus",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(math_pure)下游数 0 ≤ 本域 P1 档 20 分位 1（本域 P1 共 39 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "inverse_square_gravity",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(physics)下游数 1 ≤ 本域 P1 档 20 分位 1（本域 P1 共 16 条）"
+  },
+  {
+   "id": "lloyds_marine_market",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "public_debt_system",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "coke_smelting",
+   "channels": [
+    "高档无溯源"
+   ],
+   "why": "[高档无溯源] importance=2（P1/P2 高档）；wikiEn 为空"
+  },
+  {
+   "id": "clairaut_equation",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "bernoulli_principle",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "corps_des_ponts",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "euclid_euler_theorem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "real_valued_function",
+   "channels": [
+    "孤岛媒介制度"
+   ],
+   "why": "[孤岛媒介制度] kind=制度；rf=0 且 out_deg=0（零被引、零出边）"
+  },
+  {
+   "id": "partial_differential_equation",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(math_pure)下游数 1 ≤ 本域 P1 档 20 分位 1（本域 P1 共 39 条）"
+  },
+  {
+   "id": "peer_review",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(education_knowledge)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 9 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "clearing_house",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "actuarial_science",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "spinning_jenny",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(manufacturing)下游数 1 ≤ 本域 P1 档 20 分位 14（本域 P1 共 8 条）"
+  },
+  {
+   "id": "watt_separate_condenser",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(energy_power)下游数 91 ≥ 本域 75 分位 3 且绝对值 > 50"
+  },
+  {
+   "id": "figure_skating",
+   "channels": [
+    "孤岛媒介制度"
+   ],
+   "why": "[孤岛媒介制度] kind=制度；rf=0 且 out_deg=0（零被引、零出边）"
+  },
+  {
+   "id": "power_loom",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "lagrangian_mechanics",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "cotton_gin",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "malthus_population",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "metal_lathe",
+   "channels": [
+    "高档无溯源"
+   ],
+   "why": "[高档无溯源] importance=2（P1/P2 高档）；wikiEn 为空"
+  },
+  {
+   "id": "young_double_slit",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "judicial_review",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(governance)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 16 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "napoleonic_code",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "davy_electrolysis",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "ombudsman_institution",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "mohs_scale",
+   "channels": [
+    "孤岛媒介制度"
+   ],
+   "why": "[孤岛媒介制度] kind=制度；rf=0 且 out_deg=0（零被引、零出边）"
+  },
+  {
+   "id": "berzelius_chemical_symbols",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "bolzano_intermediate_value",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(math_pure)下游数 122 ≥ 本域 75 分位 3 且绝对值 > 50"
+  },
+  {
+   "id": "science_fiction",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(culture_media)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 12 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "dulong_petit_law",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "amperes_force_law",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "thermoelectric_effect",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "von_baer_mammalian_egg",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "metropolitan_police",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "abolition_legislation",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "factory_acts_regulation",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "ideal_gas_law",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "lenzs_law",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "gausss_law",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "position_line_fix",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "liebig_mineral_nutrition",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "telegraph",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(info_media)下游数 16 ≤ 本域 P1 档 20 分位 16（本域 P1 共 18 条）"
+  },
+  {
+   "id": "neptune_discovery",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "chicago_board_futures",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "fractional_distillation",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(chemistry)下游数 57 ≥ 本域 75 分位 5 且绝对值 > 50"
+  },
+  {
+   "id": "civil_service",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "secret_ballot",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "algebraic_function",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "wallace_natural_selection",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "international_telegraph_union",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "marx_das_kapital",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(economy)下游数 1 ≤ 本域 P1 档 20 分位 3（本域 P1 共 12 条）"
+  },
+  {
+   "id": "heat_treating",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "error_function",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "contact_geometry",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "dedekind_cuts",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(math_pure)下游数 102 ≥ 本域 75 分位 3 且绝对值 > 50"
+  },
+  {
+   "id": "homogeneous_space",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "universal_postal_union",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "gibbs_free_energy",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "implicit_function_theorem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "telephone_exchange",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(info_media)下游数 65 ≥ 本域 75 分位 2 且绝对值 > 50"
+  },
+  {
+   "id": "stefan_boltzmann_law",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(physics)下游数 55 ≥ 本域 75 分位 6 且绝对值 > 50"
+  },
+  {
+   "id": "soil_classification",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "vector_calculus",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(physics)下游数 0 ≤ 本域 P1 档 20 分位 1（本域 P1 共 16 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "phagocytosis",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "industrial_property_convention",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "standard_time_zones",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "gram_stain",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(life_medicine)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 15 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "machine_gun",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(military)下游数 4 ≤ 本域 P1 档 20 分位 4（本域 P1 共 4 条）"
+  },
+  {
+   "id": "skyscraper",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(construction)下游数 1 ≤ 本域 P1 档 20 分位 7（本域 P1 共 5 条）"
+  },
+  {
+   "id": "alternating_current",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(energy_power)下游数 9 ≤ 本域 P1 档 20 分位 16（本域 P1 共 8 条）"
+  },
+  {
+   "id": "automatic_telephone_switch",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(info_media)下游数 62 ≥ 本域 75 分位 2 且绝对值 > 50"
+  },
+  {
+   "id": "universal_suffrage",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "wien_displacement_law",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(physics)下游数 54 ≥ 本域 75 分位 6 且绝对值 > 50"
+  },
+  {
+   "id": "drywall",
+   "channels": [
+    "孤岛媒介制度"
+   ],
+   "why": "[孤岛媒介制度] kind=媒介；rf=0 且 out_deg=0（零被引、零出边）"
+  },
+  {
+   "id": "minimum_wage_law",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "collective_bargaining",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "sabine_reverberation",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "freud_psychoanalysis",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(education_knowledge)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 9 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "morley_trisector_theorem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "rayleigh_jeans_law",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(physics)下游数 53 ≥ 本域 75 分位 6 且绝对值 > 50"
+  },
+  {
+   "id": "gibbs_statistical_ensembles",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "hadamard_well_posedness",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "secretin_hormone",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "vacuum_tube",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(computing_systems)下游数 1 ≤ 本域 P1 档 20 分位 12（本域 P1 共 10 条）"
+  },
+  {
+   "id": "einstein_brownian_motion",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "animation",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(culture_media)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 12 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "jensen_inequality",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "third_law_thermodynamics",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "washing_machine",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(daily_life)下游数 1 ≤ 本域 P1 档 20 分位 1（本域 P1 共 3 条）"
+  },
+  {
+   "id": "haber_process",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(chemistry)下游数 4 ≤ 本域 P1 档 20 分位 4（本域 P1 共 6 条）"
+  },
+  {
+   "id": "ph_concept",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "primitive_element_theorem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "elastic_rebound_theory",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "invariance_of_dimension",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "gini_coefficient",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "dimension_theorem_vector_spaces",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(math_pure)下游数 0 ≤ 本域 P1 档 20 分位 1（本域 P1 共 39 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "federal_reserve_system",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(economy)下游数 3 ≤ 本域 P1 档 20 分位 3（本域 P1 共 12 条）"
+  },
+  {
+   "id": "moseley_atomic_number",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "gravitational_waves_prediction",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "stimulated_emission_theory",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "finsler_geometry",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "air_traffic_control",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(transport)下游数 2 ≤ 本域 P1 档 20 分位 2（本域 P1 共 8 条）"
+  },
+  {
+   "id": "staudinger_macromolecules",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "economic_planning_board",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "weber_bureaucracy",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "compton_scattering",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "bose_einstein_condensate",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "mutual_fund",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "soil_mechanics",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "fermi_dirac_statistics",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "goddard_liquid_rocket",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(space_exploration)下游数 62 ≥ 本域 75 分位 1 且绝对值 > 50"
+  },
+  {
+   "id": "artin_primitive_roots_conjecture",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "cohn_vossen_rigidity",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "ackermann_function",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "first_order_logic",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(logic_foundations)下游数 6 ≤ 本域 P1 档 20 分位 6（本域 P1 共 6 条）"
+  },
+  {
+   "id": "proof_theory",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(logic_foundations)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 21 条）"
+  },
+  {
+   "id": "resonance_chemistry",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "godel_completeness",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(logic_foundations)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 21 条）"
+  },
+  {
+   "id": "mach_number",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "intuitionistic_logic",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(logic_foundations)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 21 条）"
+  },
+  {
+   "id": "moment_distribution_method",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "electronegativity",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "lehmers_totient_problem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "random_variable_concept",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "fermi_beta_decay_theory",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "chebotarev_roots_unity_theorem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "halting_problem",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(logic_foundations)下游数 0 ≤ 本域 P1 档 20 分位 6（本域 P1 共 6 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "keynes_general_theory",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(economy)下游数 3 ≤ 本域 P1 档 20 分位 3（本域 P1 共 12 条）"
+  },
+  {
+   "id": "mu_recursive_function",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(logic_foundations)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 21 条）"
+  },
+  {
+   "id": "abstract_analytic_number_theory",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "de_finetti_theorem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "krein_milman_theorem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "feller_renewal_theory",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "berry_esseen_theorem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "epigenetics_concept",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "welfare_state",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "catalytic_cracking",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "maslow_hierarchy_needs",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "ito_stochastic_calculus",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(math_pure)下游数 0 ≤ 本域 P1 档 20 分位 1（本域 P1 共 39 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "schwartz_distributions",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(math_pure)下游数 0 ≤ 本域 P1 档 20 分位 1（本域 P1 共 39 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "chern_classes",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(math_pure)下游数 1 ≤ 本域 P1 档 20 分位 1（本域 P1 共 39 条）"
+  },
+  {
+   "id": "venture_capital",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "general_agreement_tariffs",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "holography",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "nicad_battery",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(energy_power)下游数 63 ≥ 本域 75 分位 3 且绝对值 > 50"
+  },
+  {
+   "id": "casimir_effect",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "cellular_automaton",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "czochralski_process",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(materials)下游数 224 ≥ 本域 75 分位 4 且绝对值 > 50"
+  },
+  {
+   "id": "printed_circuit_board",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(manufacturing)下游数 14 ≤ 本域 P1 档 20 分位 14（本域 P1 共 8 条）"
+  },
+  {
+   "id": "renormalization",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "agoh_giuga_conjecture",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "arrow_impossibility_theorem",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "bowlby_attachment_theory",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "convention_on_refugees_1951",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "rock_and_roll",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(culture_media)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 12 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "basic_oxygen_steelmaking",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "model_theory",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(logic_foundations)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 21 条）"
+  },
+  {
+   "id": "simon_bounded_rationality",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "bcs_theory",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "chomsky_generative_grammar",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(education_knowledge)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 9 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "festinger_cognitive_dissonance",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "vsepr_theory",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "meselson_stahl_experiment",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "mossbauer_effect",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "mosfet",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(info_media)下游数 11 ≤ 本域 P1 档 20 分位 16（本域 P1 共 18 条）"
+  },
+  {
+   "id": "coase_theorem",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "oral_contraceptive",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(life_medicine)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 15 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "second_harmonic_generation",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "dpll_algorithm",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "josephson_effect",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "xray_astronomy",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "cohen_forcing",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(logic_foundations)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 21 条）"
+  },
+  {
+   "id": "poverty_threshold",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "tube_structure",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "density_functional_theory",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "cosmic_microwave_background",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(earth_space)下游数 0 ≤ 本域 P1 档 20 分位 1（本域 P1 共 8 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "hypertext",
+   "channels": [
+    "疑被低估"
+   ],
+   "why": "[疑被低估] P3；域内(info_media)下游数 51 ≥ 本域 75 分位 2 且绝对值 > 50"
+  },
+  {
+   "id": "woodward_hoffmann_rules",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "fdtd_yee",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "langlands_program",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(math_pure)下游数 1 ≤ 本域 P1 档 20 分位 1（本域 P1 共 39 条）"
+  },
+  {
+   "id": "margulis_endosymbiosis",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "plate_tectonics",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(earth_space)下游数 1 ≤ 本域 P1 档 20 分位 1（本域 P1 共 8 条）"
+  },
+  {
+   "id": "solid_electrolyte",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "antieigenvalue_theory",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "sna_framework",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "apollo_11",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(space_exploration)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 4 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "curry_howard_correspondence",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(logic_foundations)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 21 条）"
+  },
+  {
+   "id": "adjacency_algebra",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "diophantine_set",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "efficient_market_hypothesis",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "information_asymmetry",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "recycling",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "securitization",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "finite_volume_method",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "p_vs_np_problem",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(algorithms_cs)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 8 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "vc_dimension",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "gaia_hypothesis",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "accounting_standards",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "floating_exchange_rate",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "gravity_assist",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "hybrid_rice",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(agriculture_food)下游数 0 ≤ 本域 P1 档 20 分位 1（本域 P1 共 6 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "maynard_smith_evolutionary_game",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "pet_scanner",
+   "channels": [
+    "高档无溯源"
+   ],
+   "why": "[高档无溯源] importance=2（P1/P2 高档）；wikiEn 为空"
+  },
+  {
+   "id": "hawking_radiation",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "tcp_ip",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(info_media)下游数 1 ≤ 本域 P1 档 20 分位 16（本域 P1 共 18 条）"
+  },
+  {
+   "id": "catalytic_converter",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "laser_cooling",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "microfinance",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "communication_complexity",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "gravitational_lensing",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "modern_wind_turbine",
+   "channels": [
+    "高档无溯源"
+   ],
+   "why": "[高档无溯源] importance=2（P1/P2 高档）；wikiEn 为空"
+  },
+  {
+   "id": "prospect_theory",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(economy)下游数 0 ≤ 本域 P1 档 20 分位 3（本域 P1 共 12 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "standard_model_particle_physics",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(physics)下游数 1 ≤ 本域 P1 档 20 分位 1（本域 P1 共 16 条）"
+  },
+  {
+   "id": "suzuki_reaction",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "asymmetric_hydrogenation",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "cosmic_inflation",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "integer_quantum_hall_effect",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "space_shuttle",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(space_exploration)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 4 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "byzantine_fault_tolerance",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "fractional_quantum_hall_effect",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "prion_theory",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "secure_multiparty_computation",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "supply_chain_management",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "un_convention_on_the_law_of_the_sea",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "pac_learning",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "cavity_qed",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "flp_theorem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "optical_tweezers",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "phase_shift_photomask",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "fast_multipole_method",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(algorithms_cs)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 8 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "photonic_crystal_structure",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "sige_heterostructure_epi",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "supramolecular_chemistry",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "ybco_high_tc_superconductor",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "basel_capital_accord",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "giant_magnetoresistance",
+   "channels": [
+    "基石尾组",
+    "原理零引用"
+   ],
+   "why": "[基石尾组] P1；域内(physics)下游数 0 ≤ 本域 P1 档 20 分位 1（本域 P1 共 16 条），或 pf=0（直接前置引用为 0）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "lean_manufacturing",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "epoxy_negative_thick_resist",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "ingaas_strained_quantum_well",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "acoustic_microscopy_package_inspection",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "combinatorial_chemistry",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "human_development_index",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "inflation_targeting",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "solder_ball_bump_forming",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "atom_economy",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "lithium_ion_battery",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(energy_power)下游数 16 ≤ 本域 P1 档 20 分位 16（本域 P1 共 8 条）"
+  },
+  {
+   "id": "thermohaline_circulation",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "bicgstab",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "deep_reactive_ion_etching",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "dna_encoded_library",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "olefin_metathesis",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "pcp_theorem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "binder_jet_powder_printing",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "external_memory_algorithm",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "ingan_quantum_well_led",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(materials)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 4 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "karger_algorithm",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "wafer_backgrinding_thinning",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "value_at_risk",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "world_wide_web_consortium",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "igzo_oxide_channel",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "metal_organic_framework",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "selective_laser_melting",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "semiconductor_burn_in_reliability",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "mems_probe_card",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "electron_beam_powder_bed_melting",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "tantalum_nitride_barrier",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "dark_energy_acceleration",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(physics)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 109 条）"
+  },
+  {
+   "id": "green_chemistry",
+   "channels": [
+    "支柱尾组",
+    "原理零引用"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）；[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "pagerank",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(algorithms_cs)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 8 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "rome_statute_international_criminal_court",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "stem_cell_concept",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "wafer_sort_kgd_test",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "wafer_level_packaging",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "cap_theorem",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "gamma_titanium_aluminide",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "metamaterial",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "organocatalysis",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "click_chemistry",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(chemistry)下游数 1 ≤ 本域 P1 档 20 分位 4（本域 P1 共 6 条）"
+  },
+  {
+   "id": "low_k_interlayer_dielectric",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "microcapsule_self_healing_polymer",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "quantitative_easing",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "aluminium_nitride_piezo_film",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "bioorthogonal_chemistry",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "e_government_initiative",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "human_genome_project",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(life_medicine)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 15 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "nmc_layered_cathode",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "redistribution_layer_routing",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "strained_silicon_channel",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "alipay",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "classification_finite_simple_groups",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(math_pure)下游数 0 ≤ 本域 P1 档 20 分位 1（本域 P1 共 39 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "crouzeixs_conjecture",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "electrochemical_co2_reduction",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "wheel_theory",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "ch_activation",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "covalent_organic_framework",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "die_singulation_dicing",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "system_in_package_integration",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "cloud_computing",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(computing_systems)下游数 12 ≤ 本域 P1 档 20 分位 12（本域 P1 共 10 条）"
+  },
+  {
+   "id": "flow_chemistry",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "rebco_coated_conductor_tape",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "llzo_garnet_solid_electrolyte",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "mobile_payment",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "chiplet_packaging",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "parametric_design",
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "[原理零引用] kind=原理；被引总数 rf=0"
+  },
+  {
+   "id": "photoredox_catalysis",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "boron_nitride_nanosheet",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "lithium_sulfur_cathode_system",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "algan_gan_hemt_channel",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "artificial_photosynthesis",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(chemistry)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 53 条）"
+  },
+  {
+   "id": "mos2_monolayer_channel",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "mxene_2d_carbide",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "silicon_interposer_2p5d",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "electric_vehicle",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(transport)下游数 2 ≤ 本域 P1 档 20 分位 2（本域 P1 共 8 条）"
+  },
+  {
+   "id": "gallium_oxide_bulk_crystal",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "hybrid_direct_bonding",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "silicene_epi_layer",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "euv_lithography",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "thermocompression_die_stack_bonding",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "central_bank_digital_currency",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "phosphorene_2d_channel",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(materials)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 51 条）"
+  },
+  {
+   "id": "fan_out_wafer_level_packaging",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "open_banking",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(economy)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 104 条）"
+  },
+  {
+   "id": "paris_agreement_climate",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "thermoelectric_copper_pillar_bump",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  },
+  {
+   "id": "general_data_protection_regulation",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(governance)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 2（本域 P2 共 96 条）"
+  },
+  {
+   "id": "large_language_model",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(computing_systems)下游数 7 ≤ 本域 P1 档 20 分位 12（本域 P1 共 10 条）"
+  },
+  {
+   "id": "mrna_vaccine",
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "[基石尾组] P1；域内(life_medicine)下游数 0 ≤ 本域 P1 档 20 分位 0（本域 P1 共 15 条），或 pf=0（直接前置引用为 0）"
+  },
+  {
+   "id": "gaa_node_fet",
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "[支柱尾组] P2；域内(manufacturing)下游数 0 ≤ 本域 P2 档 20 分位 0 且 < 全域（本域全部条目）中位数 1（本域 P2 共 69 条）"
+  }
+ ]
+}

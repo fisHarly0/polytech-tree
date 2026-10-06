@@ -1,0 +1,579 @@
+{
+  "category": "physics",
+  "shard": "gB",
+  "count": 46,
+  "items": [
+    {
+      "id": "inverse_square_gravity",
+      "name": "万有引力定律",
+      "tier": 1,
+      "kind": "原理",
+      "channel": [
+        "基石存疑"
+      ],
+      "doubt": "万有引力系被发现的自然定律，是否算科技待裁；tier1基石"
+    },
+    {
+      "id": "vector_calculus",
+      "name": "矢量分析",
+      "tier": 1,
+      "kind": "原理",
+      "channel": [
+        "基石存疑"
+      ],
+      "doubt": "矢量分析系数学工具，kind=原理归类与tier1基石均存疑"
+    },
+    {
+      "id": "standard_model_particle_physics",
+      "name": "粒子物理标准模型",
+      "tier": 1,
+      "kind": "制度",
+      "channel": [
+        "基石存疑"
+      ],
+      "doubt": "kind=制度与\"粒子理论框架\"不符；tier1基石存疑"
+    },
+    {
+      "id": "giant_magnetoresistance",
+      "name": "巨磁阻效应",
+      "tier": 1,
+      "kind": "原理",
+      "channel": [
+        "基石存疑",
+        "原理零引用"
+      ],
+      "doubt": "巨磁阻系发现的效应，是否算科技待裁；tier1却rf=0"
+    },
+    {
+      "id": "bernoulli_principle",
+      "name": "伯努利原理",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "伯努利定律系自然规律；且1738早于industrial era"
+    },
+    {
+      "id": "lagrangian_mechanics",
+      "name": "拉格朗日分析力学",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "分析力学系理论体系，kind=工艺与desc不符"
+    },
+    {
+      "id": "young_double_slit",
+      "name": "杨氏双缝干涉实验",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "双缝系干涉实验演示，kind=工艺牵强；tier2支柱但rf=1"
+    },
+    {
+      "id": "amperes_force_law",
+      "name": "安培力定律",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "安培定律系自然规律被发现；tier2支柱但rf=2"
+    },
+    {
+      "id": "thermoelectric_effect",
+      "name": "温差电效应",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "温差电效应系发现，是否算科技待裁；tier2但rf=0"
+    },
+    {
+      "id": "lenzs_law",
+      "name": "楞次定律",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "楞次定律系自然规律；tier2支柱却rf=0零引用"
+    },
+    {
+      "id": "gausss_law",
+      "name": "高斯定律",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "高斯定律系自然规律；tier2却域内下游0，场论支柱名不副实"
+    },
+    {
+      "id": "sabine_reverberation",
+      "name": "赛宾混响定律",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "混响经验定律；tier2支柱但rf=1、下游0"
+    },
+    {
+      "id": "gibbs_statistical_ensembles",
+      "name": "吉布斯系综统计力学",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "系综统计力学理论框架；tier2支柱但域内下游0"
+    },
+    {
+      "id": "einstein_brownian_motion",
+      "name": "布朗运动的原子论解释",
+      "tier": 2,
+      "kind": "器物",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "布朗运动原子论解释系理论，kind=器物明显不符"
+    },
+    {
+      "id": "third_law_thermodynamics",
+      "name": "热力学第三定律",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "热力学第三定律系自然规律；tier2支柱但rf=1"
+    },
+    {
+      "id": "moseley_atomic_number",
+      "name": "莫塞莱原子序数定律",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "莫塞莱定律系经验自然规律被发现；tier2支柱但rf=1"
+    },
+    {
+      "id": "gravitational_waves_prediction",
+      "name": "引力波预言",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "引力波系理论预言，kind=工艺与desc不符"
+    },
+    {
+      "id": "stimulated_emission_theory",
+      "name": "受激辐射理论",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "受激辐射理论(激光源头)；tier2支柱但rf=2下游0"
+    },
+    {
+      "id": "compton_scattering",
+      "name": "康普顿散射",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "康普顿散射系发现效应，是否算科技待裁；tier2但rf=0"
+    },
+    {
+      "id": "bose_einstein_condensate",
+      "name": "玻色-爱因斯坦凝聚理论",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "BEC理论预言新物态；tier2支柱但rf=1下游0"
+    },
+    {
+      "id": "fermi_dirac_statistics",
+      "name": "费米-狄拉克统计",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "费米-狄拉克分布律，是否算科技待裁；tier2但rf=0"
+    },
+    {
+      "id": "mach_number",
+      "name": "马赫数",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "马赫数系无量纲命名约定，恐非科技；kind=原理亦存疑"
+    },
+    {
+      "id": "fermi_beta_decay_theory",
+      "name": "费米β衰变理论",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "费米β衰变理论；tier2支柱但域内下游0"
+    },
+    {
+      "id": "holography",
+      "name": "全息摄影",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "全息摄影属实作成像技术；tier2支柱却rf=0下游0"
+    },
+    {
+      "id": "casimir_effect",
+      "name": "卡西米尔效应",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "卡西米尔效应系发现，是否算科技待裁；tier2但rf=0"
+    },
+    {
+      "id": "renormalization",
+      "name": "重正化理论",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "重正化计算方法；tier2支柱但rf=2下游0"
+    },
+    {
+      "id": "bcs_theory",
+      "name": "BCS超导理论",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "BCS超导理论框架；tier2支柱但rf=2下游0"
+    },
+    {
+      "id": "mossbauer_effect",
+      "name": "穆斯堡尔效应",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "穆斯堡尔效应系发现，是否算科技待裁；tier2但rf=0"
+    },
+    {
+      "id": "second_harmonic_generation",
+      "name": "二次谐波产生",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "倍频系非线性光学效应，是否算科技待裁；tier2但rf=0"
+    },
+    {
+      "id": "josephson_effect",
+      "name": "约瑟夫森效应",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "约瑟夫森效应系发现，是否算科技待裁；tier2但rf=0"
+    },
+    {
+      "id": "density_functional_theory",
+      "name": "密度泛函理论",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "密度泛函计算方法；tier2支柱但rf=2下游0"
+    },
+    {
+      "id": "fdtd_yee",
+      "name": "时域有限差分法",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "时域有限差分系数值方法，kind=原理与desc不符"
+    },
+    {
+      "id": "finite_volume_method",
+      "name": "有限体积法",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "有限体积法属实作数值方法；tier2支柱但域内下游0"
+    },
+    {
+      "id": "hawking_radiation",
+      "name": "霍金辐射",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "霍金辐射系理论预言，kind=工艺与desc不符"
+    },
+    {
+      "id": "laser_cooling",
+      "name": "激光冷却",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "激光冷却系实验方法，kind=原理不符；且rf=0"
+    },
+    {
+      "id": "cosmic_inflation",
+      "name": "宇宙暴胀理论",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "宇宙暴胀系提出理论；tier2支柱但rf=1下游0"
+    },
+    {
+      "id": "integer_quantum_hall_effect",
+      "name": "整数量子霍尔效应",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "量子霍尔效应系发现，是否算科技待裁；tier2但rf=0"
+    },
+    {
+      "id": "fractional_quantum_hall_effect",
+      "name": "分数量子霍尔效应",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "分数量子霍尔系发现，是否算科技待裁；tier2但rf=0"
+    },
+    {
+      "id": "cavity_qed",
+      "name": "腔量子电动力学",
+      "tier": 2,
+      "kind": "原理",
+      "channel": [
+        "支柱存疑",
+        "原理零引用"
+      ],
+      "doubt": "腔QED系研究领域非单一原理；tier2支柱却rf=0"
+    },
+    {
+      "id": "optical_tweezers",
+      "name": "光镊",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "光镊属实作测量仪器；tier2支柱却rf=0下游0"
+    },
+    {
+      "id": "dark_energy_acceleration",
+      "name": "暗能量与宇宙加速膨胀",
+      "tier": 2,
+      "kind": "工艺",
+      "channel": [
+        "支柱存疑"
+      ],
+      "doubt": "暗能量系观测假说，kind=工艺与desc不符"
+    },
+    {
+      "id": "fermat_principle_least_time",
+      "name": "费马极值原理",
+      "tier": 3,
+      "kind": "原理",
+      "channel": [
+        "疑被低估"
+      ],
+      "doubt": "tier3疑偏低：域内下游55，开启变分法多依赖"
+    },
+    {
+      "id": "stefan_boltzmann_law",
+      "name": "斯特藩-玻尔兹曼定律",
+      "tier": 3,
+      "kind": "原理",
+      "channel": [
+        "疑被低估"
+      ],
+      "doubt": "tier3疑偏低：域内下游55，黑体辐射链核心"
+    },
+    {
+      "id": "wien_displacement_law",
+      "name": "维恩位移定律",
+      "tier": 3,
+      "kind": "原理",
+      "channel": [
+        "疑被低估"
+      ],
+      "doubt": "tier3疑偏低：域内下游54，催生色温等依赖"
+    },
+    {
+      "id": "rayleigh_jeans_law",
+      "name": "瑞利-金斯定律",
+      "tier": 3,
+      "kind": "原理",
+      "channel": [
+        "疑被低估"
+      ],
+      "doubt": "tier3疑偏低：域内下游53，通向量子假说"
+    },
+    {
+      "id": "dulong_petit_law",
+      "name": "杜隆-珀蒂定律",
+      "tier": 4,
+      "kind": "原理",
+      "channel": [
+        "原理零引用"
+      ],
+      "doubt": "杜隆-珀蒂定律系经验自然规律被发现；tier4且rf=0"
+    }
+  ],
+  "boundary": [
+    {
+      "id": "inverse_square_gravity",
+      "why": "万有引力：自然定律被发现"
+    },
+    {
+      "id": "bernoulli_principle",
+      "why": "伯努利定律：自然规律"
+    },
+    {
+      "id": "amperes_force_law",
+      "why": "安培定律：自然规律"
+    },
+    {
+      "id": "gausss_law",
+      "why": "高斯定律：场论自然规律"
+    },
+    {
+      "id": "lenzs_law",
+      "why": "楞次定律：自然规律"
+    },
+    {
+      "id": "third_law_thermodynamics",
+      "why": "热三定律：自然规律"
+    },
+    {
+      "id": "moseley_atomic_number",
+      "why": "莫塞莱定律：经验自然规律"
+    },
+    {
+      "id": "sabine_reverberation",
+      "why": "赛宾定律：混响经验规律"
+    },
+    {
+      "id": "fermat_principle_least_time",
+      "why": "费马原理：光行最短规律"
+    },
+    {
+      "id": "stefan_boltzmann_law",
+      "why": "黑体辐射定律：自然规律"
+    },
+    {
+      "id": "wien_displacement_law",
+      "why": "维恩定律：自然规律"
+    },
+    {
+      "id": "rayleigh_jeans_law",
+      "why": "瑞利-金斯定律：自然规律"
+    },
+    {
+      "id": "dulong_petit_law",
+      "why": "杜隆-珀蒂定律：经验规律"
+    },
+    {
+      "id": "giant_magnetoresistance",
+      "why": "巨磁阻：发现之物理效应"
+    },
+    {
+      "id": "thermoelectric_effect",
+      "why": "温差电：发现效应"
+    },
+    {
+      "id": "compton_scattering",
+      "why": "康普顿散射：发现效应"
+    },
+    {
+      "id": "casimir_effect",
+      "why": "卡西米尔：量子效应"
+    },
+    {
+      "id": "mossbauer_effect",
+      "why": "穆斯堡尔：发现效应"
+    },
+    {
+      "id": "second_harmonic_generation",
+      "why": "倍频：非线性光学效应"
+    },
+    {
+      "id": "josephson_effect",
+      "why": "约瑟夫森：超导效应"
+    },
+    {
+      "id": "integer_quantum_hall_effect",
+      "why": "整数量子霍尔：发现效应"
+    },
+    {
+      "id": "fractional_quantum_hall_effect",
+      "why": "分数量子霍尔：发现效应"
+    },
+    {
+      "id": "fermi_dirac_statistics",
+      "why": "费米-狄拉克：粒子分布律"
+    },
+    {
+      "id": "mach_number",
+      "why": "马赫数：无量纲命名约定"
+    }
+  ]
+}

@@ -1,0 +1,481 @@
+{
+  "date": "2026-09-27",
+  "source": "review4 A/C/D",
+  "removed": [
+    {
+      "id": "social_stratification",
+      "verdict": "移出主库",
+      "reason": "当前描述的是等级固化的社会结果，未明确某套分层规则或分析理论。",
+      "from": "D",
+      "ts": "2026-09-27T02:49:07.672Z",
+      "item": {
+        "id": "social_stratification",
+        "name": "社会分层",
+        "nameEn": "Social Stratification",
+        "wikiEn": "Social stratification",
+        "aliases": [
+          "等级分化",
+          "阶层"
+        ],
+        "year": -7000,
+        "year_basis": "circa",
+        "year_span": null,
+        "year_note": "依墓葬与居址差异判定，无确切纪年",
+        "era": "neolithic",
+        "category": "governance",
+        "kind": "制度",
+        "importance": 2,
+        "prereqs": [
+          "kinship_system",
+          "big_man_leader"
+        ],
+        "related": [
+          "slavery",
+          "primogeniture",
+          "law_of_manu",
+          "grain_storage"
+        ],
+        "desc": "剩余产品把人群固化为高低序列，身份从此可继承，成为一切法典要处理的对象。"
+      }
+    },
+    {
+      "id": "spice_trade",
+      "verdict": "移出主库",
+      "reason": "当前仅记载早期香料贸易存在，未定义独立的交易、物流或保藏机制。",
+      "from": "D",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "spice_trade",
+        "name": "香料贸易",
+        "nameEn": "Spice trade",
+        "wikiEn": "Spice trade",
+        "aliases": [
+          "丁香贸易",
+          "古代香料商路"
+        ],
+        "year": -1700,
+        "year_basis": "century",
+        "year_span": null,
+        "year_note": "只知世纪，取该世纪中值（规范 §3.8 规则 3）",
+        "era": "bronze_age",
+        "category": "daily_life",
+        "kind": "工艺",
+        "importance": 5,
+        "prereqs": [
+          "sailing_ship"
+        ],
+        "related": [
+          "tin_smelting"
+        ],
+        "desc": "叙利亚特尔卡遗址出土印尼丁香，香料远程贸易已存在。"
+      }
+    },
+    {
+      "id": "silk_road",
+      "verdict": "移出主库",
+      "reason": "当前条目是欧亚贸易通道，未说明独立的运输或贸易组织方法；要按历史交流网络保留吗？",
+      "from": "C",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "silk_road",
+        "name": "丝绸之路",
+        "nameEn": "Silk Road",
+        "wikiEn": "Silk Road",
+        "aliases": [
+          "丝路"
+        ],
+        "year": -130,
+        "year_basis": "decade",
+        "year_span": null,
+        "year_note": "只知年代，取该十年代中点（规范 §3.8 规则 4）",
+        "era": "antiquity",
+        "category": "transport",
+        "kind": "工艺",
+        "importance": 3,
+        "prereqs": [],
+        "related": [
+          "royal_road"
+        ],
+        "desc": "张骞通西域后形成的欧亚贸易通道。"
+      }
+    },
+    {
+      "id": "arab_agricultural_revolution",
+      "verdict": "移出主库",
+      "reason": "当前描述概括作物与灌溉技术的传播，未固定为一套可复用方法；要保留这类农业史概括吗？",
+      "from": "C",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "arab_agricultural_revolution",
+        "name": "阿拉伯农业革命",
+        "nameEn": "Arab Agricultural Revolution",
+        "wikiEn": "Arab Agricultural Revolution",
+        "aliases": [
+          "伊斯兰农业革命"
+        ],
+        "year": 900,
+        "year_basis": "century",
+        "year_span": null,
+        "year_note": "只知世纪，取该世纪中值（规范 §3.8 规则 3）",
+        "era": "middle_ages",
+        "category": "agriculture_food",
+        "kind": "工艺",
+        "importance": 3,
+        "prereqs": [
+          "irrigation"
+        ],
+        "related": [
+          "sugar",
+          "sugarcane_mill"
+        ],
+        "desc": "伊斯兰世界传播新作物与灌溉技术，改变地中海农业。"
+      }
+    },
+    {
+      "id": "pax_mongolica",
+      "verdict": "移出主库",
+      "reason": "当前主要表达历史时期及商道通行状况，尚未界定区别于驿站、法令等条目的独立机制。",
+      "from": "D",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "pax_mongolica",
+        "name": "蒙古和平",
+        "nameEn": "Pax Mongolica",
+        "wikiEn": "Pax Mongolica",
+        "aliases": [
+          "蒙古治世"
+        ],
+        "year": 1275,
+        "year_basis": "circa",
+        "year_span": null,
+        "year_note": "欧亚商路统一安保期约13—14世纪，取约1275",
+        "era": "middle_ages",
+        "category": "governance",
+        "kind": "制度",
+        "importance": 2,
+        "prereqs": [
+          "mongol_yasa",
+          "mongol_yam_relay"
+        ],
+        "related": [
+          "silk_road",
+          "hanseatic_league",
+          "diplomacy",
+          "quarantine"
+        ],
+        "desc": "以单一强权担保跨境商道与使节通行，使洲际人员、货物与疫病第一次同步流动。"
+      }
+    },
+    {
+      "id": "columbian_exchange",
+      "verdict": "移出主库",
+      "reason": "描述的是跨大陆物种迁移过程，而非具体驯化、运输或治理技术；要作为历史过程保留吗？",
+      "from": "C",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "columbian_exchange",
+        "name": "哥伦布大交换",
+        "nameEn": "Columbian Exchange",
+        "wikiEn": "Columbian exchange",
+        "aliases": [
+          "哥伦布交换"
+        ],
+        "year": 1492,
+        "year_basis": "exact",
+        "year_span": null,
+        "year_note": "",
+        "era": "renaissance",
+        "category": "agriculture_food",
+        "kind": "制度",
+        "importance": 1,
+        "prereqs": [
+          "sailing_ship"
+        ],
+        "related": [
+          "maize",
+          "potato",
+          "coffee",
+          "agriculture"
+        ],
+        "desc": "新旧大陆作物牲畜病菌的物种大交换，重排全球食谱。"
+      }
+    },
+    {
+      "id": "fermat_last_theorem",
+      "verdict": "移出主库",
+      "reason": "节点明确限定为费马大定理的提出与悬而未决历史，不能借后来证明方法定档；是否保留命题提出节点须用户裁定。",
+      "from": "A",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "fermat_last_theorem",
+        "name": "费马大定理（提出）",
+        "nameEn": "Fermat's Last Theorem",
+        "wikiEn": "Fermat's Last Theorem",
+        "aliases": [
+          "费马最后定理",
+          "费马猜想",
+          "Fermat conjecture",
+          "FLT"
+        ],
+        "year": 1637,
+        "year_basis": "exact",
+        "year_span": null,
+        "year_note": "年份可在该词条正文/信息框检得（脚本取证）",
+        "era": "renaissance",
+        "category": "math_pure",
+        "kind": "原理",
+        "importance": 2,
+        "prereqs": [
+          "diophantine_equations"
+        ],
+        "related": [
+          "wiles_fermat_proof",
+          "symbolic_algebra"
+        ],
+        "desc": "费马在页边断言n大于二时x^n+y^n=z^n无正整数解，困扰数学界357年。"
+      }
+    },
+    {
+      "id": "riemann_hypothesis",
+      "verdict": "移出主库",
+      "reason": "当前节点是尚待证明的ζ零点命题，影响与条件推论不能自动等同已建立的方法；是否单独收录猜想由用户裁定。",
+      "from": "A",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "riemann_hypothesis",
+        "name": "黎曼猜想",
+        "nameEn": "Riemann hypothesis",
+        "wikiEn": "Riemann hypothesis",
+        "aliases": [
+          "黎曼假设",
+          "RH"
+        ],
+        "year": 1859,
+        "year_basis": "exact",
+        "year_span": null,
+        "year_note": "",
+        "era": "industrial",
+        "category": "math_pure",
+        "kind": "原理",
+        "importance": 2,
+        "prereqs": [
+          "euler_product_zeta"
+        ],
+        "related": [
+          "analytic_number_theory",
+          "prime_number",
+          "prime_number_theorem",
+          "wigner_random_matrices"
+        ],
+        "desc": "猜测黎曼 ζ 函数非平凡零点全落在临界线上，牵动素数分布，列为千禧难题。"
+      }
+    },
+    {
+      "id": "literacy",
+      "verdict": "移出主库",
+      "reason": "当前描述读写普及的社会状态；是否收录这一状态，还是明确按读写能力算科技？",
+      "from": "D",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "literacy",
+        "name": "全民识字",
+        "nameEn": "Literacy",
+        "wikiEn": "Literacy",
+        "aliases": [
+          "识字率",
+          "读写能力普及"
+        ],
+        "year": 1870,
+        "year_basis": "decade",
+        "year_span": null,
+        "year_note": "取 1870 年前后欧美义务教育法集中出台期",
+        "era": "second_industrial",
+        "category": "education_knowledge",
+        "kind": "制度",
+        "importance": 2,
+        "prereqs": [
+          "compulsory_education",
+          "public_library"
+        ],
+        "related": [
+          "universal_suffrage",
+          "civil_service"
+        ],
+        "desc": "读写在多数成人中普及，使政令、合同与技术手册能被自行阅读。"
+      }
+    },
+    {
+      "id": "brocards_problem",
+      "verdict": "移出主库",
+      "reason": "条目是阶乘加一为平方的开放求解问题，现内容未给出独立通用解法；是否保留问题节点须用户裁定。",
+      "from": "A",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "brocards_problem",
+        "name": "布罗卡问题",
+        "nameEn": "Brocard's problem",
+        "wikiEn": "Brocard's problem",
+        "aliases": [
+          "布罗卡猜想",
+          "n!+1平方问题",
+          "Brocard problem"
+        ],
+        "year": 1876,
+        "year_basis": "exact",
+        "year_span": null,
+        "year_note": "年份可在该词条正文/信息框检得（脚本取证）",
+        "era": "second_industrial",
+        "category": "math_pure",
+        "kind": "原理",
+        "importance": 4,
+        "prereqs": [],
+        "related": [
+          "abc_conjecture",
+          "formula_for_primes"
+        ],
+        "desc": "求n!+1为完全平方数的n，仅知三个解且猜想无他解，可由abc猜想推出有限。"
+      }
+    },
+    {
+      "id": "p_vs_np_problem",
+      "verdict": "移出主库",
+      "reason": "当前节点是尚未解决的复杂性问题本身；需决定是否收录问题对象，不能借NP完全性理论代替其内容。",
+      "from": "A",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "p_vs_np_problem",
+        "name": "P 对 NP 问题",
+        "nameEn": "P versus NP problem",
+        "wikiEn": "P versus NP problem",
+        "aliases": [
+          "P=NP?",
+          "P对NP"
+        ],
+        "year": 1971,
+        "year_basis": "batch_asserted",
+        "year_span": null,
+        "year_note": "库克1971年、莱文1973年先后明确提出；词条导语与信息框均未检得该年份，降为批次断言",
+        "era": "information",
+        "category": "algorithms_cs",
+        "kind": "原理",
+        "importance": 1,
+        "prereqs": [
+          "computational_complexity_theory"
+        ],
+        "related": [
+          "cook_levin_np_completeness",
+          "cryptography",
+          "shors_algorithm",
+          "turing_machine"
+        ],
+        "desc": "验证易的问题是否必定求解也易，克雷千禧难题，直接决定现代密码与优化的边界。"
+      }
+    },
+    {
+      "id": "spam_email",
+      "verdict": "移出主库",
+      "reason": "当前描述仅为DEC首次群发广告事件，未明确独立的群发或反垃圾方法；建议移出此事件节点。",
+      "from": "A",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "spam_email",
+        "name": "垃圾邮件",
+        "nameEn": "Email spam",
+        "wikiEn": "Email spam",
+        "aliases": [
+          "垃圾电邮",
+          "spam",
+          "不请自来的商业邮件",
+          "DEC广告邮件"
+        ],
+        "year": 1978,
+        "year_basis": "batch_asserted",
+        "year_span": null,
+        "year_note": "",
+        "era": "information",
+        "category": "info_media",
+        "kind": "工艺",
+        "importance": 4,
+        "prereqs": [
+          "email"
+        ],
+        "related": [
+          "email",
+          "listserv"
+        ],
+        "desc": "1978年DEC向阿帕网数百用户群发广告，史上第一封垃圾邮件。"
+      }
+    },
+    {
+      "id": "solar_grid_parity",
+      "verdict": "移出主库",
+      "reason": "当前条目只描述光伏成本达到经济阈值的历史状态，是否仍作为科技节点保留？",
+      "from": "C",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "solar_grid_parity",
+        "name": "光伏平价上网",
+        "nameEn": "Grid parity",
+        "wikiEn": "Grid parity",
+        "aliases": [
+          "电网平价",
+          "光伏发电平价",
+          "平价光伏",
+          "无补贴光伏"
+        ],
+        "year": 2020,
+        "year_basis": "decade",
+        "year_span": null,
+        "year_note": "只知年代，取该十年代中点（规范 §3.8 规则 4）",
+        "era": "intelligent",
+        "category": "energy_power",
+        "kind": "工艺",
+        "importance": 3,
+        "prereqs": [
+          "solar_cell"
+        ],
+        "related": [
+          "perovskite_solar_cell",
+          "offshore_wind_power"
+        ],
+        "desc": "2020年前后多国光伏度电成本低于火电，进入平价时代。"
+      }
+    },
+    {
+      "id": "metaverse",
+      "verdict": "移出主库",
+      "reason": "当前描述主要是2021年概念热潮；虽可包含多种虚拟世界技术，尚未指明本节点独立的可复用机制，需裁定是否收录该概念对象。",
+      "from": "A",
+      "ts": "2026-09-27T02:49:07.673Z",
+      "item": {
+        "id": "metaverse",
+        "name": "元宇宙",
+        "nameEn": "Metaverse",
+        "wikiEn": "Metaverse",
+        "aliases": [
+          "Meta元宇宙",
+          "沉浸式虚拟世界",
+          "Fortnite虚拟演唱会"
+        ],
+        "year": 2021,
+        "year_basis": "exact",
+        "year_span": null,
+        "year_note": "年份可在该词条正文/信息框检得（脚本取证）",
+        "era": "intelligent",
+        "category": "computing_systems",
+        "kind": "工艺",
+        "importance": 4,
+        "prereqs": [
+          "internet"
+        ],
+        "related": [
+          "roblox",
+          "apple_vision_pro",
+          "web3"
+        ],
+        "desc": "2021年因Facebook改名而火爆的沉浸式虚拟世界概念。"
+      }
+    }
+  ],
+  "count": 14
+}

@@ -98,7 +98,8 @@ export const KIND_COUNTS: Record<string, number> = KIND_ORDER.reduce(
 // ───── 年代依据标签（规范 §6：让"精确数值"与"真实精度"同时可见） ─────
 export const YEAR_BASIS_LABEL: Record<string, { mark: string; approx: boolean }> = {
   exact: { mark: '', approx: false },
-  batch_asserted: { mark: '批次给出，未逐条核对', approx: false },
+  // 默认档，几乎每条都带 → 长标注不进取悬停卡，依据仍留在 techs.json 的 year_basis 字段里
+  batch_asserted: { mark: '', approx: false },
   circa: { mark: '约数', approx: true },
   decade: { mark: '十年代取值', approx: true },
   century: { mark: '世纪中值', approx: true },

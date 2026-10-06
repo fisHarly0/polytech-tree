@@ -1,0 +1,187 @@
+{
+ "seed": 20260927,
+ "ts": "2026-09-21T15:57:12.445Z",
+ "total": 100,
+ "by_domain": {
+  "agriculture_food": {
+   "n": 4
+  },
+  "algorithms_cs": {
+   "n": 4
+  },
+  "chemistry": {
+   "n": 4
+  },
+  "computing_systems": {
+   "n": 5
+  },
+  "construction": {
+   "n": 4
+  },
+  "culture_media": {
+   "n": 4
+  },
+  "daily_life": {
+   "n": 4,
+   "reason": "本域 P1 仅 3 条，顶层档位样本受限；「kind∈{原理,媒介}」池仅 1 条（< 每域下限 3），该域在此维度上无余量可抽"
+  },
+  "earth_space": {
+   "n": 4
+  },
+  "economy": {
+   "n": 4,
+   "reason": "「importance≥4」池仅 2 条（< 每域下限 3），该域在此维度上无余量可抽"
+  },
+  "education_knowledge": {
+   "n": 4
+  },
+  "energy_power": {
+   "n": 5,
+   "reason": "无法覆盖「kind∈{原理,媒介}」(kind∈{原理,媒介})：本域 0 条满足，未放宽判据"
+  },
+  "governance": {
+   "n": 4
+  },
+  "info_media": {
+   "n": 6
+  },
+  "life_medicine": {
+   "n": 6
+  },
+  "logic_foundations": {
+   "n": 3,
+   "reason": "「importance≥4」池仅 1 条（< 每域下限 3），该域在此维度上无余量可抽"
+  },
+  "manufacturing": {
+   "n": 5
+  },
+  "materials": {
+   "n": 4,
+   "reason": "本域 P1 仅 4 条，顶层档位样本受限；「kind∈{原理,媒介}」池仅 1 条（< 每域下限 3），该域在此维度上无余量可抽"
+  },
+  "math_pure": {
+   "n": 8
+  },
+  "military": {
+   "n": 4,
+   "reason": "本域 P1 仅 4 条，顶层档位样本受限"
+  },
+  "physics": {
+   "n": 5
+  },
+  "space_exploration": {
+   "n": 4,
+   "reason": "本域 P1 仅 4 条，顶层档位样本受限"
+  },
+  "transport": {
+   "n": 5,
+   "reason": "「kind∈{原理,媒介}」池仅 1 条（< 每域下限 3），该域在此维度上无余量可抽"
+  }
+ },
+ "batches": [
+  [
+   "achilles_number",
+   "autobahn",
+   "barometer",
+   "calculus",
+   "candu_reactor",
+   "cayley_glider",
+   "classical_elements",
+   "convex_combination",
+   "crank_connecting_rod",
+   "crowdsourcing",
+   "dna_double_helix",
+   "ebers_papyrus",
+   "entscheidungsproblem",
+   "erlang_queueing_theory",
+   "esim",
+   "golden_rice",
+   "halothane",
+   "hausdorff_space",
+   "high_voltage_direct_current",
+   "integrated_circuit",
+   "ipod",
+   "junkers_ju52",
+   "kraft_process",
+   "lithography",
+   "measles_vaccine",
+   "microprocessor",
+   "moore_law",
+   "mosaic",
+   "nsfnet",
+   "oersted_electromagnetism",
+   "operating_microscope",
+   "ophthalmoscope",
+   "ox_yoke",
+   "position_line_fix",
+   "pressurized_water_reactor",
+   "rotary_quern",
+   "runge_theorem",
+   "scraper",
+   "secondary_products_revolution",
+   "shulba_sutras",
+   "silicon_interposer_2p5d",
+   "smart_card",
+   "spectral_sequence",
+   "stereotype_printing",
+   "stone_tools",
+   "thyristor",
+   "traction_engine",
+   "wigner_random_matrices",
+   "yukawa_meson_theory",
+   "z3_computer"
+  ],
+  [
+   "abolition_legislation",
+   "action_algebra",
+   "atomic_theory",
+   "baby_monitor",
+   "bank",
+   "blunt_body_heat_shield",
+   "bolas",
+   "bowlby_attachment_theory",
+   "cellophane",
+   "commedia_dell_arte",
+   "conscription",
+   "convention_on_refugees_1951",
+   "distillation",
+   "extradosed_bridge",
+   "fairy_tale",
+   "fire_brick",
+   "friction_match",
+   "fullerene",
+   "gas_mask",
+   "gmres",
+   "gold_standard",
+   "guerrilla_warfare",
+   "hadley_cell",
+   "health_qr_code",
+   "hutton_uniformitarianism",
+   "hydrogen_bond",
+   "karmarkar_interior_point",
+   "laminated_glass",
+   "language",
+   "library",
+   "lunokhod",
+   "moment_distribution_method",
+   "montessori_education",
+   "obelisk",
+   "pillow",
+   "poverty_threshold",
+   "pseudorandom_number_generator",
+   "rebco_coated_conductor_tape",
+   "schwarz_domain_decomposition",
+   "seawall",
+   "snowboarding",
+   "sovereignty_principle",
+   "space_shuttle",
+   "stablecoin",
+   "starlink",
+   "taixue_han",
+   "tea_bag",
+   "toilet_paper",
+   "type_theory",
+   "uranium_thorium_dating"
+  ]
+ ]
+}

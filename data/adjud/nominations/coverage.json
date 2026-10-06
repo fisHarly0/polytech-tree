@@ -1,0 +1,2284 @@
+{
+ "spec6_gate": {
+  "denominator_def": "calib 中「用户裁决为改判/移出/换档（即该动）」的条目里、未被任一通道提名的比例（契约 §7 写死为唯一合法分母）",
+  "adjudication_records_found": 0,
+  "decidable": false,
+  "verdict": "N/A — 校准批裁决尚未产生，本轮任何数字都不构成 spec §6 的 1/3 卡点判定",
+  "note": "不为凑合格数字调阈值；nominal_coverage 与 nominal_unnominated 均为参考，不许拿全样本命中率卡 1/3。"
+ },
+ "test_set": "calib-sample.json（契约 §6 校准批）",
+ "sample_source": "E:\\AIproject\\ALLTech\\data\\adjud\\calib-sample.json",
+ "sample_seed": 20260927,
+ "test_total": 100,
+ "nominal_coverage": {
+  "label": "名义覆盖：test_total 里被≥1 通道提名（通道捞异常用，契约 §7 禁止拿它卡 1/3）",
+  "nominated_any_channel": 11,
+  "denominator": 100,
+  "rate": 0.11
+ },
+ "tier_breakdown": {
+  "note": "各 importance 档的样本数与被任一通道提名数；同一 id 只计自己档一次（P1+…+P5 的 nominated = nominal_coverage 值）",
+  "P1": {
+   "sample": 10,
+   "nominated": 2
+  },
+  "P2": {
+   "sample": 43,
+   "nominated": 9
+  },
+  "P3": {
+   "sample": 13,
+   "nominated": 0
+  },
+  "P4": {
+   "sample": 30,
+   "nominated": 0
+  },
+  "P5": {
+   "sample": 4,
+   "nominated": 0
+  },
+  "group_P1_P2": {
+   "sample": 53,
+   "nominated": 11
+  },
+  "group_P3_P4_P5": {
+   "sample": 47,
+   "nominated": 0
+  }
+ },
+ "nominal_unnominated": {
+  "label": "名义未提名（全样本未被任一通道提名）——真实漏检的上界：含本就无需改动的条目",
+  "count": 89,
+  "rate": 0.89
+ },
+ "missed": [
+  {
+   "id": "achilles_number",
+   "metrics": {
+    "name": "阿喀琉斯数",
+    "category": "math_pure",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 0,
+    "descendants": 0,
+    "desc_rank_pct": 0.509,
+    "desc_zero_share": 0.5041,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 3，需 ≥ 且 >50）"
+  },
+  {
+   "id": "action_algebra",
+   "metrics": {
+    "name": "作用代数",
+    "category": "logic_foundations",
+    "importance": 4,
+    "kind": "原理",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.6944,
+    "desc_zero_share": 0.3889,
+    "domain": {
+     "p1P20": 6,
+     "p2P20": 0,
+     "p75": 14,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 14，需 ≥ 且 >50）；原理但 rf=1>0"
+  },
+  {
+   "id": "atomic_theory",
+   "metrics": {
+    "name": "近代原子论",
+    "category": "chemistry",
+    "importance": 1,
+    "kind": "原理",
+    "pf": 8,
+    "rf": 16,
+    "out_deg": 0,
+    "descendants": 76,
+    "desc_rank_pct": 0.011,
+    "desc_zero_share": 0.4725,
+    "domain": {
+     "p1P20": 4,
+     "p2P20": 0,
+     "p75": 5,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "基石尾组未中：域内下游 76 > 本域 P1 20 分位 4 且 pf=8>0；原理但 rf=16>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "autobahn",
+   "metrics": {
+    "name": "高速公路",
+    "category": "transport",
+    "importance": 2,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 2,
+    "out_deg": 2,
+    "descendants": 0,
+    "desc_rank_pct": 0.4072,
+    "desc_zero_share": 0.6186,
+    "domain": {
+     "p1P20": 2,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "baby_monitor",
+   "metrics": {
+    "name": "婴儿监护器",
+    "category": "daily_life",
+    "importance": 4,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.2558,
+    "desc_zero_share": 0.7597,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 0,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 0，需 ≥ 且 >50）"
+  },
+  {
+   "id": "bank",
+   "metrics": {
+    "name": "近代银行",
+    "category": "economy",
+    "importance": 1,
+    "kind": "制度",
+    "pf": 7,
+    "rf": 12,
+    "out_deg": 1,
+    "descendants": 40,
+    "desc_rank_pct": 0.0242,
+    "desc_zero_share": 0.4113,
+    "domain": {
+     "p1P20": 3,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "基石尾组未中：域内下游 40 > 本域 P1 20 分位 3 且 pf=7>0；制度但 rf=12/out_deg=1，非孤岛；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "barometer",
+   "metrics": {
+    "name": "气压计",
+    "category": "physics",
+    "importance": 2,
+    "kind": "器物",
+    "pf": 2,
+    "rf": 8,
+    "out_deg": 0,
+    "descendants": 2,
+    "desc_rank_pct": 0.4115,
+    "desc_zero_share": 0.4292,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 6,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 2（本域 P2 20 分位 0，全域（本域全部条目）中位数 1，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "blunt_body_heat_shield",
+   "metrics": {
+    "name": "钝体防热罩",
+    "category": "space_exploration",
+    "importance": 3,
+    "kind": "原理",
+    "pf": 2,
+    "rf": 2,
+    "out_deg": 1,
+    "descendants": 2,
+    "desc_rank_pct": 0.1923,
+    "desc_zero_share": 0.6154,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 2（本域 75 分位 1，需 ≥ 且 >50）；原理但 rf=2>0"
+  },
+  {
+   "id": "bolas",
+   "metrics": {
+    "name": "投石绊索",
+    "category": "military",
+    "importance": 5,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.4602,
+    "desc_zero_share": 0.6549,
+    "domain": {
+     "p1P20": 4,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P5 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 1，需 ≥ 且 >50）"
+  },
+  {
+   "id": "calculus",
+   "metrics": {
+    "name": "微积分学",
+    "category": "math_pure",
+    "importance": 1,
+    "kind": "器物",
+    "pf": 30,
+    "rf": 37,
+    "out_deg": 1,
+    "descendants": 452,
+    "desc_rank_pct": 0.0049,
+    "desc_zero_share": 0.5041,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "基石尾组未中：域内下游 452 > 本域 P1 20 分位 1 且 pf=30>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "candu_reactor",
+   "metrics": {
+    "name": "CANDU重水堆",
+    "category": "energy_power",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.494,
+    "desc_zero_share": 0.5774,
+    "domain": {
+     "p1P20": 16,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 3，需 ≥ 且 >50）"
+  },
+  {
+   "id": "cayley_glider",
+   "metrics": {
+    "name": "载人滑翔机",
+    "category": "transport",
+    "importance": 4,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 2,
+    "out_deg": 0,
+    "descendants": 0,
+    "desc_rank_pct": 0.4794,
+    "desc_zero_share": 0.6186,
+    "domain": {
+     "p1P20": 2,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 1，需 ≥ 且 >50）"
+  },
+  {
+   "id": "cellophane",
+   "metrics": {
+    "name": "玻璃纸",
+    "category": "materials",
+    "importance": 4,
+    "kind": "媒介",
+    "pf": 1,
+    "rf": 2,
+    "out_deg": 0,
+    "descendants": 3,
+    "desc_rank_pct": 0.3154,
+    "desc_zero_share": 0.4769,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 4,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 3（本域 75 分位 4，需 ≥ 且 >50）；媒介但 rf=2/out_deg=0，非孤岛"
+  },
+  {
+   "id": "classical_elements",
+   "metrics": {
+    "name": "四元素说",
+    "category": "physics",
+    "importance": 4,
+    "kind": "原理",
+    "pf": 3,
+    "rf": 5,
+    "out_deg": 0,
+    "descendants": 5,
+    "desc_rank_pct": 0.2743,
+    "desc_zero_share": 0.4292,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 6,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 5（本域 75 分位 6，需 ≥ 且 >50）；原理但 rf=5>0"
+  },
+  {
+   "id": "commedia_dell_arte",
+   "metrics": {
+    "name": "即兴喜剧",
+    "category": "culture_media",
+    "importance": 2,
+    "kind": "媒介",
+    "pf": 0,
+    "rf": 5,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.4161,
+    "desc_zero_share": 0.698,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；媒介但 rf=5/out_deg=1，非孤岛；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "conscription",
+   "metrics": {
+    "name": "征兵制",
+    "category": "military",
+    "importance": 2,
+    "kind": "制度",
+    "pf": 0,
+    "rf": 4,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.5575,
+    "desc_zero_share": 0.6549,
+    "domain": {
+     "p1P20": 4,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；制度但 rf=4/out_deg=1，非孤岛；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "convex_combination",
+   "metrics": {
+    "name": "凸组合",
+    "category": "math_pure",
+    "importance": 3,
+    "kind": "原理",
+    "pf": 1,
+    "rf": 2,
+    "out_deg": 0,
+    "descendants": 1,
+    "desc_rank_pct": 0.3748,
+    "desc_zero_share": 0.5041,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 1（本域 75 分位 3，需 ≥ 且 >50）；原理但 rf=2>0"
+  },
+  {
+   "id": "crank_connecting_rod",
+   "metrics": {
+    "name": "曲柄连杆机构",
+    "category": "energy_power",
+    "importance": 4,
+    "kind": "器物",
+    "pf": 1,
+    "rf": 2,
+    "out_deg": 2,
+    "descendants": 1,
+    "desc_rank_pct": 0.3393,
+    "desc_zero_share": 0.5774,
+    "domain": {
+     "p1P20": 16,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 1（本域 75 分位 3，需 ≥ 且 >50）"
+  },
+  {
+   "id": "crowdsourcing",
+   "metrics": {
+    "name": "众包",
+    "category": "info_media",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 2,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.5034,
+    "desc_zero_share": 0.5753,
+    "domain": {
+     "p1P20": 16,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 2，需 ≥ 且 >50）"
+  },
+  {
+   "id": "distillation",
+   "metrics": {
+    "name": "蒸馏",
+    "category": "chemistry",
+    "importance": 2,
+    "kind": "工艺",
+    "pf": 8,
+    "rf": 10,
+    "out_deg": 0,
+    "descendants": 10,
+    "desc_rank_pct": 0.1538,
+    "desc_zero_share": 0.4725,
+    "domain": {
+     "p1P20": 4,
+     "p2P20": 0,
+     "p75": 5,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 10（本域 P2 20 分位 0，全域（本域全部条目）中位数 1，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "dna_double_helix",
+   "metrics": {
+    "name": "DNA双螺旋",
+    "category": "life_medicine",
+    "importance": 1,
+    "kind": "工艺",
+    "pf": 14,
+    "rf": 20,
+    "out_deg": 1,
+    "descendants": 31,
+    "desc_rank_pct": 0.0155,
+    "desc_zero_share": 0.6409,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "基石尾组未中：域内下游 31 > 本域 P1 20 分位 0 且 pf=14>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "ebers_papyrus",
+   "metrics": {
+    "name": "埃伯斯纸草卷",
+    "category": "life_medicine",
+    "importance": 4,
+    "kind": "媒介",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.5356,
+    "desc_zero_share": 0.6409,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 1，需 ≥ 且 >50）；媒介但 rf=0/out_deg=1，非孤岛"
+  },
+  {
+   "id": "entscheidungsproblem",
+   "metrics": {
+    "name": "判定问题",
+    "category": "logic_foundations",
+    "importance": 2,
+    "kind": "原理",
+    "pf": 1,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 1,
+    "desc_rank_pct": 0.4444,
+    "desc_zero_share": 0.3889,
+    "domain": {
+     "p1P20": 6,
+     "p2P20": 0,
+     "p75": 14,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 1（本域 P2 20 分位 0，全域（本域全部条目）中位数 1，需 ≤分位 且 <中位）；原理但 rf=1>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "erlang_queueing_theory",
+   "metrics": {
+    "name": "厄尔朗排队论",
+    "category": "math_pure",
+    "importance": 2,
+    "kind": "媒介",
+    "pf": 0,
+    "rf": 2,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.6989,
+    "desc_zero_share": 0.5041,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；媒介但 rf=2/out_deg=1，非孤岛；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "esim",
+   "metrics": {
+    "name": "eSIM",
+    "category": "info_media",
+    "importance": 5,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.5616,
+    "desc_zero_share": 0.5753,
+    "domain": {
+     "p1P20": 16,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P5 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 2，需 ≥ 且 >50）"
+  },
+  {
+   "id": "extradosed_bridge",
+   "metrics": {
+    "name": "矮塔斜拉桥",
+    "category": "construction",
+    "importance": 2,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 3,
+    "descendants": 0,
+    "desc_rank_pct": 0.5504,
+    "desc_zero_share": 0.6512,
+    "domain": {
+     "p1P20": 7,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "fairy_tale",
+   "metrics": {
+    "name": "童话故事",
+    "category": "culture_media",
+    "importance": 2,
+    "kind": "媒介",
+    "pf": 0,
+    "rf": 4,
+    "out_deg": 2,
+    "descendants": 0,
+    "desc_rank_pct": 0.4899,
+    "desc_zero_share": 0.698,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；媒介但 rf=4/out_deg=2，非孤岛；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "fire_brick",
+   "metrics": {
+    "name": "耐火砖",
+    "category": "construction",
+    "importance": 2,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 3,
+    "descendants": 0,
+    "desc_rank_pct": 0.5659,
+    "desc_zero_share": 0.6512,
+    "domain": {
+     "p1P20": 7,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "friction_match",
+   "metrics": {
+    "name": "摩擦火柴",
+    "category": "chemistry",
+    "importance": 5,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 2,
+    "descendants": 0,
+    "desc_rank_pct": 0.7692,
+    "desc_zero_share": 0.4725,
+    "domain": {
+     "p1P20": 4,
+     "p2P20": 0,
+     "p75": 5,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": false
+   },
+   "why_missed": "P5 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 5，需 ≥ 且 >50）"
+  },
+  {
+   "id": "fullerene",
+   "metrics": {
+    "name": "富勒烯",
+    "category": "materials",
+    "importance": 3,
+    "kind": "工艺",
+    "pf": 2,
+    "rf": 4,
+    "out_deg": 0,
+    "descendants": 6,
+    "desc_rank_pct": 0.1846,
+    "desc_zero_share": 0.4769,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 4,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 6（本域 75 分位 4，需 ≥ 且 >50）"
+  },
+  {
+   "id": "gas_mask",
+   "metrics": {
+    "name": "防毒面具",
+    "category": "military",
+    "importance": 2,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.6283,
+    "desc_zero_share": 0.6549,
+    "domain": {
+     "p1P20": 4,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "gmres",
+   "metrics": {
+    "name": "GMRES",
+    "category": "algorithms_cs",
+    "importance": 2,
+    "kind": "原理",
+    "pf": 0,
+    "rf": 4,
+    "out_deg": 3,
+    "descendants": 0,
+    "desc_rank_pct": 0.5984,
+    "desc_zero_share": 0.6142,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；原理但 rf=4>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "gold_standard",
+   "metrics": {
+    "name": "金本位制",
+    "category": "economy",
+    "importance": 2,
+    "kind": "制度",
+    "pf": 5,
+    "rf": 9,
+    "out_deg": 1,
+    "descendants": 8,
+    "desc_rank_pct": 0.121,
+    "desc_zero_share": 0.4113,
+    "domain": {
+     "p1P20": 3,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 8（本域 P2 20 分位 0，全域（本域全部条目）中位数 1，需 ≤分位 且 <中位）；制度但 rf=9/out_deg=1，非孤岛；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "golden_rice",
+   "metrics": {
+    "name": "黄金大米",
+    "category": "agriculture_food",
+    "importance": 2,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 2,
+    "descendants": 0,
+    "desc_rank_pct": 0.6575,
+    "desc_zero_share": 0.5822,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "guerrilla_warfare",
+   "metrics": {
+    "name": "游击战",
+    "category": "military",
+    "importance": 2,
+    "kind": "原理",
+    "pf": 0,
+    "rf": 2,
+    "out_deg": 0,
+    "descendants": 0,
+    "desc_rank_pct": 0.6726,
+    "desc_zero_share": 0.6549,
+    "domain": {
+     "p1P20": 4,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；原理但 rf=2>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "hadley_cell",
+   "metrics": {
+    "name": "哈得来环流",
+    "category": "earth_space",
+    "importance": 2,
+    "kind": "原理",
+    "pf": 1,
+    "rf": 2,
+    "out_deg": 1,
+    "descendants": 1,
+    "desc_rank_pct": 0.2657,
+    "desc_zero_share": 0.6573,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 1（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；原理但 rf=2>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "halothane",
+   "metrics": {
+    "name": "氟烷",
+    "category": "life_medicine",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 3,
+    "descendants": 0,
+    "desc_rank_pct": 0.5975,
+    "desc_zero_share": 0.6409,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 1，需 ≥ 且 >50）"
+  },
+  {
+   "id": "hausdorff_space",
+   "metrics": {
+    "name": "豪斯多夫空间",
+    "category": "math_pure",
+    "importance": 2,
+    "kind": "原理",
+    "pf": 4,
+    "rf": 8,
+    "out_deg": 1,
+    "descendants": 5,
+    "desc_rank_pct": 0.1718,
+    "desc_zero_share": 0.5041,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 5（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；原理但 rf=8>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "health_qr_code",
+   "metrics": {
+    "name": "健康码",
+    "category": "governance",
+    "importance": 4,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 5,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.7672,
+    "desc_zero_share": 0.3534,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 10,
+     "median_used": 2,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 10，需 ≥ 且 >50）"
+  },
+  {
+   "id": "high_voltage_direct_current",
+   "metrics": {
+    "name": "高压直流输电",
+    "category": "energy_power",
+    "importance": 2,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 2,
+    "descendants": 0,
+    "desc_rank_pct": 0.6786,
+    "desc_zero_share": 0.5774,
+    "domain": {
+     "p1P20": 16,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "hutton_uniformitarianism",
+   "metrics": {
+    "name": "赫顿均变论",
+    "category": "earth_space",
+    "importance": 2,
+    "kind": "原理",
+    "pf": 1,
+    "rf": 2,
+    "out_deg": 1,
+    "descendants": 3,
+    "desc_rank_pct": 0.1399,
+    "desc_zero_share": 0.6573,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 3（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；原理但 rf=2>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "hydrogen_bond",
+   "metrics": {
+    "name": "氢键",
+    "category": "chemistry",
+    "importance": 2,
+    "kind": "原理",
+    "pf": 1,
+    "rf": 2,
+    "out_deg": 1,
+    "descendants": 1,
+    "desc_rank_pct": 0.4725,
+    "desc_zero_share": 0.4725,
+    "domain": {
+     "p1P20": 4,
+     "p2P20": 0,
+     "p75": 5,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 1（本域 P2 20 分位 0，全域（本域全部条目）中位数 1，需 ≤分位 且 <中位）；原理但 rf=2>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "integrated_circuit",
+   "metrics": {
+    "name": "集成电路",
+    "category": "info_media",
+    "importance": 1,
+    "kind": "器物",
+    "pf": 23,
+    "rf": 36,
+    "out_deg": 2,
+    "descendants": 207,
+    "desc_rank_pct": 0.0171,
+    "desc_zero_share": 0.5753,
+    "domain": {
+     "p1P20": 16,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "基石尾组未中：域内下游 207 > 本域 P1 20 分位 16 且 pf=23>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "ipod",
+   "metrics": {
+    "name": "iPod",
+    "category": "computing_systems",
+    "importance": 3,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 4,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.7065,
+    "desc_zero_share": 0.5688,
+    "domain": {
+     "p1P20": 12,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 2，需 ≥ 且 >50）"
+  },
+  {
+   "id": "junkers_ju52",
+   "metrics": {
+    "name": "容克斯Ju 52",
+    "category": "transport",
+    "importance": 3,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 2,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.7268,
+    "desc_zero_share": 0.6186,
+    "domain": {
+     "p1P20": 2,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 1，需 ≥ 且 >50）"
+  },
+  {
+   "id": "karmarkar_interior_point",
+   "metrics": {
+    "name": "卡马卡尔内点法",
+    "category": "algorithms_cs",
+    "importance": 2,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 3,
+    "out_deg": 2,
+    "descendants": 0,
+    "desc_rank_pct": 0.7087,
+    "desc_zero_share": 0.6142,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "kraft_process",
+   "metrics": {
+    "name": "硫酸盐法制浆",
+    "category": "manufacturing",
+    "importance": 3,
+    "kind": "媒介",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 2,
+    "descendants": 0,
+    "desc_rank_pct": 0.7681,
+    "desc_zero_share": 0.4444,
+    "domain": {
+     "p1P20": 14,
+     "p2P20": 0,
+     "p75": 6,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 6，需 ≥ 且 >50）；媒介但 rf=1/out_deg=2，非孤岛"
+  },
+  {
+   "id": "laminated_glass",
+   "metrics": {
+    "name": "夹层玻璃",
+    "category": "materials",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 5,
+    "out_deg": 0,
+    "descendants": 0,
+    "desc_rank_pct": 0.7,
+    "desc_zero_share": 0.4769,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 4,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 4，需 ≥ 且 >50）"
+  },
+  {
+   "id": "language",
+   "metrics": {
+    "name": "语言",
+    "category": "culture_media",
+    "importance": 1,
+    "kind": "工艺",
+    "pf": 1,
+    "rf": 3,
+    "out_deg": 0,
+    "descendants": 17,
+    "desc_rank_pct": 0.0134,
+    "desc_zero_share": 0.698,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "基石尾组未中：域内下游 17 > 本域 P1 20 分位 0 且 pf=1>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "library",
+   "metrics": {
+    "name": "图书馆",
+    "category": "education_knowledge",
+    "importance": 4,
+    "kind": "媒介",
+    "pf": 3,
+    "rf": 6,
+    "out_deg": 1,
+    "descendants": 4,
+    "desc_rank_pct": 0.2128,
+    "desc_zero_share": 0.5532,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 4（本域 75 分位 2，需 ≥ 且 >50）；媒介但 rf=6/out_deg=1，非孤岛"
+  },
+  {
+   "id": "lithography",
+   "metrics": {
+    "name": "石版印刷",
+    "category": "info_media",
+    "importance": 3,
+    "kind": "媒介",
+    "pf": 2,
+    "rf": 5,
+    "out_deg": 0,
+    "descendants": 2,
+    "desc_rank_pct": 0.2603,
+    "desc_zero_share": 0.5753,
+    "domain": {
+     "p1P20": 16,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 2（本域 75 分位 2，需 ≥ 且 >50）；媒介但 rf=5/out_deg=0，非孤岛"
+  },
+  {
+   "id": "lunokhod",
+   "metrics": {
+    "name": "月球车1号",
+    "category": "space_exploration",
+    "importance": 4,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.7308,
+    "desc_zero_share": 0.6154,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 1，需 ≥ 且 >50）"
+  },
+  {
+   "id": "measles_vaccine",
+   "metrics": {
+    "name": "麻疹疫苗",
+    "category": "life_medicine",
+    "importance": 3,
+    "kind": "工艺",
+    "pf": 1,
+    "rf": 2,
+    "out_deg": 4,
+    "descendants": 1,
+    "desc_rank_pct": 0.2972,
+    "desc_zero_share": 0.6409,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 1（本域 75 分位 1，需 ≥ 且 >50）"
+  },
+  {
+   "id": "microprocessor",
+   "metrics": {
+    "name": "微处理器",
+    "category": "computing_systems",
+    "importance": 1,
+    "kind": "器物",
+    "pf": 17,
+    "rf": 26,
+    "out_deg": 1,
+    "descendants": 103,
+    "desc_rank_pct": 0.0181,
+    "desc_zero_share": 0.5688,
+    "domain": {
+     "p1P20": 12,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "基石尾组未中：域内下游 103 > 本域 P1 20 分位 12 且 pf=17>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "montessori_education",
+   "metrics": {
+    "name": "蒙特梭利教学法",
+    "category": "education_knowledge",
+    "importance": 2,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.7766,
+    "desc_zero_share": 0.5532,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "moore_law",
+   "metrics": {
+    "name": "摩尔定律",
+    "category": "computing_systems",
+    "importance": 2,
+    "kind": "原理",
+    "pf": 1,
+    "rf": 2,
+    "out_deg": 2,
+    "descendants": 1,
+    "desc_rank_pct": 0.3623,
+    "desc_zero_share": 0.5688,
+    "domain": {
+     "p1P20": 12,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 1（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；原理但 rf=2>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "mosaic",
+   "metrics": {
+    "name": "镶嵌工艺",
+    "category": "manufacturing",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 4,
+    "rf": 8,
+    "out_deg": 0,
+    "descendants": 4,
+    "desc_rank_pct": 0.2754,
+    "desc_zero_share": 0.4444,
+    "domain": {
+     "p1P20": 14,
+     "p2P20": 0,
+     "p75": 6,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 4（本域 75 分位 6，需 ≥ 且 >50）"
+  },
+  {
+   "id": "nsfnet",
+   "metrics": {
+    "name": "NSFNET",
+    "category": "info_media",
+    "importance": 3,
+    "kind": "媒介",
+    "pf": 0,
+    "rf": 2,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.726,
+    "desc_zero_share": 0.5753,
+    "domain": {
+     "p1P20": 16,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 2，需 ≥ 且 >50）；媒介但 rf=2/out_deg=1，非孤岛"
+  },
+  {
+   "id": "obelisk",
+   "metrics": {
+    "name": "方尖碑",
+    "category": "construction",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 2,
+    "descendants": 0,
+    "desc_rank_pct": 0.7054,
+    "desc_zero_share": 0.6512,
+    "domain": {
+     "p1P20": 7,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 1，需 ≥ 且 >50）"
+  },
+  {
+   "id": "oersted_electromagnetism",
+   "metrics": {
+    "name": "奥斯特电流磁效应",
+    "category": "physics",
+    "importance": 2,
+    "kind": "工艺",
+    "pf": 4,
+    "rf": 5,
+    "out_deg": 1,
+    "descendants": 266,
+    "desc_rank_pct": 0.0088,
+    "desc_zero_share": 0.4292,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 6,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 266（本域 P2 20 分位 0，全域（本域全部条目）中位数 1，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "operating_microscope",
+   "metrics": {
+    "name": "手术显微镜",
+    "category": "life_medicine",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 1,
+    "rf": 1,
+    "out_deg": 2,
+    "descendants": 1,
+    "desc_rank_pct": 0.3189,
+    "desc_zero_share": 0.6409,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 1（本域 75 分位 1，需 ≥ 且 >50）"
+  },
+  {
+   "id": "ophthalmoscope",
+   "metrics": {
+    "name": "检眼镜",
+    "category": "life_medicine",
+    "importance": 4,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 2,
+    "descendants": 0,
+    "desc_rank_pct": 0.7709,
+    "desc_zero_share": 0.6409,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 1，需 ≥ 且 >50）"
+  },
+  {
+   "id": "ox_yoke",
+   "metrics": {
+    "name": "牛轭",
+    "category": "agriculture_food",
+    "importance": 4,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 2,
+    "out_deg": 0,
+    "descendants": 0,
+    "desc_rank_pct": 0.8014,
+    "desc_zero_share": 0.5822,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 2，需 ≥ 且 >50）"
+  },
+  {
+   "id": "pillow",
+   "metrics": {
+    "name": "枕",
+    "category": "daily_life",
+    "importance": 2,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 3,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.6667,
+    "desc_zero_share": 0.7597,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 0,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "pressurized_water_reactor",
+   "metrics": {
+    "name": "压水反应堆",
+    "category": "energy_power",
+    "importance": 2,
+    "kind": "工艺",
+    "pf": 1,
+    "rf": 5,
+    "out_deg": 1,
+    "descendants": 1,
+    "desc_rank_pct": 0.381,
+    "desc_zero_share": 0.5774,
+    "domain": {
+     "p1P20": 16,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 1（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "pseudorandom_number_generator",
+   "metrics": {
+    "name": "伪随机数生成器",
+    "category": "algorithms_cs",
+    "importance": 2,
+    "kind": "工艺",
+    "pf": 1,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 4,
+    "desc_rank_pct": 0.1181,
+    "desc_zero_share": 0.6142,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 4（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "rotary_quern",
+   "metrics": {
+    "name": "旋转磨盘",
+    "category": "agriculture_food",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 0,
+    "descendants": 0,
+    "desc_rank_pct": 0.8562,
+    "desc_zero_share": 0.5822,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 2，需 ≥ 且 >50）"
+  },
+  {
+   "id": "runge_theorem",
+   "metrics": {
+    "name": "龙格逼近定理",
+    "category": "math_pure",
+    "importance": 3,
+    "kind": "原理",
+    "pf": 0,
+    "rf": 4,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.9247,
+    "desc_zero_share": 0.5041,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 3，需 ≥ 且 >50）；原理但 rf=4>0"
+  },
+  {
+   "id": "schwarz_domain_decomposition",
+   "metrics": {
+    "name": "施瓦茨交替法与区域分解",
+    "category": "algorithms_cs",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.8976,
+    "desc_zero_share": 0.6142,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 1，需 ≥ 且 >50）"
+  },
+  {
+   "id": "scraper",
+   "metrics": {
+    "name": "刮削器",
+    "category": "manufacturing",
+    "importance": 4,
+    "kind": "器物",
+    "pf": 1,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 14,
+    "desc_rank_pct": 0.1498,
+    "desc_zero_share": 0.4444,
+    "domain": {
+     "p1P20": 14,
+     "p2P20": 0,
+     "p75": 6,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 14（本域 75 分位 6，需 ≥ 且 >50）"
+  },
+  {
+   "id": "seawall",
+   "metrics": {
+    "name": "海堤",
+    "category": "earth_space",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.8741,
+    "desc_zero_share": 0.6573,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 1，需 ≥ 且 >50）"
+  },
+  {
+   "id": "shulba_sutras",
+   "metrics": {
+    "name": "《绳法经》",
+    "category": "math_pure",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.9345,
+    "desc_zero_share": 0.5041,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 3，需 ≥ 且 >50）"
+  },
+  {
+   "id": "smart_card",
+   "metrics": {
+    "name": "智能卡",
+    "category": "computing_systems",
+    "importance": 5,
+    "kind": "制度",
+    "pf": 0,
+    "rf": 2,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.8913,
+    "desc_zero_share": 0.5688,
+    "domain": {
+     "p1P20": 12,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P5 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 2，需 ≥ 且 >50）；制度但 rf=2/out_deg=1，非孤岛"
+  },
+  {
+   "id": "snowboarding",
+   "metrics": {
+    "name": "单板滑雪",
+    "category": "culture_media",
+    "importance": 4,
+    "kind": "制度",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.8658,
+    "desc_zero_share": 0.698,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 1，需 ≥ 且 >50）；制度但 rf=0/out_deg=1，非孤岛"
+  },
+  {
+   "id": "spectral_sequence",
+   "metrics": {
+    "name": "谱序列",
+    "category": "math_pure",
+    "importance": 2,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.9444,
+    "desc_zero_share": 0.5041,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "stablecoin",
+   "metrics": {
+    "name": "稳定币",
+    "category": "economy",
+    "importance": 4,
+    "kind": "工艺",
+    "pf": 1,
+    "rf": 3,
+    "out_deg": 1,
+    "descendants": 1,
+    "desc_rank_pct": 0.5403,
+    "desc_zero_share": 0.4113,
+    "domain": {
+     "p1P20": 3,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 1（本域 75 分位 3，需 ≥ 且 >50）"
+  },
+  {
+   "id": "starlink",
+   "metrics": {
+    "name": "星链",
+    "category": "space_exploration",
+    "importance": 2,
+    "kind": "媒介",
+    "pf": 0,
+    "rf": 4,
+    "out_deg": 2,
+    "descendants": 0,
+    "desc_rank_pct": 0.8846,
+    "desc_zero_share": 0.6154,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；媒介但 rf=4/out_deg=2，非孤岛；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "stereotype_printing",
+   "metrics": {
+    "name": "铅版印刷",
+    "category": "info_media",
+    "importance": 4,
+    "kind": "媒介",
+    "pf": 0,
+    "rf": 2,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.8767,
+    "desc_zero_share": 0.5753,
+    "domain": {
+     "p1P20": 16,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 2，需 ≥ 且 >50）；媒介但 rf=2/out_deg=1，非孤岛"
+  },
+  {
+   "id": "stone_tools",
+   "metrics": {
+    "name": "打制石器",
+    "category": "manufacturing",
+    "importance": 1,
+    "kind": "器物",
+    "pf": 15,
+    "rf": 17,
+    "out_deg": 0,
+    "descendants": 323,
+    "desc_rank_pct": 0.0048,
+    "desc_zero_share": 0.4444,
+    "domain": {
+     "p1P20": 14,
+     "p2P20": 0,
+     "p75": 6,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "基石尾组未中：域内下游 323 > 本域 P1 20 分位 14 且 pf=15>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "taixue_han",
+   "metrics": {
+    "name": "太学",
+    "category": "education_knowledge",
+    "importance": 2,
+    "kind": "制度",
+    "pf": 1,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 1,
+    "desc_rank_pct": 0.4362,
+    "desc_zero_share": 0.5532,
+    "domain": {
+     "p1P20": 0,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 1（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；制度但 rf=1/out_deg=1，非孤岛；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "tea_bag",
+   "metrics": {
+    "name": "茶包",
+    "category": "daily_life",
+    "importance": 3,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.876,
+    "desc_zero_share": 0.7597,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 0,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 0，需 ≥ 且 >50）"
+  },
+  {
+   "id": "thyristor",
+   "metrics": {
+    "name": "晶闸管",
+    "category": "energy_power",
+    "importance": 3,
+    "kind": "器物",
+    "pf": 1,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 1,
+    "desc_rank_pct": 0.4048,
+    "desc_zero_share": 0.5774,
+    "domain": {
+     "p1P20": 16,
+     "p2P20": 0,
+     "p75": 3,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 1（本域 75 分位 3，需 ≥ 且 >50）"
+  },
+  {
+   "id": "toilet_paper",
+   "metrics": {
+    "name": "卫生纸",
+    "category": "daily_life",
+    "importance": 4,
+    "kind": "媒介",
+    "pf": 0,
+    "rf": 3,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.9147,
+    "desc_zero_share": 0.7597,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 0,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 0，需 ≥ 且 >50）；媒介但 rf=3/out_deg=1，非孤岛"
+  },
+  {
+   "id": "traction_engine",
+   "metrics": {
+    "name": "蒸汽牵引机",
+    "category": "transport",
+    "importance": 4,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.9227,
+    "desc_zero_share": 0.6186,
+    "domain": {
+     "p1P20": 2,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P4 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 1，需 ≥ 且 >50）"
+  },
+  {
+   "id": "type_theory",
+   "metrics": {
+    "name": "类型论",
+    "category": "logic_foundations",
+    "importance": 2,
+    "kind": "原理",
+    "pf": 1,
+    "rf": 3,
+    "out_deg": 1,
+    "descendants": 1,
+    "desc_rank_pct": 0.5833,
+    "desc_zero_share": 0.3889,
+    "domain": {
+     "p1P20": 6,
+     "p2P20": 0,
+     "p75": 14,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 1（本域 P2 20 分位 0，全域（本域全部条目）中位数 1，需 ≤分位 且 <中位）；原理但 rf=3>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "uranium_thorium_dating",
+   "metrics": {
+    "name": "铀钍测年法",
+    "category": "earth_space",
+    "importance": 2,
+    "kind": "工艺",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 1,
+    "descendants": 0,
+    "desc_rank_pct": 0.972,
+    "desc_zero_share": 0.6573,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 1,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "wigner_random_matrices",
+   "metrics": {
+    "name": "维格纳随机矩阵",
+    "category": "physics",
+    "importance": 3,
+    "kind": "原理",
+    "pf": 0,
+    "rf": 1,
+    "out_deg": 2,
+    "descendants": 0,
+    "desc_rank_pct": 0.9823,
+    "desc_zero_share": 0.4292,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 6,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "P3 不在基石/支柱/高档射程；疑被低估未中：域内下游 0（本域 75 分位 6，需 ≥ 且 >50）；原理但 rf=1>0"
+  },
+  {
+   "id": "yukawa_meson_theory",
+   "metrics": {
+    "name": "汤川介子理论",
+    "category": "physics",
+    "importance": 2,
+    "kind": "原理",
+    "pf": 1,
+    "rf": 1,
+    "out_deg": 1,
+    "descendants": 4,
+    "desc_rank_pct": 0.354,
+    "desc_zero_share": 0.4292,
+    "domain": {
+     "p1P20": 1,
+     "p2P20": 0,
+     "p75": 6,
+     "median_used": 1,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 4（本域 P2 20 分位 0，全域（本域全部条目）中位数 1，需 ≤分位 且 <中位）；原理但 rf=1>0；有 wikiEn 溯源，高档无溯源不捞"
+  },
+  {
+   "id": "z3_computer",
+   "metrics": {
+    "name": "Z3 计算机",
+    "category": "computing_systems",
+    "importance": 2,
+    "kind": "器物",
+    "pf": 0,
+    "rf": 0,
+    "out_deg": 2,
+    "descendants": 0,
+    "desc_rank_pct": 0.9964,
+    "desc_zero_share": 0.5688,
+    "domain": {
+     "p1P20": 12,
+     "p2P20": 0,
+     "p75": 2,
+     "median_used": 0,
+     "median_scope": "domain"
+    },
+    "has_wikiEn": true
+   },
+   "why_missed": "支柱尾组未中：域内下游 0（本域 P2 20 分位 0，全域（本域全部条目）中位数 0，需 ≤分位 且 <中位）；有 wikiEn 溯源，高档无溯源不捞"
+  }
+ ],
+ "missed_ids": [
+  "achilles_number",
+  "action_algebra",
+  "atomic_theory",
+  "autobahn",
+  "baby_monitor",
+  "bank",
+  "barometer",
+  "blunt_body_heat_shield",
+  "bolas",
+  "calculus",
+  "candu_reactor",
+  "cayley_glider",
+  "cellophane",
+  "classical_elements",
+  "commedia_dell_arte",
+  "conscription",
+  "convex_combination",
+  "crank_connecting_rod",
+  "crowdsourcing",
+  "distillation",
+  "dna_double_helix",
+  "ebers_papyrus",
+  "entscheidungsproblem",
+  "erlang_queueing_theory",
+  "esim",
+  "extradosed_bridge",
+  "fairy_tale",
+  "fire_brick",
+  "friction_match",
+  "fullerene",
+  "gas_mask",
+  "gmres",
+  "gold_standard",
+  "golden_rice",
+  "guerrilla_warfare",
+  "hadley_cell",
+  "halothane",
+  "hausdorff_space",
+  "health_qr_code",
+  "high_voltage_direct_current",
+  "hutton_uniformitarianism",
+  "hydrogen_bond",
+  "integrated_circuit",
+  "ipod",
+  "junkers_ju52",
+  "karmarkar_interior_point",
+  "kraft_process",
+  "laminated_glass",
+  "language",
+  "library",
+  "lithography",
+  "lunokhod",
+  "measles_vaccine",
+  "microprocessor",
+  "montessori_education",
+  "moore_law",
+  "mosaic",
+  "nsfnet",
+  "obelisk",
+  "oersted_electromagnetism",
+  "operating_microscope",
+  "ophthalmoscope",
+  "ox_yoke",
+  "pillow",
+  "pressurized_water_reactor",
+  "pseudorandom_number_generator",
+  "rotary_quern",
+  "runge_theorem",
+  "schwarz_domain_decomposition",
+  "scraper",
+  "seawall",
+  "shulba_sutras",
+  "smart_card",
+  "snowboarding",
+  "spectral_sequence",
+  "stablecoin",
+  "starlink",
+  "stereotype_printing",
+  "stone_tools",
+  "taixue_han",
+  "tea_bag",
+  "thyristor",
+  "toilet_paper",
+  "traction_engine",
+  "type_theory",
+  "uranium_thorium_dating",
+  "wigner_random_matrices",
+  "yukawa_meson_theory",
+  "z3_computer"
+ ]
+}

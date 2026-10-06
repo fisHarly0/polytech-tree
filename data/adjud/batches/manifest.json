@@ -1,0 +1,182 @@
+{
+  "contract": "docs/superpowers/specs/2026-09-27-adjud-tooling-contract.md §1/§9",
+  "design": "docs/superpowers/specs/2026-09-27-importance-kind-review-design.md §3.3",
+  "owner": "agent-4 (scripts/adjud_batches.mjs)",
+  "kind": "candidate_work_queue",
+  "status_note": "本清单是 T2 全量快筛的候选工作队列，不是“已复查”。条目未经任何裁决。",
+  "groups_source": {
+    "path": "docs/superpowers/data/domain-groups.json",
+    "sha256": "39ef1d6132c7895d63df82baf094d190f2b0fde1572f9a905d8cfa7d61fa96a2",
+    "note": "契约 §1 唯一真值；批次产物由该分组文件生成，凭 sha256 可追溯到当时的分组内容"
+  },
+  "t2_gate": {
+    "condition": "启动条件（spec §3.3）：校准批 100 条中用户“改判+移出”推翻率 > 20% 才启动全量快筛",
+    "if_not_met": "若 ≤ 20%：停在第二段，只裁决提名池（约 400–500 条），本清单不消费并显式标注全量未覆盖",
+    "default": "未启动"
+  },
+  "metrics_source": "data/adjud/metrics.json (contract §10 shared metrics)",
+  "batch_rule": "80–100 条/批，批内按 (era, importance) 排序，同域同代不跨批打散（BATCH_MIN=80, BATCH_MAX=100）",
+  "forced_splits": [
+    {
+      "group": "B",
+      "domain_era": "computing_systems|information",
+      "chunk_size": 103,
+      "split_into_parts": 2,
+      "reason": "单域单时代块 >100 条，为满足 80–100/批不得不切，未做均衡性改动"
+    },
+    {
+      "group": "D",
+      "domain_era": "math_pure|industrial",
+      "chunk_size": 168,
+      "split_into_parts": 2,
+      "reason": "单域单时代块 >100 条，为满足 80–100/批不得不切，未做均衡性改动"
+    },
+    {
+      "group": "D",
+      "domain_era": "math_pure|second_industrial",
+      "chunk_size": 242,
+      "split_into_parts": 3,
+      "reason": "单域单时代块 >100 条，为满足 80–100/批不得不切，未做均衡性改动"
+    }
+  ],
+  "groups": {
+    "A": {
+      "domains": [
+        "chemistry",
+        "construction",
+        "daily_life",
+        "manufacturing",
+        "physics"
+      ],
+      "total": 782,
+      "batches": 8,
+      "avg_batch_size": 97.75,
+      "min_batch": 82,
+      "max_batch": 100,
+      "batch_sizes": [
+        82,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "B": {
+      "domains": [
+        "computing_systems",
+        "earth_space",
+        "military",
+        "space_exploration",
+        "transport"
+      ],
+      "total": 778,
+      "batches": 8,
+      "avg_batch_size": 97.25,
+      "min_batch": 80,
+      "max_batch": 100,
+      "batch_sizes": [
+        100,
+        99,
+        100,
+        80,
+        100,
+        99,
+        100,
+        100
+      ]
+    },
+    "C": {
+      "domains": [
+        "culture_media",
+        "economy",
+        "education_knowledge",
+        "governance",
+        "info_media"
+      ],
+      "total": 775,
+      "batches": 8,
+      "avg_batch_size": 96.875,
+      "min_batch": 81,
+      "max_batch": 100,
+      "batch_sizes": [
+        97,
+        100,
+        100,
+        100,
+        100,
+        100,
+        81,
+        97
+      ]
+    },
+    "D": {
+      "domains": [
+        "algorithms_cs",
+        "logic_foundations",
+        "math_pure"
+      ],
+      "total": 774,
+      "batches": 9,
+      "avg_batch_size": 86,
+      "min_batch": 80,
+      "max_batch": 95,
+      "batch_sizes": [
+        91,
+        95,
+        88,
+        80,
+        89,
+        81,
+        89,
+        81,
+        80
+      ]
+    },
+    "E": {
+      "domains": [
+        "agriculture_food",
+        "energy_power",
+        "life_medicine",
+        "materials"
+      ],
+      "total": 767,
+      "batches": 8,
+      "avg_batch_size": 95.875,
+      "min_batch": 83,
+      "max_batch": 100,
+      "batch_sizes": [
+        83,
+        99,
+        100,
+        100,
+        100,
+        99,
+        100,
+        86
+      ]
+    }
+  },
+  "totals": {
+    "techs_json_total": 3876,
+    "batched_total": 3876,
+    "unique_batched_ids": 3876,
+    "duplicate_ids": 0,
+    "batches_total": 41,
+    "group_sizes": {
+      "A": 782,
+      "B": 778,
+      "C": 775,
+      "D": 774,
+      "E": 767
+    },
+    "group_size_range": 15,
+    "group_size_range_detail": "最大组 A=782, 最小组 E=767（运行时计算，非断言；契约 §1 改写版不含均衡规模承诺，极差如实报告）"
+  },
+  "consistency": {
+    "group_domains_not_in_categories_json": [],
+    "techs_categories_not_in_categories_json": []
+  }
+}

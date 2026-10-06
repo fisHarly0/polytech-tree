@@ -9,9 +9,15 @@ import { buildEdges, buildEraRings } from './edges'
 import { buildNameLabels, buildEraLabels, updateLabelFocal, setLabelMinPxAll } from './labels'
 import { CameraRig } from './controls'
 import { TourPlan, BLEND } from './tour'
+import { buildGraph, kHopDepth, prereqFocus } from './graph'
 
 // ───── 数据与布局 ─────
 const { placed, eraRadii, eraY, towerHeight } = layoutTower(TECHS)
+
+// 点击聚焦沿"画面上真实存在的弧线"走 2 跳：实测集大小 p50 10 / p90 39 / max 184，
+// 规模压得住，故不设限流（校验见 scripts/focus_graph_check.mjs）
+const graph = buildGraph(placed.map(p => p.node.id), placed.map(p => p.node.prereqs))
+const FOCUS_HOPS = 2
 
 // 统计行随数据变化，避免写死后再也数不清
 document.getElementById('statLine')!.textContent =
@@ -44,25 +50,29 @@ const rig = new CameraRig(camera, renderer.domElement, eraRadii, towerHeight, pl
 const edges = buildEdges(placed, plan.revealAt)
 scene.add(edges.lines)
 
-// ───── UI：图例 + 名称显示上限 ─────
+// ───── UI：图例（领域可隐藏）+ 名称显示上限 ─────
 const legend = document.getElementById('legend')!
+const catCount = CATEGORY_NAMES.map((_, i) => placed.filter(p => p.node.category === i).length)
+const IMPLbl = ['基石', '领域支柱', '领域内重要', '改良与细分', '长尾补充']
 legend.innerHTML = `
   <div class="lg-head"><div class="lg-title">领域图例</div>
     <button class="lg-toggle" id="legendToggle" title="折叠/展开图例">▾</button></div>
   <div class="lg-body">
   ${['A', 'B', 'C', 'D'].map(g => `
-    <div class="lg-group">${GROUP_NAMES[g]}</div>
+    <button class="lg-group" data-group="${g}" title="整组开关：组内有隐藏时全显，否则全隐">${GROUP_NAMES[g]}<i>▾</i></button>
     ${CATEGORY_NAMES.map((name, i) => CATEGORY_GROUPS[i] === g ? `
-      <div class="lg-item">
-        <span class="lg-dot" style="background:${CATEGORY_HEX[i]};color:${CATEGORY_HEX[i]}"></span>${name}
-      </div>` : '').join('')}`).join('')}
+      <button class="lg-item lg-cat" data-cat="${i}" title="点击隐藏该领域（含其连线），再点恢复">
+        <span class="lg-dot" style="background:${CATEGORY_HEX[i]};color:${CATEGORY_HEX[i]}"></span><span>${name}</span><b>${catCount[i]}</b>
+      </button>` : '').join('')}`).join('')}
+  <div class="lg-hint">点领域名隐藏该领域（含连线）· 点组名整组开关</div>
+  <button class="lg-reset" id="catReset">全部显示</button>
   <div class="lg-sep"></div>
   <div class="lg-title">形状 = 重要度（面数）</div>
-  <div class="lg-item">20 面 基石</div>
-  <div class="lg-item">12 面 领域支柱</div>
-  <div class="lg-item">8 面 领域内重要</div>
-  <div class="lg-item">6 面 改良与细分</div>
-  <div class="lg-item">4 面 长尾补充</div>
+  ${[1, 2, 3, 4, 5].map(l => `
+    <button class="lg-item lg-imp" data-level="${l}" title="点击只看该档（独显），再点恢复全部">
+      <span>${facesOf(l)} 面 ${IMPLbl[l - 1]}</span><b>${placed.filter(p => p.node.importance === l).length}</b>
+    </button>`).join('')}
+  <div class="lg-hint">点一档 = 只看这一档；再点恢复</div>
   <div class="lg-sep"></div>
   <div class="lg-title">名称显示上限</div>
   <div class="lg-limit">
@@ -73,7 +83,7 @@ legend.innerHTML = `
   <div class="lg-sep"></div>
   <div class="lg-title">副轴 kind（规范 §3：筛选与文案）</div>
   <div class="lg-kinds" id="kindFilter"></div>
-  <div class="lg-hint">点选即筛选：只压暗与让出名称名额，不动节点位置</div>
+  <div class="lg-hint">点选即筛选：隐去节点、连线与名称，不动位置</div>
   </div>
 `
 // 图例折叠：只留标题行，把画面让给塔身
@@ -83,27 +93,90 @@ legendToggle.addEventListener('click', () => {
   legendToggle.textContent = collapsed ? '▸' : '▾'
 })
 
-// ───── `kind` 副轴筛选（§3；只改颜色与名称名额，不改布局） ─────
+// ───── 可见性状态：领域掩码 ∧ kind 掩码 ∧ 重要度独显 + 点击聚焦，三处渲染共用一次下发 ─────
+const hiddenCats = new Set<number>()
+const activeKinds = new Set<string>()
+let soloImp: number | null = null // 独显某档重要度（null = 不限档）
+let selected: number | null = null
+let selectionMode: 'nearby' | 'prereqs' = 'nearby'
+const focusBuf = new Int8Array(placed.length)
+let focusDepth: Int8Array | null = null
+const nodeVis = new Uint8Array(placed.length).fill(1) // 1 = 在场（未被隐藏）
+const edgeActive = new Uint8Array(placed.length).fill(1) // 在场且在聚焦集内 → 连线遮罩
+const isVisible = (i: number) => nodeVis[i] > 0
+
 const kindFilter = document.getElementById('kindFilter')!
 const KINDS = ['原理', '工艺', '器物', '制度', '媒介'] as const
-const kindCount = KINDS.map(k => placed.filter(p => p.node.kind === k).length)
-const activeKinds = new Set<string>()
 kindFilter.innerHTML = KINDS.map((k, i) =>
-  `<button class="lg-kind" data-kind="${k}">${k}<b>${kindCount[i]}</b></button>`).join('')
-function applyKindFilter() {
-  const keep = activeKinds.size
-    ? (idx: number) => activeKinds.has(placed[idx].node.kind)
-    : null
-  field.setFilter(keep)
-  nameLabels.setFilter(keep)
+  `<button class="lg-kind" data-kind="${k}">${k}<b>${placed.filter(p => p.node.kind === k).length}</b></button>`).join('')
+
+// 域群 → 该组下的领域索引。键必须是 categories.json 的组字母（A/B/C/D），
+// 图例的 data-group 用的就是这个字母
+const CATS_BY_GROUP: Record<string, number[]> = Object.fromEntries(
+  ['A', 'B', 'C', 'D'].map(g =>
+    [g, CATEGORY_NAMES.map((_, i) => i).filter(i => CATEGORY_GROUPS[i] === g)]))
+
+function syncPanelState() {
+  legend.querySelectorAll('.lg-cat').forEach(el =>
+    el.classList.toggle('off', hiddenCats.has(Number((el as HTMLElement).dataset.cat))))
+  // 组头三态：全隐 / 部分隐 / 全显，免得整组灰着却看不出组里还剩几个领域
+  legend.querySelectorAll('.lg-group').forEach(el => {
+    const cats = CATS_BY_GROUP[(el as HTMLElement).dataset.group!] ?? []
+    const hidden = cats.filter(c => hiddenCats.has(c)).length
+    el.classList.toggle('off', hidden === cats.length)
+    el.classList.toggle('part', hidden > 0 && hidden < cats.length)
+  })
+  document.getElementById('catReset')!.classList.toggle('idle', hiddenCats.size === 0 && soloImp === null)
+  legend.querySelectorAll('.lg-imp').forEach(el =>
+    el.classList.toggle('on', Number((el as HTMLElement).dataset.level) === soloImp))
   kindFilter.querySelectorAll('.lg-kind').forEach(el =>
     el.classList.toggle('on', activeKinds.has((el as HTMLElement).dataset.kind!)))
 }
+
+function applyVisualState() {
+  const kindsOn = activeKinds.size > 0
+  for (let i = 0; i < placed.length; i++) {
+    const n = placed[i].node
+    nodeVis[i] = !hiddenCats.has(n.category) &&
+      (!kindsOn || activeKinds.has(n.kind)) &&
+      (soloImp === null || n.importance === soloImp) ? 1 : 0
+  }
+  // 选中项所属领域被隐藏时聚焦自动失效
+  if (selected !== null && !nodeVis[selected]) { selected = null; focusDepth = null }
+  for (let i = 0; i < placed.length; i++)
+    edgeActive[i] = nodeVis[i] && (!focusDepth || focusDepth[i] >= 0) ? 1 : 0
+  syncPanelState()
+  field.setVisible(isVisible, focusDepth)
+  nameLabels.setFilter(isVisible)
+  nameLabels.setFocus(focusDepth)
+  edges.setActive(edgeActive)
+  edges.setEmphasis(focusDepth !== null) // 聚焦时子图的线提亮
+  if (focusDepth) edges.highlightPrereqs(null)
+}
+
+legend.addEventListener('click', e => {
+  const el = (e.target as HTMLElement).closest?.('.lg-cat, .lg-group, .lg-imp, .lg-reset') as HTMLElement | null
+  if (!el) return
+  if (el.classList.contains('lg-reset')) { hiddenCats.clear(); soloImp = null }
+  else if (el.classList.contains('lg-imp')) {
+    const l = Number(el.dataset.level)
+    soloImp = soloImp === l ? null : l // 独显：再点同一档即恢复
+  } else if (el.classList.contains('lg-group')) {
+    const cats = CATS_BY_GROUP[el.dataset.group!] ?? []
+    const anyHidden = cats.some(c => hiddenCats.has(c))
+    for (const c of cats) anyHidden ? hiddenCats.delete(c) : hiddenCats.add(c)
+  } else {
+    const c = Number(el.dataset.cat)
+    hiddenCats.has(c) ? hiddenCats.delete(c) : hiddenCats.add(c)
+  }
+  applyVisualState()
+})
+
 kindFilter.addEventListener('click', e => {
   const k = (e.target as HTMLElement)?.dataset?.kind
   if (!k) return
   activeKinds.has(k) ? activeKinds.delete(k) : activeKinds.add(k)
-  applyKindFilter()
+  applyVisualState()
 })
 
 let labelLimit = 100
@@ -137,7 +210,6 @@ const fog = scene.fog as THREE.Fog
 const FOG_BASE = { near: fog.near, far: fog.far }
 let shownEra = -2
 let shownFov = BASE_FOV
-let selectedRootIdx: number | null = null
 
 // 视场随"要看的圆盘"渐变；标签的像素换算依赖焦距，改 fov 必须同步
 function applyFov(fov: number) {
@@ -164,12 +236,13 @@ function setTouring(on: boolean) {
   fog.near = on ? 420 : FOG_BASE.near
   fog.far = on ? 2200 : FOG_BASE.far
   if (on) {
-    clearSelection()
     hoverIdx = null
-    field.highlight(null)
     shownEra = -2
+    // 漫游是纯观赏：聚焦先解除，领域/kind 的隐藏保留（连线遮罩与隐去一并带上）
+    selected = null
+    focusDepth = null
+    applyVisualState()
     field.beginTour(plan.revealAt, 0)
-    edges.highlightPrereqs(null)
     edges.beginTour()
   } else {
     tooltip.classList.remove('show')
@@ -201,60 +274,11 @@ rig.onTourEnd = () => {
   btnTour.classList.remove('active')
 }
 
-// ───── 悬停信息 ─────
+// ───── 拾取：悬停看信息，点击锁定关联 ─────
 const tooltip = document.getElementById('tooltip')!
 const raycaster = new THREE.Raycaster()
 const ndc = new THREE.Vector2()
 let hoverIdx: number | null = null
-const nodeIndexById = new Map(placed.map((p, i) => [p.node.id, i]))
-
-function nodeIndexAt(clientX: number, clientY: number): number | null {
-  const rect = renderer.domElement.getBoundingClientRect()
-  ndc.set(
-    ((clientX - rect.left) / rect.width) * 2 - 1,
-    -((clientY - rect.top) / rect.height) * 2 + 1
-  )
-  raycaster.setFromCamera(ndc, camera)
-  const hit = raycaster.intersectObjects(field.meshes, false)[0]
-  return hit ? field.nodeIndexAt(hit.object, hit.instanceId!) : null
-}
-
-function prereqTreeFrom(rootIdx: number): number[] {
-  const seen = new Set<number>()
-  const pending = [rootIdx]
-  while (pending.length) {
-    const idx = pending.pop()!
-    if (seen.has(idx)) continue
-    seen.add(idx)
-    for (const id of placed[idx].node.prereqs) {
-      const prereqIdx = nodeIndexById.get(id)
-      if (prereqIdx !== undefined) pending.push(prereqIdx)
-    }
-  }
-  return [...seen]
-}
-
-function clearSelection() {
-  if (selectedRootIdx === null) return
-  selectedRootIdx = null
-  field.setTreeHighlight(null, null)
-  edges.highlightTree(null)
-  hoverIdx = null
-  tooltip.classList.remove('show')
-  renderer.domElement.style.cursor = ''
-}
-
-function selectNode(idx: number | null) {
-  if (idx === null || selectedRootIdx === idx) {
-    clearSelection()
-    return
-  }
-  const nodes = prereqTreeFrom(idx)
-  selectedRootIdx = idx
-  field.highlight(null)
-  field.setTreeHighlight(idx, new Set(nodes))
-  edges.highlightTree(nodes)
-}
 
 // 规范 §6：tooltip 同时显示"精确数值"与"真实精度"，避免把约定值读成确证
 function yearText(n: TechNode): string {
@@ -266,61 +290,99 @@ function yearText(n: TechNode): string {
   return `${b.approx ? '约' : ''}${core}${b.mark ? `（${b.mark}）` : ''}`
 }
 
+function pickAt(clientX: number, clientY: number): number | null {
+  const rect = renderer.domElement.getBoundingClientRect()
+  ndc.set(
+    ((clientX - rect.left) / rect.width) * 2 - 1,
+    -((clientY - rect.top) / rect.height) * 2 + 1
+  )
+  raycaster.setFromCamera(ndc, camera)
+  // 隐去的节点由 field 挡回 null，但要继续试更靠后的命中，否则它们会挡住身后
+  for (const h of raycaster.intersectObjects(field.meshes, false)) {
+    const idx = field.nodeIndexAt(h.object, h.instanceId!)
+    if (idx !== null) return idx
+  }
+  return null
+}
+
+function selectNode(idx: number | null, mode: 'nearby' | 'prereqs' = 'nearby') {
+  if (idx === null || (idx === selected && mode === selectionMode)) {
+    selected = null
+    focusDepth = null
+  } else {
+    selected = idx
+    selectionMode = mode
+    focusDepth = mode === 'prereqs'
+      ? prereqFocus(graph, idx, focusBuf)
+      : kHopDepth(graph, idx, FOCUS_HOPS, focusBuf)
+  }
+  applyVisualState()
+}
+
 renderer.domElement.addEventListener('pointermove', e => {
   if (rig.mode === 'tour') return // 漫游中相机在动，悬停无意义
-  const idx = nodeIndexAt(e.clientX, e.clientY)
-  if (idx !== null) {
-    hoverIdx = idx
-    const n = placed[idx].node
-    // 前置科技：显示名称（最多 4 个，避免溢出）
-    const prereqNames = n.prereqs
-      .map(id => TECH_BY_ID.get(id)?.name ?? '')
-      .filter(Boolean)
-      .slice(0, 4)
-      .join('、')
-    tooltip.innerHTML = `
-        <div class="tt-name">${n.name}</div>
-        <div class="tt-dim">${n.nameEn !== n.name ? n.nameEn + ' · ' : ''}${yearText(n)}</div>
-        <div class="tt-dim">${ERA_INFO[n.era].name} · ${CATEGORY_NAMES[n.category]}${n.kind ? ' · ' + n.kind : ''}</div>
-        <div class="tt-dim">重要度 ${'★'.repeat(6 - n.importance)}${'☆'.repeat(n.importance - 1)}　${facesOf(n.importance)} 面</div>
-        ${prereqNames ? `<div class="tt-dim">前置：${prereqNames}</div>` : ''}
-        ${n.desc ? `<div class="tt-desc">${n.desc}</div>` : ''}
-        ${n.wikiEn
-          ? `<div class="tt-src">摘要参考英文维基百科条目
-              <a href="https://en.wikipedia.org/wiki/${encodeURIComponent(n.wikiEn)}" target="_blank" rel="noopener">${n.wikiEn}</a>
-              （CC BY-SA 4.0）</div>`
-          : ''}
-    `
-    tooltip.style.left = `${e.clientX + 16}px`
-    tooltip.style.top = `${e.clientY + 12}px`
-    tooltip.classList.add('show')
-    renderer.domElement.style.cursor = 'pointer'
+  const idx = pickAt(e.clientX, e.clientY)
+  hoverIdx = idx
+  if (idx === null) {
+    tooltip.classList.remove('show')
+    renderer.domElement.style.cursor = ''
     return
   }
-  hoverIdx = null
-  tooltip.classList.remove('show')
-  renderer.domElement.style.cursor = ''
+  const n = placed[idx].node
+  // 前置科技：显示名称（最多 4 个，避免溢出）
+  const prereqNames = n.prereqs
+    .map(id => TECH_BY_ID.get(id)?.name ?? '')
+    .filter(Boolean)
+    .slice(0, 4)
+    .join('、')
+  const link = selected === null ? '' : selected === idx
+    ? `<div class="tt-dim">已聚焦：${selectionMode === 'prereqs' ? '全部上游前置科技' : '与其相连的两跳内科技'}</div>`
+    : focusDepth && focusDepth[idx] >= 0
+      ? `<div class="tt-dim">${selectionMode === 'prereqs' ? '属于上游前置树' : `在聚焦范围内（${focusDepth[idx]} 跳）`}</div>` : ''
+  tooltip.innerHTML = `
+    <div class="tt-name">${n.name}</div>
+    <div class="tt-dim">${n.nameEn !== n.name ? n.nameEn + ' · ' : ''}${yearText(n)}</div>
+    <div class="tt-dim">${ERA_INFO[n.era].name} · ${CATEGORY_NAMES[n.category]}${n.kind ? ' · ' + n.kind : ''}</div>
+    <div class="tt-dim">重要度 ${'★'.repeat(6 - n.importance)}${'☆'.repeat(n.importance - 1)}　${facesOf(n.importance)} 面</div>
+    ${prereqNames ? `<div class="tt-dim">前置：${prereqNames}</div>` : ''}
+    ${n.desc ? `<div class="tt-desc">${n.desc}</div>` : ''}
+    ${link}
+    ${n.wikiEn
+      ? `<div class="tt-src">摘要参考英文维基百科条目
+          <a href="https://en.wikipedia.org/wiki/${encodeURIComponent(n.wikiEn)}" target="_blank" rel="noopener">${n.wikiEn}</a>
+          （CC BY-SA 4.0）</div>`
+      : ''}
+  `
+  tooltip.style.left = `${e.clientX + 16}px`
+  tooltip.style.top = `${e.clientY + 12}px`
+  tooltip.classList.add('show')
+  renderer.domElement.style.cursor = 'pointer'
 })
+
 renderer.domElement.addEventListener('pointerleave', () => {
   hoverIdx = null
   tooltip.classList.remove('show')
   renderer.domElement.style.cursor = ''
 })
 
-// 鼠标拖拽只旋转视角；单击节点锁定整棵前置树，单击其余位置解除。
-let pointerDown: { x: number; y: number; button: number; wasTouring: boolean } | null = null
-document.addEventListener('pointerdown', e => {
-  pointerDown = { x: e.clientX, y: e.clientY, button: e.button, wasTouring: rig.mode === 'tour' }
+// 普通点击保留两跳聚焦，Shift + 点击锁定完整前置树；拖动与退出漫游不触发选择。
+let pointerDown: { x: number; y: number; time: number; id: number; wasTouring: boolean } | null = null
+renderer.domElement.addEventListener('pointerdown', e => {
+  pointerDown = e.button === 0
+    ? { x: e.clientX, y: e.clientY, time: performance.now(), id: e.pointerId, wasTouring: rig.mode === 'tour' }
+    : null
 }, true)
-document.addEventListener('click', e => {
-  if (rig.mode === 'tour') return
-  if (e.target !== renderer.domElement) {
-    clearSelection()
-    return
-  }
-  if (!pointerDown || pointerDown.wasTouring || pointerDown.button !== 0 ||
-      Math.hypot(e.clientX - pointerDown.x, e.clientY - pointerDown.y) > 6) return
-  selectNode(nodeIndexAt(e.clientX, e.clientY))
+renderer.domElement.addEventListener('pointerup', e => {
+  const down = pointerDown
+  pointerDown = null
+  if (!down || down.id !== e.pointerId || down.wasTouring || e.button !== 0 || rig.mode === 'tour') return
+  if (Math.hypot(e.clientX - down.x, e.clientY - down.y) > 5) return
+  if (performance.now() - down.time > 400) return
+  selectNode(pickAt(e.clientX, e.clientY), e.shiftKey ? 'prereqs' : 'nearby')
+})
+renderer.domElement.addEventListener('pointercancel', () => { pointerDown = null })
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && selected !== null) selectNode(null)
 })
 
 // ───── 自适应窗口 ─────
@@ -338,6 +400,9 @@ const clock = new THREE.Clock()
 const nameIdx = new Int32Array(placed.length)
 const nameAlpha = new Float32Array(placed.length)
 
+// 首帧前把掩码下发一遍：面板初始态（"全部显示"是否可点）也在这里对齐
+applyVisualState()
+
 function loop() {
   requestAnimationFrame(loop)
   const dt = Math.min(clock.getDelta(), 0.1)
@@ -354,8 +419,8 @@ function loop() {
     nameLabels.setTourNames(Math.max(0, plan.collectNames(t, nameIdx, nameAlpha)), nameIdx, nameAlpha)
   } else {
     field.update(time)
-    field.highlight(selectedRootIdx === null ? hoverIdx : null)
-    if (selectedRootIdx === null) edges.highlightPrereqs(hoverIdx)
+    field.highlight(hoverIdx)
+    edges.highlightPrereqs(selected === null ? hoverIdx : null)
     // 名称：仅完整在屏内的，按距离保留最近 limit 个
     nameLabels.update(camera, labelLimit, innerWidth, innerHeight)
   }

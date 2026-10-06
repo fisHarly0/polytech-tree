@@ -248,6 +248,8 @@ export function buildNameLabels(placed: PlacedNode[]): {
   invalidate: () => void
   /** 名称筛选：非匹配条目直接不参与"屏内最近 N 个"的选取 */
   setFilter: (keep: ((nodeIdx: number) => boolean) | null) => void
+  /** 聚焦：跳数表（>=0 的条目名字优先占名额），传 null 取消 */
+  setFocus: (focus: Int8Array | null) => void
 } {
   const names = placed.map(p => p.node.name)
   const { pages, slots } = buildNameAtlas(names)
@@ -283,16 +285,20 @@ export function buildNameLabels(placed: PlacedNode[]): {
   // 距离排序缓存（避免每帧分配）
   const dists = new Float32Array(placed.length)
   const order: number[] = []
+  const pinOrder: number[] = [] // 聚焦集内、本轮真正拿到名额的条目
+  const pinned = new Uint8Array(placed.length)
   const lastCamPos = new THREE.Vector3(0, -1e9, 0) // 初始值保证首帧必更新
   let lastLimit = -1
   let lastW = 0, lastH = 0
   let keep: ((nodeIdx: number) => boolean) | null = null
+  let focus: Int8Array | null = null
 
   const _v = new THREE.Vector3()
   const _proj = new THREE.Vector3()
 
   // 与 shader 一致的像素尺寸钳制常量
   const MIN_PX = 16, MAX_PX = 28, MARGIN_PX = 8 // MARGIN：距屏幕边缘的安全留白
+  const PIN_MAX = 40 // 聚焦时钉住的名字上限：2 跳集 p90 = 39，个别枢纽到 184，不能让字糊屏
 
   const update = (
     camera: THREE.PerspectiveCamera,
@@ -316,6 +322,7 @@ export function buildNameLabels(placed: PlacedNode[]): {
     order.length = 0
     for (let i = 0; i < placed.length; i++) {
       if (keep && !keep(i)) continue
+      if (focus && focus[i] < 0) continue // 聚焦时集外只留形体，名字一并收掉
       const p = placed[i]
       // 相机空间深度：在相机背后或比近裁剪面近的剔除
       _proj.copy(p.position).applyMatrix4(camera.matrixWorldInverse)
@@ -347,12 +354,29 @@ export function buildNameLabels(placed: PlacedNode[]): {
     }
     order.sort((a, b) => dists[a] - dists[b])
 
-    visAttrs.forEach(a => (a.array as Float32Array).fill(0))
-    const n = Math.min(Math.max(limit, 0), order.length)
-    for (let k = 0; k < n; k++) {
-      const e = nodeLocal[order[k]]
-      ;(e.attr.array as Float32Array)[e.local] = 1
+    // 聚焦：跳数小的先占名额（自身→1 跳→2 跳），拿不到名额的仍按近者优先
+    pinOrder.length = 0
+    if (focus) {
+      const cand = order.filter(i => focus![i] >= 0)
+      cand.sort((a, b) => focus![a] - focus![b] || dists[a] - dists[b])
+      const nPin = Math.min(PIN_MAX, limit, cand.length)
+      for (let k = 0; k < nPin; k++) { pinned[cand[k]] = 1; pinOrder.push(cand[k]) }
     }
+
+    visAttrs.forEach(a => (a.array as Float32Array).fill(0))
+    const put = (i: number, v: number) => {
+      const e = nodeLocal[i]
+      ;(e.attr.array as Float32Array)[e.local] = v
+    }
+    let shown = 0
+    for (const i of pinOrder) { put(i, 1); shown++ }
+    for (let k = 0; shown < limit && k < order.length; k++) {
+      const i = order[k]
+      if (pinned[i]) continue // 已钉住，不重复占名额
+      put(i, 1)
+      shown++
+    }
+    for (const i of pinOrder) pinned[i] = 0
     visAttrs.forEach(a => { a.needsUpdate = true })
   }
 
@@ -373,6 +397,10 @@ export function buildNameLabels(placed: PlacedNode[]): {
     setFilter: (fn: ((nodeIdx: number) => boolean) | null) => {
       keep = fn
       lastCamPos.set(0, -1e9, 0) // 迫使下一帧重算可见集
+    },
+    setFocus: (fn: Int8Array | null) => {
+      focus = fn
+      lastCamPos.set(0, -1e9, 0)
     },
   }
 }

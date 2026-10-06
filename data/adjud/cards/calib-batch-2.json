@@ -1,0 +1,2127 @@
+{
+ "shard": "calib",
+ "batch": "calib-2",
+ "total": 50,
+ "metrics_source": "data\\adjud\\metrics.json（契约 §10 共享指标）",
+ "id_source": "data\\adjud\\calib-sample.json",
+ "channel_counts": {
+  "支柱尾组": 4,
+  "原理零引用": 2,
+  "基石尾组": 2
+ },
+ "cards": [
+  {
+   "id": "abolition_legislation",
+   "name": "废奴立法",
+   "nameEn": "Abolition Legislation",
+   "wikiEn": "Abolitionism",
+   "aliases": [
+    "废奴运动",
+    "奴隶解放法"
+   ],
+   "year": 1833,
+   "year_basis": "exact",
+   "year_span": null,
+   "year_note": "英属殖民地废奴法1833年通过；挂上位词条Abolitionism",
+   "era": "industrial",
+   "category": "governance",
+   "kind": "制度",
+   "importance": 2,
+   "prereqs": [
+    "slavery",
+    "edicts_ashoka",
+    "encomienda_grant",
+    "movable_type_printing"
+   ],
+   "related": [
+    "serfdom",
+    "universal_suffrage",
+    "corvee_labor",
+    "geneva_conventions_1949"
+   ],
+   "desc": "以成文法废止人身所有权并向业主支付补偿，把劳动力从财产改写为受合同法约束的主体。",
+   "out_deg": 4,
+   "pf": 0,
+   "rf": 1,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 76,
+   "desc_rank_pct": 0.6552,
+   "desc_zero_share": 0.3534,
+   "tier_rank_pct": 0.2143,
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "机械事实：importance=2、kind=制度、category=governance、era=industrial、year=1833（year_basis=exact）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=4（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 76/116（desc_rank_pct=65.5%）；本域 116 条中 descendants==0 占 35.3%。 档位相对位置：tier_rank_pct=21.4%（同域同代 governance+industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：【支柱尾组：P2 且域内下游 0 ≤ 本域 P2 的 20 分位 0 且 < 本域中位数 2】"
+  },
+  {
+   "id": "action_algebra",
+   "name": "作用代数",
+   "nameEn": "Action algebra",
+   "wikiEn": "Action algebra",
+   "aliases": [
+    "行动代数",
+    "作用逻辑代数",
+    "Action algebra"
+   ],
+   "year": 1990,
+   "year_basis": "decade",
+   "year_span": null,
+   "year_note": "只知年代，取该十年代中点（规范 §3.8 规则 4）",
+   "era": "information",
+   "category": "logic_foundations",
+   "kind": "原理",
+   "importance": 4,
+   "prereqs": [
+    "boolean_algebra_structure"
+   ],
+   "related": [
+    "turing_machine"
+   ],
+   "desc": "兼具剩余半格与克林尼星号的代数结构，普拉特1990年提出，是程序逻辑代数模型。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 1,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 25,
+   "desc_rank_pct": 0.6944,
+   "desc_zero_share": 0.3889,
+   "tier_rank_pct": 1,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=原理、category=logic_foundations、era=information、year=1990（year_basis=decade）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 25/36（desc_rank_pct=69.4%）；本域 36 条中 descendants==0 占 38.9%。 档位相对位置：tier_rank_pct=100.0%（同域同代 logic_foundations+information 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "atomic_theory",
+   "name": "近代原子论",
+   "nameEn": "Atomic theory",
+   "wikiEn": "Atomic theory",
+   "aliases": [
+    "Dalton atomic theory",
+    "道尔顿原子论"
+   ],
+   "year": 1803,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "",
+   "era": "industrial",
+   "category": "chemistry",
+   "kind": "原理",
+   "importance": 1,
+   "prereqs": [],
+   "related": [
+    "periodic_table"
+   ],
+   "desc": "道尔顿提出元素由定重比原子构成，奠定近代化学。",
+   "out_deg": 0,
+   "pf": 8,
+   "rf": 16,
+   "descendants": 76,
+   "direct_downstream": [
+    {
+     "id": "law_of_multiple_proportions",
+     "name": "倍比定律",
+     "importance": 3
+    },
+    {
+     "id": "berzelius_chemical_symbols",
+     "name": "贝采里乌斯元素符号体系",
+     "importance": 2
+    },
+    {
+     "id": "dulong_petit_law",
+     "name": "杜隆-珀蒂定律",
+     "importance": 4
+    },
+    {
+     "id": "kekule_valence_theory",
+     "name": "化合价理论",
+     "importance": 2
+    },
+    {
+     "id": "periodic_table",
+     "name": "元素周期表",
+     "importance": 1
+    }
+   ],
+   "desc_rank": 1,
+   "desc_rank_pct": 0.011,
+   "desc_zero_share": 0.4725,
+   "tier_rank_pct": 0.0357,
+   "channels": [],
+   "why": "机械事实：importance=1、kind=原理、category=chemistry、era=industrial、year=1803（year_basis=batch_asserted）。 引用侧：pf=8（作为他人 prereq 终点次数）、rf=16（prereq+related 被引总数）、out_deg=0（prereq 出边）。 下游侧：descendants=76（prereq 传递闭包），域内排名 1/91（desc_rank_pct=1.1%）；本域 91 条中 descendants==0 占 47.3%。 档位相对位置：tier_rank_pct=3.6%（同域同代 chemistry+industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 5 条：倍比定律(law_of_multiple_proportions, P3)、贝采里乌斯元素符号体系(berzelius_chemical_symbols, P2)、杜隆-珀蒂定律(dulong_petit_law, P4)、化合价理论(kekule_valence_theory, P2)、元素周期表(periodic_table, P1)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "baby_monitor",
+   "name": "婴儿监护器",
+   "nameEn": "Baby monitor",
+   "wikiEn": "Baby monitor",
+   "aliases": [],
+   "year": 1937,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "second_industrial",
+   "category": "daily_life",
+   "kind": "器物",
+   "importance": 4,
+   "prereqs": [
+    "radio"
+   ],
+   "related": [
+    "telephone",
+    "cradle"
+   ],
+   "desc": "婴儿室声音经无线电传到父母一端，隔房也能即时响应啼哭。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 0,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 33,
+   "desc_rank_pct": 0.2558,
+   "desc_zero_share": 0.7597,
+   "tier_rank_pct": 0.8444,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=器物、category=daily_life、era=second_industrial、year=1937（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=0（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 33/129（desc_rank_pct=25.6%）；本域 129 条中 descendants==0 占 76.0%。 档位相对位置：tier_rank_pct=84.4%（同域同代 daily_life+second_industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "bank",
+   "name": "近代银行",
+   "nameEn": "Bank",
+   "wikiEn": "Bank",
+   "aliases": [
+    "存款银行",
+    "公共银行"
+   ],
+   "year": 1407,
+   "year_basis": "circa",
+   "year_span": null,
+   "year_note": "巴塞罗那与热那亚公共银行先后设立",
+   "era": "renaissance",
+   "category": "economy",
+   "kind": "制度",
+   "importance": 1,
+   "prereqs": [
+    "negotiable_instrument"
+   ],
+   "related": [
+    "insurance",
+    "bank_of_england",
+    "joint_stock_company"
+   ],
+   "desc": "吸收存款、转账记账并按期限放出贷款，把闲散资金转为可投资的资本。",
+   "out_deg": 1,
+   "pf": 7,
+   "rf": 12,
+   "descendants": 40,
+   "direct_downstream": [
+    {
+     "id": "mercantilism",
+     "name": "重商主义",
+     "importance": 2
+    },
+    {
+     "id": "east_india_charter",
+     "name": "特许贸易公司",
+     "importance": 2
+    },
+    {
+     "id": "joint_stock_company",
+     "name": "股份公司",
+     "importance": 1
+    },
+    {
+     "id": "bank_of_amsterdam",
+     "name": "阿姆斯特丹兑换银行",
+     "importance": 2
+    },
+    {
+     "id": "fractional_reserve_banking",
+     "name": "部分准备金银行",
+     "importance": 1
+    }
+   ],
+   "desc_rank": 3,
+   "desc_rank_pct": 0.0242,
+   "desc_zero_share": 0.4113,
+   "tier_rank_pct": 0.0714,
+   "channels": [],
+   "why": "机械事实：importance=1、kind=制度、category=economy、era=renaissance、year=1407（year_basis=circa）。 引用侧：pf=7（作为他人 prereq 终点次数）、rf=12（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=40（prereq 传递闭包），域内排名 3/124（desc_rank_pct=2.4%）；本域 124 条中 descendants==0 占 41.1%。 档位相对位置：tier_rank_pct=7.1%（同域同代 economy+renaissance 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 5 条：重商主义(mercantilism, P2)、特许贸易公司(east_india_charter, P2)、股份公司(joint_stock_company, P1)、阿姆斯特丹兑换银行(bank_of_amsterdam, P2)、部分准备金银行(fractional_reserve_banking, P1)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "blunt_body_heat_shield",
+   "name": "钝体防热罩",
+   "nameEn": "Heat shield",
+   "wikiEn": "Heat shield",
+   "aliases": [
+    "烧蚀防热罩",
+    "艾伦钝体理论",
+    "Blunt body theory"
+   ],
+   "year": 1951,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "",
+   "era": "atomic_electronic",
+   "category": "space_exploration",
+   "kind": "原理",
+   "importance": 3,
+   "prereqs": [
+    "v2_rocket_postwar"
+   ],
+   "related": [
+    "corona_satellite",
+    "mercury_program"
+   ],
+   "desc": "艾伦钝体理论与烧蚀罩，让弹头与飞船安全再入。",
+   "out_deg": 1,
+   "pf": 2,
+   "rf": 2,
+   "descendants": 2,
+   "direct_downstream": [
+    {
+     "id": "corona_satellite",
+     "name": "科罗纳侦察卫星",
+     "importance": 3
+    },
+    {
+     "id": "space_shuttle",
+     "name": "航天飞机",
+     "importance": 1
+    }
+   ],
+   "desc_rank": 10,
+   "desc_rank_pct": 0.1923,
+   "desc_zero_share": 0.6154,
+   "tier_rank_pct": 0.4091,
+   "channels": [],
+   "why": "机械事实：importance=3、kind=原理、category=space_exploration、era=atomic_electronic、year=1951（year_basis=batch_asserted）。 引用侧：pf=2（作为他人 prereq 终点次数）、rf=2（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=2（prereq 传递闭包），域内排名 10/52（desc_rank_pct=19.2%）；本域 52 条中 descendants==0 占 61.5%。 档位相对位置：tier_rank_pct=40.9%（同域同代 space_exploration+atomic_electronic 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 2 条：科罗纳侦察卫星(corona_satellite, P3)、航天飞机(space_shuttle, P1)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "bolas",
+   "name": "投石绊索",
+   "nameEn": "Bolas",
+   "wikiEn": "Bolas",
+   "aliases": [
+    "流星索",
+    "绊兽索"
+   ],
+   "year": -15000,
+   "year_basis": "century",
+   "year_span": null,
+   "year_note": "只知世纪，取该世纪中值（规范 §3.8 规则 3）",
+   "era": "prehistory",
+   "category": "military",
+   "kind": "工艺",
+   "importance": 5,
+   "prereqs": [
+    "rope"
+   ],
+   "related": [
+    "sling_weapon",
+    "spear"
+   ],
+   "desc": "系重球的绳索，掷出缠绕以绊捕猎物。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 1,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 52,
+   "desc_rank_pct": 0.4602,
+   "desc_zero_share": 0.6549,
+   "tier_rank_pct": 1,
+   "channels": [],
+   "why": "机械事实：importance=5、kind=工艺、category=military、era=prehistory、year=-15000（year_basis=century）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 52/113（desc_rank_pct=46.0%）；本域 113 条中 descendants==0 占 65.5%。 档位相对位置：tier_rank_pct=100.0%（同域同代 military+prehistory 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "bowlby_attachment_theory",
+   "name": "鲍尔比依恋理论",
+   "nameEn": "Attachment theory",
+   "wikiEn": "Attachment theory",
+   "aliases": [
+    "依恋理论",
+    "母爱剥夺假说",
+    "Bowlby-Ainsworth",
+    "安全型依恋"
+   ],
+   "year": 1951,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "",
+   "era": "atomic_electronic",
+   "category": "education_knowledge",
+   "kind": "原理",
+   "importance": 2,
+   "prereqs": [],
+   "related": [
+    "freud_psychoanalysis"
+   ],
+   "desc": "早期照料关系塑造内部工作模式，1969年系统化，影响深远。",
+   "out_deg": 0,
+   "pf": 0,
+   "rf": 0,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 47,
+   "desc_rank_pct": 0.5,
+   "desc_zero_share": 0.5532,
+   "tier_rank_pct": 0.375,
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "机械事实：importance=2、kind=原理、category=education_knowledge、era=atomic_electronic、year=1951（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=0（prereq+related 被引总数）、out_deg=0（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 47/94（desc_rank_pct=50.0%）；本域 94 条中 descendants==0 占 55.3%。 档位相对位置：tier_rank_pct=37.5%（同域同代 education_knowledge+atomic_electronic 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：【原理零引用：kind=原理 且 prereq+related 被引总数 rf=0】"
+  },
+  {
+   "id": "cellophane",
+   "name": "玻璃纸",
+   "nameEn": "Cellophane",
+   "wikiEn": "Cellophane",
+   "aliases": [
+    "赛璐玢",
+    "再生纤维素膜"
+   ],
+   "year": 1908,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "",
+   "era": "second_industrial",
+   "category": "materials",
+   "kind": "媒介",
+   "importance": 4,
+   "prereqs": [],
+   "related": [
+    "rayon",
+    "polyethylene"
+   ],
+   "desc": "布兰登伯格1908年制玻璃纸，首种透明包装薄膜。",
+   "out_deg": 0,
+   "pf": 1,
+   "rf": 2,
+   "descendants": 3,
+   "direct_downstream": [
+    {
+     "id": "hemodialysis",
+     "name": "血液透析",
+     "importance": 2
+    }
+   ],
+   "desc_rank": 41,
+   "desc_rank_pct": 0.3154,
+   "desc_zero_share": 0.4769,
+   "tier_rank_pct": 0.6522,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=媒介、category=materials、era=second_industrial、year=1908（year_basis=batch_asserted）。 引用侧：pf=1（作为他人 prereq 终点次数）、rf=2（prereq+related 被引总数）、out_deg=0（prereq 出边）。 下游侧：descendants=3（prereq 传递闭包），域内排名 41/130（desc_rank_pct=31.5%）；本域 130 条中 descendants==0 占 47.7%。 档位相对位置：tier_rank_pct=65.2%（同域同代 materials+second_industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 1 条：血液透析(hemodialysis, P2)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "commedia_dell_arte",
+   "name": "即兴喜剧",
+   "nameEn": "Commedia dell'arte",
+   "wikiEn": "Commedia dell'arte",
+   "aliases": [
+    "假面喜剧",
+    "行会喜剧"
+   ],
+   "year": 1550,
+   "year_basis": "circa",
+   "year_span": null,
+   "year_note": "意大利流浪艺人剧团成型于十六世纪中叶",
+   "era": "renaissance",
+   "category": "culture_media",
+   "kind": "媒介",
+   "importance": 2,
+   "prereqs": [
+    "greek_theatre"
+   ],
+   "related": [
+    "puppet_theatre",
+    "opera",
+    "film_genre"
+   ],
+   "desc": "以定型角色、假面与提纲即兴演出的流动戏剧，是现代喜剧程式的源头。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 5,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 62,
+   "desc_rank_pct": 0.4161,
+   "desc_zero_share": 0.698,
+   "tier_rank_pct": 0.1739,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=媒介、category=culture_media、era=renaissance、year=1550（year_basis=circa）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=5（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 62/149（desc_rank_pct=41.6%）；本域 149 条中 descendants==0 占 69.8%。 档位相对位置：tier_rank_pct=17.4%（同域同代 culture_media+renaissance 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "conscription",
+   "name": "征兵制",
+   "nameEn": "Conscription",
+   "wikiEn": "Conscription",
+   "aliases": [
+    "Levée en masse",
+    "义务兵役制",
+    "全民皆兵",
+    "征兵制",
+    "普遍兵役制"
+   ],
+   "year": 1793,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "法国1793年全民动员令；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "industrial",
+   "category": "military",
+   "kind": "制度",
+   "importance": 2,
+   "prereqs": [
+    "nation_state"
+   ],
+   "related": [
+    "roman_legion",
+    "guerrilla_warfare",
+    "machine_gun",
+    "universal_suffrage"
+   ],
+   "desc": "以公民义务为基础的普遍兵役制，决定近代动员规模。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 4,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 63,
+   "desc_rank_pct": 0.5575,
+   "desc_zero_share": 0.6549,
+   "tier_rank_pct": 0.3333,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=制度、category=military、era=industrial、year=1793（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=4（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 63/113（desc_rank_pct=55.8%）；本域 113 条中 descendants==0 占 65.5%。 档位相对位置：tier_rank_pct=33.3%（同域同代 military+industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "convention_on_refugees_1951",
+   "name": "难民地位公约",
+   "nameEn": "Refugee Convention",
+   "wikiEn": "Convention Relating to the Status of Refugees",
+   "aliases": [
+    "难民公约",
+    "不推回原则"
+   ],
+   "year": 1951,
+   "year_basis": "exact",
+   "year_span": null,
+   "year_note": "1951年日内瓦公约",
+   "era": "atomic_electronic",
+   "category": "governance",
+   "kind": "制度",
+   "importance": 2,
+   "prereqs": [
+    "universal_declaration_human_rights",
+    "civil_registration",
+    "united_nations",
+    "photography"
+   ],
+   "related": [
+    "nation_state",
+    "roman_citizenship",
+    "red_cross_movement",
+    "universal_postal_union"
+   ],
+   "desc": "确立不得遣返受迫害者并发给国际通行证件，使身份不再完全由单一国籍授予。",
+   "out_deg": 4,
+   "pf": 0,
+   "rf": 1,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 82,
+   "desc_rank_pct": 0.7069,
+   "desc_zero_share": 0.3534,
+   "tier_rank_pct": 0.6667,
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "机械事实：importance=2、kind=制度、category=governance、era=atomic_electronic、year=1951（year_basis=exact）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=4（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 82/116（desc_rank_pct=70.7%）；本域 116 条中 descendants==0 占 35.3%。 档位相对位置：tier_rank_pct=66.7%（同域同代 governance+atomic_electronic 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：【支柱尾组：P2 且域内下游 0 ≤ 本域 P2 的 20 分位 0 且 < 本域中位数 2】"
+  },
+  {
+   "id": "distillation",
+   "name": "蒸馏",
+   "nameEn": "Distillation",
+   "wikiEn": "Distillation",
+   "aliases": [
+    "亚历山大蒸馏",
+    "蒸馏提香",
+    "蒸馏术"
+   ],
+   "year": -1200,
+   "year_basis": "convention_floor",
+   "year_span": null,
+   "year_note": "仅知时代归属，取该时代起点（规范 §3.8 规则 6）",
+   "era": "antiquity",
+   "category": "chemistry",
+   "kind": "工艺",
+   "importance": 2,
+   "prereqs": [],
+   "related": [
+    "alchemy",
+    "tyrian_purple"
+   ],
+   "desc": "阿卡德泥板记载以蒸馏法提炼香水香精的工序。",
+   "out_deg": 0,
+   "pf": 8,
+   "rf": 10,
+   "descendants": 10,
+   "direct_downstream": [
+    {
+     "id": "pharmacy",
+     "name": "药房",
+     "importance": 4
+    },
+    {
+     "id": "drug_testing",
+     "name": "药物试验",
+     "importance": 4
+    },
+    {
+     "id": "anesthetic_sponge",
+     "name": "催眠海绵",
+     "importance": 4
+    },
+    {
+     "id": "paracelsus_iatrochemistry",
+     "name": "化学医学派",
+     "importance": 3
+    },
+    {
+     "id": "phosphorus_isolation",
+     "name": "磷的发现",
+     "importance": 4
+    }
+   ],
+   "desc_rank": 14,
+   "desc_rank_pct": 0.1538,
+   "desc_zero_share": 0.4725,
+   "tier_rank_pct": 0.5,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=工艺、category=chemistry、era=antiquity、year=-1200（year_basis=convention_floor）。 引用侧：pf=8（作为他人 prereq 终点次数）、rf=10（prereq+related 被引总数）、out_deg=0（prereq 出边）。 下游侧：descendants=10（prereq 传递闭包），域内排名 14/91（desc_rank_pct=15.4%）；本域 91 条中 descendants==0 占 47.3%。 档位相对位置：tier_rank_pct=50.0%（同域同代 chemistry+antiquity 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 5 条：药房(pharmacy, P4)、药物试验(drug_testing, P4)、催眠海绵(anesthetic_sponge, P4)、化学医学派(paracelsus_iatrochemistry, P3)、磷的发现(phosphorus_isolation, P4)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "extradosed_bridge",
+   "name": "矮塔斜拉桥",
+   "nameEn": "Extradosed bridge",
+   "wikiEn": "Extradosed bridge",
+   "aliases": [
+    "部分斜拉桥",
+    "低塔斜拉桥"
+   ],
+   "year": 1992,
+   "year_basis": "circa",
+   "year_span": null,
+   "year_note": "1990 年代初欧洲与日本建成首批该体系桥，取约值",
+   "era": "information",
+   "category": "construction",
+   "kind": "器物",
+   "importance": 2,
+   "prereqs": [
+    "cable_stayed_bridge",
+    "reinforced_concrete",
+    "bessemer_steel"
+   ],
+   "related": [
+    "suspension_bridge",
+    "cantilever_bridge",
+    "arch",
+    "crane"
+   ],
+   "desc": "低塔外置索与连续梁共同受力，填补中等跨径空档。",
+   "out_deg": 3,
+   "pf": 0,
+   "rf": 0,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 71,
+   "desc_rank_pct": 0.5504,
+   "desc_zero_share": 0.6512,
+   "tier_rank_pct": 0.5,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=器物、category=construction、era=information、year=1992（year_basis=circa）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=0（prereq+related 被引总数）、out_deg=3（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 71/129（desc_rank_pct=55.0%）；本域 129 条中 descendants==0 占 65.1%。 档位相对位置：tier_rank_pct=50.0%（同域同代 construction+information 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "fairy_tale",
+   "name": "童话故事",
+   "nameEn": "Fairy tale",
+   "wikiEn": "Fairy tale",
+   "aliases": [
+    "民间故事",
+    "传说故事"
+   ],
+   "year": 1697,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "贝洛《鹅妈妈故事集》1697 年刊行，使口头故事成文体裁；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "renaissance",
+   "category": "culture_media",
+   "kind": "媒介",
+   "importance": 2,
+   "prereqs": [
+    "epic_poetry",
+    "movable_type_printing"
+   ],
+   "related": [
+    "sonnet",
+    "puppet_theatre",
+    "comic_book"
+   ],
+   "desc": "把口头民间传说改写为固定文本的儿童叙事体裁，成为后世故事产业的素材库。",
+   "out_deg": 2,
+   "pf": 0,
+   "rf": 4,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 73,
+   "desc_rank_pct": 0.4899,
+   "desc_zero_share": 0.698,
+   "tier_rank_pct": 0.3478,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=媒介、category=culture_media、era=renaissance、year=1697（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=4（prereq+related 被引总数）、out_deg=2（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 73/149（desc_rank_pct=49.0%）；本域 149 条中 descendants==0 占 69.8%。 档位相对位置：tier_rank_pct=34.8%（同域同代 culture_media+renaissance 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "fire_brick",
+   "name": "耐火砖",
+   "nameEn": "Fire brick",
+   "wikiEn": "Fire brick",
+   "aliases": [
+    "耐火材料砌体",
+    "高铝砖"
+   ],
+   "year": 1825,
+   "year_basis": "decade",
+   "year_span": null,
+   "year_note": "硅铝质耐火砖随高温工业炉在 19 世纪前期定型，取年代中值",
+   "era": "industrial",
+   "category": "construction",
+   "kind": "工艺",
+   "importance": 2,
+   "prereqs": [
+    "fired_brick",
+    "blast_furnace",
+    "iron_smelting"
+   ],
+   "related": [
+    "rotary_kiln",
+    "portland_cement",
+    "open_hearth_furnace",
+    "cementation_process"
+   ],
+   "desc": "高铝硅料成型高温烧成，砌炉衬而不软化坍落。",
+   "out_deg": 3,
+   "pf": 0,
+   "rf": 0,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 73,
+   "desc_rank_pct": 0.5659,
+   "desc_zero_share": 0.6512,
+   "tier_rank_pct": 0.3158,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=工艺、category=construction、era=industrial、year=1825（year_basis=decade）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=0（prereq+related 被引总数）、out_deg=3（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 73/129（desc_rank_pct=56.6%）；本域 129 条中 descendants==0 占 65.1%。 档位相对位置：tier_rank_pct=31.6%（同域同代 construction+industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "friction_match",
+   "name": "摩擦火柴",
+   "nameEn": "Friction match",
+   "wikiEn": "",
+   "aliases": [
+    "Congreve",
+    "Match",
+    "Walker friction match",
+    "安全火柴"
+   ],
+   "year": 1826,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "",
+   "era": "industrial",
+   "category": "chemistry",
+   "kind": "工艺",
+   "importance": 5,
+   "prereqs": [
+    "gunpowder",
+    "match"
+   ],
+   "related": [
+    "candle",
+    "phosphorus_isolation"
+   ],
+   "desc": "沃克发明摩擦起火的火柴，1844年安全火柴问世。",
+   "out_deg": 2,
+   "pf": 0,
+   "rf": 1,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 70,
+   "desc_rank_pct": 0.7692,
+   "desc_zero_share": 0.4725,
+   "tier_rank_pct": 1,
+   "channels": [],
+   "why": "机械事实：importance=5、kind=工艺、category=chemistry、era=industrial、year=1826（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=2（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 70/91（desc_rank_pct=76.9%）；本域 91 条中 descendants==0 占 47.3%。 档位相对位置：tier_rank_pct=100.0%（同域同代 chemistry+industrial 内 importance 升序位次/组内条数）。 wikiEn 空；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "fullerene",
+   "name": "富勒烯",
+   "nameEn": "Buckminsterfullerene",
+   "wikiEn": "Buckminsterfullerene",
+   "aliases": [
+    "C60",
+    "巴克敏斯特富勒烯",
+    "足球烯"
+   ],
+   "year": 1985,
+   "year_basis": "exact",
+   "year_span": null,
+   "year_note": "年份可在该词条正文/信息框检得（脚本取证）",
+   "era": "information",
+   "category": "materials",
+   "kind": "工艺",
+   "importance": 3,
+   "prereqs": [],
+   "related": [
+    "carbon_nanotube",
+    "conductive_polymer"
+   ],
+   "desc": "克罗托等发现C60笼形分子，开启纳米碳材料领域。",
+   "out_deg": 0,
+   "pf": 2,
+   "rf": 4,
+   "descendants": 6,
+   "direct_downstream": [
+    {
+     "id": "carbon_nanotube",
+     "name": "碳纳米管",
+     "importance": 3
+    },
+    {
+     "id": "graphene",
+     "name": "石墨烯",
+     "importance": 2
+    }
+   ],
+   "desc_rank": 24,
+   "desc_rank_pct": 0.1846,
+   "desc_zero_share": 0.4769,
+   "tier_rank_pct": 0.7241,
+   "channels": [],
+   "why": "机械事实：importance=3、kind=工艺、category=materials、era=information、year=1985（year_basis=exact）。 引用侧：pf=2（作为他人 prereq 终点次数）、rf=4（prereq+related 被引总数）、out_deg=0（prereq 出边）。 下游侧：descendants=6（prereq 传递闭包），域内排名 24/130（desc_rank_pct=18.5%）；本域 130 条中 descendants==0 占 47.7%。 档位相对位置：tier_rank_pct=72.4%（同域同代 materials+information 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 2 条：碳纳米管(carbon_nanotube, P3)、石墨烯(graphene, P2)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "gas_mask",
+   "name": "防毒面具",
+   "nameEn": "Gas mask",
+   "wikiEn": "Gas mask",
+   "aliases": [
+    "防毒面罩",
+    "Respirator"
+   ],
+   "year": 1916,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "德军1916年列装带滤毒罐的防毒面具；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "second_industrial",
+   "category": "military",
+   "kind": "器物",
+   "importance": 2,
+   "prereqs": [
+    "chemical_warfare"
+   ],
+   "related": [
+    "charcoal",
+    "trench_warfare",
+    "camouflage"
+   ],
+   "desc": "滤毒罐吸附或中和毒剂蒸气，化学战的标配防护。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 1,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 71,
+   "desc_rank_pct": 0.6283,
+   "desc_zero_share": 0.6549,
+   "tier_rank_pct": 0.4,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=器物、category=military、era=second_industrial、year=1916（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 71/113（desc_rank_pct=62.8%）；本域 113 条中 descendants==0 占 65.5%。 档位相对位置：tier_rank_pct=40.0%（同域同代 military+second_industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "gmres",
+   "name": "GMRES",
+   "nameEn": "Generalized minimal residual method",
+   "wikiEn": "Generalized minimal residual method",
+   "aliases": [
+    "广义最小残差法",
+    "GMRES算法",
+    "Saad-Schultz",
+    "Krylov残差最小化"
+   ],
+   "year": 1986,
+   "year_basis": "exact",
+   "year_span": null,
+   "year_note": "年份可在该词条正文/信息框检得（脚本取证）",
+   "era": "information",
+   "category": "algorithms_cs",
+   "kind": "原理",
+   "importance": 2,
+   "prereqs": [
+    "arnoldi_iteration",
+    "blas",
+    "krylov_subspace"
+   ],
+   "related": [
+    "lanczos_algorithm",
+    "multigrid_method",
+    "nuclear_reactor"
+   ],
+   "desc": "萨阿德与舒尔茨1986年的Krylov残差最小化法，解非对称方程组，重启稳健。",
+   "out_deg": 3,
+   "pf": 0,
+   "rf": 4,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 76,
+   "desc_rank_pct": 0.5984,
+   "desc_zero_share": 0.6142,
+   "tier_rank_pct": 0.3721,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=原理、category=algorithms_cs、era=information、year=1986（year_basis=exact）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=4（prereq+related 被引总数）、out_deg=3（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 76/127（desc_rank_pct=59.8%）；本域 127 条中 descendants==0 占 61.4%。 档位相对位置：tier_rank_pct=37.2%（同域同代 algorithms_cs+information 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "gold_standard",
+   "name": "金本位制",
+   "nameEn": "Gold standard",
+   "wikiEn": "Gold standard",
+   "aliases": [
+    "金币本位",
+    "黄金平价"
+   ],
+   "year": 1821,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "英国 1821 年恢复金币自由兑换；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "industrial",
+   "category": "economy",
+   "kind": "制度",
+   "importance": 2,
+   "prereqs": [
+    "bank_of_england"
+   ],
+   "related": [
+    "bretton_woods_system",
+    "fiat_money",
+    "metric_system"
+   ],
+   "desc": "货币按固定含金量互通，带来百年低汇率风险与跨境资本流动。",
+   "out_deg": 1,
+   "pf": 5,
+   "rf": 9,
+   "descendants": 8,
+   "direct_downstream": [
+    {
+     "id": "bimetallism_standard",
+     "name": "金银复本位制",
+     "importance": 2
+    },
+    {
+     "id": "quantity_theory_of_money",
+     "name": "货币数量论",
+     "importance": 2
+    },
+    {
+     "id": "bretton_woods_system",
+     "name": "布雷顿森林体系",
+     "importance": 2
+    },
+    {
+     "id": "fiat_money",
+     "name": "法定货币",
+     "importance": 2
+    },
+    {
+     "id": "floating_exchange_rate",
+     "name": "浮动汇率制",
+     "importance": 2
+    }
+   ],
+   "desc_rank": 15,
+   "desc_rank_pct": 0.121,
+   "desc_zero_share": 0.4113,
+   "tier_rank_pct": 0.6842,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=制度、category=economy、era=industrial、year=1821（year_basis=batch_asserted）。 引用侧：pf=5（作为他人 prereq 终点次数）、rf=9（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=8（prereq 传递闭包），域内排名 15/124（desc_rank_pct=12.1%）；本域 124 条中 descendants==0 占 41.1%。 档位相对位置：tier_rank_pct=68.4%（同域同代 economy+industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 5 条：金银复本位制(bimetallism_standard, P2)、货币数量论(quantity_theory_of_money, P2)、布雷顿森林体系(bretton_woods_system, P2)、法定货币(fiat_money, P2)、浮动汇率制(floating_exchange_rate, P2)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "guerrilla_warfare",
+   "name": "游击战",
+   "nameEn": "Guerrilla warfare",
+   "wikiEn": "Guerrilla warfare",
+   "aliases": [
+    "游击战争"
+   ],
+   "year": 1808,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "半岛战争1808年，该词由此流行；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "industrial",
+   "category": "military",
+   "kind": "原理",
+   "importance": 2,
+   "prereqs": [],
+   "related": [
+    "conscription",
+    "blitzkrieg",
+    "assault_rifle"
+   ],
+   "desc": "弱势一方依托民众以袭扰消耗正规军的非对称战法。",
+   "out_deg": 0,
+   "pf": 0,
+   "rf": 2,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 76,
+   "desc_rank_pct": 0.6726,
+   "desc_zero_share": 0.6549,
+   "tier_rank_pct": 0.5556,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=原理、category=military、era=industrial、year=1808（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=2（prereq+related 被引总数）、out_deg=0（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 76/113（desc_rank_pct=67.3%）；本域 113 条中 descendants==0 占 65.5%。 档位相对位置：tier_rank_pct=55.6%（同域同代 military+industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "hadley_cell",
+   "name": "哈得来环流",
+   "nameEn": "Hadley cell",
+   "wikiEn": "Hadley cell",
+   "aliases": [
+    "热带环流圈",
+    "信风环流"
+   ],
+   "year": 1735,
+   "year_basis": "exact",
+   "year_span": null,
+   "year_note": "哈雷1735年解释信风成因",
+   "era": "industrial",
+   "category": "earth_space",
+   "kind": "原理",
+   "importance": 2,
+   "prereqs": [
+    "newtonian_mechanics"
+   ],
+   "related": [
+    "coriolis_force",
+    "jet_stream",
+    "sail"
+   ],
+   "desc": "热带受热上升、高空回流的经向环流，塑造信风与沙漠带。",
+   "out_deg": 1,
+   "pf": 1,
+   "rf": 2,
+   "descendants": 1,
+   "direct_downstream": [
+    {
+     "id": "jet_stream",
+     "name": "急流",
+     "importance": 2
+    }
+   ],
+   "desc_rank": 38,
+   "desc_rank_pct": 0.2657,
+   "desc_zero_share": 0.6573,
+   "tier_rank_pct": 0.3333,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=原理、category=earth_space、era=industrial、year=1735（year_basis=exact）。 引用侧：pf=1（作为他人 prereq 终点次数）、rf=2（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=1（prereq 传递闭包），域内排名 38/143（desc_rank_pct=26.6%）；本域 143 条中 descendants==0 占 65.7%。 档位相对位置：tier_rank_pct=33.3%（同域同代 earth_space+industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 1 条：急流(jet_stream, P2)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "health_qr_code",
+   "name": "健康码",
+   "nameEn": "Health Codes (Chinese mobile app group)",
+   "wikiEn": "Health Codes (Chinese mobile app group)",
+   "aliases": [
+    "防疫健康码",
+    "健康行程码",
+    "Health QR Code"
+   ],
+   "year": 2020,
+   "year_basis": "decade",
+   "year_span": null,
+   "year_note": "只知年代，取该十年代中点（规范 §3.8 规则 4）",
+   "era": "intelligent",
+   "category": "governance",
+   "kind": "器物",
+   "importance": 4,
+   "prereqs": [
+    "smartphone"
+   ],
+   "related": [
+    "digital_identity",
+    "qr_code_payment"
+   ],
+   "desc": "2020年中国疫情期间推出的手机健康状态二维码通行系统。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 5,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 89,
+   "desc_rank_pct": 0.7672,
+   "desc_zero_share": 0.3534,
+   "tier_rank_pct": 0.8,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=器物、category=governance、era=intelligent、year=2020（year_basis=decade）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=5（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 89/116（desc_rank_pct=76.7%）；本域 116 条中 descendants==0 占 35.3%。 档位相对位置：tier_rank_pct=80.0%（同域同代 governance+intelligent 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "hutton_uniformitarianism",
+   "name": "赫顿均变论",
+   "nameEn": "Hutton's uniformitarianism and plutonism",
+   "wikiEn": "James Hutton",
+   "aliases": [
+    "火成论",
+    "均变论",
+    "Plutonism",
+    "郝登",
+    "地球论"
+   ],
+   "year": 1785,
+   "year_basis": "exact",
+   "year_span": null,
+   "year_note": "年份可在该词条正文/信息框检得（脚本取证）",
+   "era": "industrial",
+   "category": "earth_space",
+   "kind": "原理",
+   "importance": 2,
+   "prereqs": [
+    "steno_stratigraphy"
+   ],
+   "related": [
+    "cuvier_paleontology_catastrophism",
+    "lyell_principles_geology"
+   ],
+   "desc": "赫顿主张地球经缓慢作用长期演化，岩石主由火成。",
+   "out_deg": 1,
+   "pf": 1,
+   "rf": 2,
+   "descendants": 3,
+   "direct_downstream": [
+    {
+     "id": "lyell_principles_geology",
+     "name": "赖尔《地质学原理》",
+     "importance": 2
+    }
+   ],
+   "desc_rank": 20,
+   "desc_rank_pct": 0.1399,
+   "desc_zero_share": 0.6573,
+   "tier_rank_pct": 0.3889,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=原理、category=earth_space、era=industrial、year=1785（year_basis=exact）。 引用侧：pf=1（作为他人 prereq 终点次数）、rf=2（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=3（prereq 传递闭包），域内排名 20/143（desc_rank_pct=14.0%）；本域 143 条中 descendants==0 占 65.7%。 档位相对位置：tier_rank_pct=38.9%（同域同代 earth_space+industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 1 条：赖尔《地质学原理》(lyell_principles_geology, P2)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "hydrogen_bond",
+   "name": "氢键",
+   "nameEn": "Hydrogen bond",
+   "wikiEn": "Hydrogen bond",
+   "aliases": [
+    "氢桥键"
+   ],
+   "year": 1920,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "拉蒂默与罗代布什1920年首次明确表述；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "second_industrial",
+   "category": "chemistry",
+   "kind": "原理",
+   "importance": 2,
+   "prereqs": [
+    "lewis_covalent_octet"
+   ],
+   "related": [
+    "dna_double_helix",
+    "van_der_waals_equation"
+   ],
+   "desc": "氢与强电负原子间的定向弱键，决定水的反常与碱基配对。",
+   "out_deg": 1,
+   "pf": 1,
+   "rf": 2,
+   "descendants": 1,
+   "direct_downstream": [
+    {
+     "id": "supramolecular_chemistry",
+     "name": "超分子化学",
+     "importance": 2
+    }
+   ],
+   "desc_rank": 43,
+   "desc_rank_pct": 0.4725,
+   "desc_zero_share": 0.4725,
+   "tier_rank_pct": 0.2778,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=原理、category=chemistry、era=second_industrial、year=1920（year_basis=batch_asserted）。 引用侧：pf=1（作为他人 prereq 终点次数）、rf=2（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=1（prereq 传递闭包），域内排名 43/91（desc_rank_pct=47.3%）；本域 91 条中 descendants==0 占 47.3%。 档位相对位置：tier_rank_pct=27.8%（同域同代 chemistry+second_industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 1 条：超分子化学(supramolecular_chemistry, P2)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "karmarkar_interior_point",
+   "name": "卡马卡尔内点法",
+   "nameEn": "Karmarkar's algorithm",
+   "wikiEn": "Karmarkar's algorithm",
+   "aliases": [
+    "内点法",
+    "卡马卡尔算法",
+    "Karmarkar算法",
+    "投影尺度法"
+   ],
+   "year": 1984,
+   "year_basis": "exact",
+   "year_span": null,
+   "year_note": "年份可在该词条正文/信息框检得（脚本取证）",
+   "era": "information",
+   "category": "algorithms_cs",
+   "kind": "工艺",
+   "importance": 2,
+   "prereqs": [
+    "khachiyan_ellipsoid_method",
+    "simplex_method"
+   ],
+   "related": [
+    "electrical_grid",
+    "lp_duality_theory",
+    "rockafellar_convex_analysis"
+   ],
+   "desc": "卡马卡尔给出实用的多项式时间内点算法，引爆线性与非线性规划变革。",
+   "out_deg": 2,
+   "pf": 0,
+   "rf": 3,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 90,
+   "desc_rank_pct": 0.7087,
+   "desc_zero_share": 0.6142,
+   "tier_rank_pct": 0.4186,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=工艺、category=algorithms_cs、era=information、year=1984（year_basis=exact）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=3（prereq+related 被引总数）、out_deg=2（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 90/127（desc_rank_pct=70.9%）；本域 127 条中 descendants==0 占 61.4%。 档位相对位置：tier_rank_pct=41.9%（同域同代 algorithms_cs+information 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "laminated_glass",
+   "name": "夹层玻璃",
+   "nameEn": "Laminated glass",
+   "wikiEn": "Laminated glass",
+   "aliases": [
+    "安全玻璃",
+    "Triplex",
+    "夹胶玻璃"
+   ],
+   "year": 1909,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "",
+   "era": "second_industrial",
+   "category": "materials",
+   "kind": "工艺",
+   "importance": 4,
+   "prereqs": [],
+   "related": [
+    "fourcault_process",
+    "fiberglass"
+   ],
+   "desc": "本尼迪克图斯1909年发明夹胶安全玻璃，破碎不飞溅。",
+   "out_deg": 0,
+   "pf": 0,
+   "rf": 5,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 91,
+   "desc_rank_pct": 0.7,
+   "desc_zero_share": 0.4769,
+   "tier_rank_pct": 0.7391,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=工艺、category=materials、era=second_industrial、year=1909（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=5（prereq+related 被引总数）、out_deg=0（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 91/130（desc_rank_pct=70.0%）；本域 130 条中 descendants==0 占 47.7%。 档位相对位置：tier_rank_pct=73.9%（同域同代 materials+second_industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "language",
+   "name": "语言",
+   "nameEn": "Language",
+   "wikiEn": "Language",
+   "aliases": [
+    "Origin of language",
+    "言语",
+    "有声语言"
+   ],
+   "year": -100000,
+   "year_basis": "century",
+   "year_span": null,
+   "year_note": "只知世纪，取该世纪中值（规范 §3.8 规则 3）",
+   "era": "prehistory",
+   "category": "culture_media",
+   "kind": "工艺",
+   "importance": 1,
+   "prereqs": [],
+   "related": [
+    "rock_art",
+    "tally_stick"
+   ],
+   "desc": "有声语言形成，知识与文化得以代际传承。",
+   "out_deg": 0,
+   "pf": 1,
+   "rf": 3,
+   "descendants": 17,
+   "direct_downstream": [
+    {
+     "id": "epic_poetry",
+     "name": "史诗",
+     "importance": 2
+    }
+   ],
+   "desc_rank": 2,
+   "desc_rank_pct": 0.0134,
+   "desc_zero_share": 0.698,
+   "tier_rank_pct": 0.2,
+   "channels": [],
+   "why": "机械事实：importance=1、kind=工艺、category=culture_media、era=prehistory、year=-100000（year_basis=century）。 引用侧：pf=1（作为他人 prereq 终点次数）、rf=3（prereq+related 被引总数）、out_deg=0（prereq 出边）。 下游侧：descendants=17（prereq 传递闭包），域内排名 2/149（desc_rank_pct=1.3%）；本域 149 条中 descendants==0 占 69.8%。 档位相对位置：tier_rank_pct=20.0%（同域同代 culture_media+prehistory 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 1 条：史诗(epic_poetry, P2)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "library",
+   "name": "图书馆",
+   "nameEn": "Library",
+   "wikiEn": "Library",
+   "aliases": [
+    "泥板档案馆",
+    "埃勃拉档案",
+    "Library archive"
+   ],
+   "year": -2500,
+   "year_basis": "century",
+   "year_span": null,
+   "year_note": "只知世纪，取该世纪中值（规范 §3.8 规则 3）",
+   "era": "bronze_age",
+   "category": "education_knowledge",
+   "kind": "媒介",
+   "importance": 4,
+   "prereqs": [
+    "clay_tablet"
+   ],
+   "related": [
+    "dictionary"
+   ],
+   "desc": "苏美尔神庙与埃勃拉王宫系统收藏分类泥板文书。",
+   "out_deg": 1,
+   "pf": 3,
+   "rf": 6,
+   "descendants": 4,
+   "direct_downstream": [
+    {
+     "id": "museum",
+     "name": "博物馆",
+     "importance": 2
+    },
+    {
+     "id": "british_museum_public",
+     "name": "公共博物馆",
+     "importance": 2
+    },
+    {
+     "id": "dewey_decimal",
+     "name": "十进图书分类法",
+     "importance": 2
+    }
+   ],
+   "desc_rank": 20,
+   "desc_rank_pct": 0.2128,
+   "desc_zero_share": 0.5532,
+   "tier_rank_pct": 1,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=媒介、category=education_knowledge、era=bronze_age、year=-2500（year_basis=century）。 引用侧：pf=3（作为他人 prereq 终点次数）、rf=6（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=4（prereq 传递闭包），域内排名 20/94（desc_rank_pct=21.3%）；本域 94 条中 descendants==0 占 55.3%。 档位相对位置：tier_rank_pct=100.0%（同域同代 education_knowledge+bronze_age 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 3 条：博物馆(museum, P2)、公共博物馆(british_museum_public, P2)、十进图书分类法(dewey_decimal, P2)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "lunokhod",
+   "name": "月球车1号",
+   "nameEn": "Lunokhod 1",
+   "wikiEn": "Lunokhod 1",
+   "aliases": [
+    "月行者1号",
+    "Lunokhod",
+    "遥控月球车"
+   ],
+   "year": 1970,
+   "year_basis": "convention_floor",
+   "year_span": null,
+   "year_note": "仅知时代归属，取该时代起点（规范 §3.8 规则 6）",
+   "era": "information",
+   "category": "space_exploration",
+   "kind": "器物",
+   "importance": 4,
+   "prereqs": [
+    "lunar_probe"
+   ],
+   "related": [
+    "apollo_11"
+   ],
+   "desc": "1970年首辆地外遥控车在月面行驶逾十公里。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 1,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 38,
+   "desc_rank_pct": 0.7308,
+   "desc_zero_share": 0.6154,
+   "tier_rank_pct": 0.9091,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=器物、category=space_exploration、era=information、year=1970（year_basis=convention_floor）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 38/52（desc_rank_pct=73.1%）；本域 52 条中 descendants==0 占 61.5%。 档位相对位置：tier_rank_pct=90.9%（同域同代 space_exploration+information 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "moment_distribution_method",
+   "name": "弯矩分配法",
+   "nameEn": "Moment distribution method",
+   "wikiEn": "Moment distribution method",
+   "aliases": [
+    "力矩分配法",
+    "交叉法"
+   ],
+   "year": 1930,
+   "year_basis": "exact",
+   "year_span": null,
+   "year_note": "1930 年发表于美国土木工程师学会期刊",
+   "era": "second_industrial",
+   "category": "construction",
+   "kind": "原理",
+   "importance": 2,
+   "prereqs": [
+    "calculus",
+    "newtonian_mechanics",
+    "linear_elasticity_math"
+   ],
+   "related": [
+    "steel_frame_construction",
+    "skyscraper",
+    "finite_element_method",
+    "archimedes_statics"
+   ],
+   "desc": "逐节点分配不平衡弯矩并迭代逼近，手算刚架内力。",
+   "out_deg": 3,
+   "pf": 0,
+   "rf": 0,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 88,
+   "desc_rank_pct": 0.6822,
+   "desc_zero_share": 0.6512,
+   "tier_rank_pct": 0.4286,
+   "channels": [
+    "原理零引用"
+   ],
+   "why": "机械事实：importance=2、kind=原理、category=construction、era=second_industrial、year=1930（year_basis=exact）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=0（prereq+related 被引总数）、out_deg=3（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 88/129（desc_rank_pct=68.2%）；本域 129 条中 descendants==0 占 65.1%。 档位相对位置：tier_rank_pct=42.9%（同域同代 construction+second_industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：【原理零引用：kind=原理 且 prereq+related 被引总数 rf=0】"
+  },
+  {
+   "id": "montessori_education",
+   "name": "蒙特梭利教学法",
+   "nameEn": "Montessori education",
+   "wikiEn": "Montessori education",
+   "aliases": [
+    "蒙氏教育",
+    "幼儿之家"
+   ],
+   "year": 1907,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "1907年罗马幼儿之家创办；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "second_industrial",
+   "category": "education_knowledge",
+   "kind": "工艺",
+   "importance": 2,
+   "prereqs": [
+    "kindergarten"
+   ],
+   "related": [
+    "educational_psychology",
+    "progressive_education"
+   ],
+   "desc": "让儿童以教具自主操作的感官教学法，始于罗马",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 1,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 73,
+   "desc_rank_pct": 0.7766,
+   "desc_zero_share": 0.5532,
+   "tier_rank_pct": 0.6111,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=工艺、category=education_knowledge、era=second_industrial、year=1907（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 73/94（desc_rank_pct=77.7%）；本域 94 条中 descendants==0 占 55.3%。 档位相对位置：tier_rank_pct=61.1%（同域同代 education_knowledge+second_industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "obelisk",
+   "name": "方尖碑",
+   "nameEn": "Obelisk",
+   "wikiEn": "Obelisk",
+   "aliases": [
+    "方尖石柱",
+    "奥贝利斯克"
+   ],
+   "year": -1950,
+   "year_basis": "century",
+   "year_span": null,
+   "year_note": "只知世纪，取该世纪中值（规范 §3.8 规则 3）",
+   "era": "bronze_age",
+   "category": "construction",
+   "kind": "工艺",
+   "importance": 4,
+   "prereqs": [
+    "column",
+    "ashlar"
+   ],
+   "related": [
+    "egyptian_pyramid"
+   ],
+   "desc": "塞努斯雷特一世在赫利奥波利斯立整块花岗岩方尖碑。",
+   "out_deg": 2,
+   "pf": 0,
+   "rf": 1,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 91,
+   "desc_rank_pct": 0.7054,
+   "desc_zero_share": 0.6512,
+   "tier_rank_pct": 0.8636,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=工艺、category=construction、era=bronze_age、year=-1950（year_basis=century）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=2（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 91/129（desc_rank_pct=70.5%）；本域 129 条中 descendants==0 占 65.1%。 档位相对位置：tier_rank_pct=86.4%（同域同代 construction+bronze_age 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "pillow",
+   "name": "枕",
+   "nameEn": "Pillow",
+   "wikiEn": "Pillow",
+   "aliases": [
+    "枕头",
+    "枕具"
+   ],
+   "year": -7000,
+   "year_basis": "circa",
+   "year_span": null,
+   "year_note": "新石器时代以石枕、木枕垫头，填充软枕出现较晚",
+   "era": "neolithic",
+   "category": "daily_life",
+   "kind": "器物",
+   "importance": 2,
+   "prereqs": [
+    "bedding"
+   ],
+   "related": [
+    "carpet",
+    "bedding",
+    "longhouse"
+   ],
+   "desc": "睡眠时垫承头颈的软具，与席、褥共同构成卧具组合。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 3,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 86,
+   "desc_rank_pct": 0.6667,
+   "desc_zero_share": 0.7597,
+   "tier_rank_pct": 0.375,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=器物、category=daily_life、era=neolithic、year=-7000（year_basis=circa）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=3（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 86/129（desc_rank_pct=66.7%）；本域 129 条中 descendants==0 占 76.0%。 档位相对位置：tier_rank_pct=37.5%（同域同代 daily_life+neolithic 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "poverty_threshold",
+   "name": "贫困线测算",
+   "nameEn": "Poverty threshold",
+   "wikiEn": "Poverty threshold",
+   "aliases": [
+    "贫困标准",
+    "贫困门槛"
+   ],
+   "year": 1963,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "1963年以家庭食品预算推算贫困收入标准，1965年采纳为官方线；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "atomic_electronic",
+   "category": "economy",
+   "kind": "原理",
+   "importance": 2,
+   "prereqs": [
+    "consumer_price_index",
+    "kuznets_national_income"
+   ],
+   "related": [
+    "gini_coefficient",
+    "human_development_index",
+    "sna_framework"
+   ],
+   "desc": "以家庭食品开支推算最低收入标准，贫困被量化成统计口径。",
+   "out_deg": 2,
+   "pf": 0,
+   "rf": 2,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 110,
+   "desc_rank_pct": 0.8871,
+   "desc_zero_share": 0.4113,
+   "tier_rank_pct": 0.4286,
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "机械事实：importance=2、kind=原理、category=economy、era=atomic_electronic、year=1963（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=2（prereq+related 被引总数）、out_deg=2（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 110/124（desc_rank_pct=88.7%）；本域 124 条中 descendants==0 占 41.1%。 档位相对位置：tier_rank_pct=42.9%（同域同代 economy+atomic_electronic 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：【支柱尾组：P2 且域内下游 0 ≤ 本域 P2 的 20 分位 0 且 < 本域中位数 1】"
+  },
+  {
+   "id": "pseudorandom_number_generator",
+   "name": "伪随机数生成器",
+   "nameEn": "Pseudorandom number generator",
+   "wikiEn": "Pseudorandom number generator",
+   "aliases": [
+    "PRNG",
+    "随机数发生器",
+    "线性同余发生器"
+   ],
+   "year": 1949,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "冯·诺伊曼中间平方法与莱默同余法同期提出；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "atomic_electronic",
+   "category": "algorithms_cs",
+   "kind": "工艺",
+   "importance": 2,
+   "prereqs": [
+    "electronic_computer"
+   ],
+   "related": [
+    "monte_carlo_method",
+    "cryptography",
+    "cryptographic_hash_function",
+    "block_cipher"
+   ],
+   "desc": "用确定性算法产出统计上近随机的数列，供蒙特卡洛模拟、抽样与加密使用。",
+   "out_deg": 1,
+   "pf": 1,
+   "rf": 1,
+   "descendants": 4,
+   "direct_downstream": [
+    {
+     "id": "block_cipher",
+     "name": "分组密码",
+     "importance": 2
+    }
+   ],
+   "desc_rank": 15,
+   "desc_rank_pct": 0.1181,
+   "desc_zero_share": 0.6142,
+   "tier_rank_pct": 0.4333,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=工艺、category=algorithms_cs、era=atomic_electronic、year=1949（year_basis=batch_asserted）。 引用侧：pf=1（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=4（prereq 传递闭包），域内排名 15/127（desc_rank_pct=11.8%）；本域 127 条中 descendants==0 占 61.4%。 档位相对位置：tier_rank_pct=43.3%（同域同代 algorithms_cs+atomic_electronic 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 1 条：分组密码(block_cipher, P2)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "rebco_coated_conductor_tape",
+   "name": "稀土钡铜氧超导带材",
+   "nameEn": "REBCO coated conductor",
+   "wikiEn": "Rare-earth barium copper oxide",
+   "aliases": [
+    "ReBCO",
+    "第二代高温超导带材",
+    "涂层导体"
+   ],
+   "year": 2006,
+   "year_basis": "circa",
+   "year_span": [
+    2005,
+    2008
+   ],
+   "year_note": "2000 年代中期双面织构缓冲层加超导薄膜实现千米级带材",
+   "era": "intelligent",
+   "category": "materials",
+   "kind": "工艺",
+   "importance": 2,
+   "prereqs": [
+    "chemical_vapor_deposition",
+    "superconductivity_discovery"
+   ],
+   "related": [
+    "niobium_tin",
+    "ndfeb_magnet"
+   ],
+   "desc": "在织构金属基带上外延稀土钡铜氧薄膜，做成可载大电流的柔性超导带。",
+   "out_deg": 2,
+   "pf": 0,
+   "rf": 0,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 115,
+   "desc_rank_pct": 0.8846,
+   "desc_zero_share": 0.4769,
+   "tier_rank_pct": 0.9,
+   "channels": [
+    "支柱尾组"
+   ],
+   "why": "机械事实：importance=2、kind=工艺、category=materials、era=intelligent、year=2006（year_basis=circa）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=0（prereq+related 被引总数）、out_deg=2（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 115/130（desc_rank_pct=88.5%）；本域 130 条中 descendants==0 占 47.7%。 档位相对位置：tier_rank_pct=90.0%（同域同代 materials+intelligent 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：【支柱尾组：P2 且域内下游 0 ≤ 本域 P2 的 20 分位 0 且 < 本域中位数 1】"
+  },
+  {
+   "id": "schwarz_domain_decomposition",
+   "name": "施瓦茨交替法与区域分解",
+   "nameEn": "Domain decomposition methods",
+   "wikiEn": "Domain decomposition methods",
+   "aliases": [
+    "施瓦茨交替法",
+    "区域分解法",
+    "Schwarz alternating method",
+    "加性施瓦茨法"
+   ],
+   "year": 1869,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "",
+   "era": "industrial",
+   "category": "algorithms_cs",
+   "kind": "工艺",
+   "importance": 4,
+   "prereqs": [
+    "laplace_equation"
+   ],
+   "related": [
+    "finite_difference_method",
+    "multigrid_method"
+   ],
+   "desc": "施瓦茨1869年提出以重叠子区域交替求解，1980年代发展为并行区域分解方法族。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 1,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 114,
+   "desc_rank_pct": 0.8976,
+   "desc_zero_share": 0.6142,
+   "tier_rank_pct": 1,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=工艺、category=algorithms_cs、era=industrial、year=1869（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 114/127（desc_rank_pct=89.8%）；本域 127 条中 descendants==0 占 61.4%。 档位相对位置：tier_rank_pct=100.0%（同域同代 algorithms_cs+industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "seawall",
+   "name": "海堤",
+   "nameEn": "Seawall",
+   "wikiEn": "Seawall",
+   "aliases": [
+    "海塘",
+    "防波堤"
+   ],
+   "year": -5000,
+   "year_basis": "century",
+   "year_span": null,
+   "year_note": "只知世纪，取该世纪中值（规范 §3.8 规则 3）",
+   "era": "neolithic",
+   "category": "earth_space",
+   "kind": "工艺",
+   "importance": 4,
+   "prereqs": [
+    "ground_stone"
+   ],
+   "related": [
+    "village"
+   ],
+   "desc": "沿岸砌筑海堤，保护聚落免受海潮侵袭。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 1,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 125,
+   "desc_rank_pct": 0.8741,
+   "desc_zero_share": 0.6573,
+   "tier_rank_pct": 1,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=工艺、category=earth_space、era=neolithic、year=-5000（year_basis=century）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 125/143（desc_rank_pct=87.4%）；本域 143 条中 descendants==0 占 65.7%。 档位相对位置：tier_rank_pct=100.0%（同域同代 earth_space+neolithic 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "snowboarding",
+   "name": "单板滑雪",
+   "nameEn": "Snowboarding",
+   "wikiEn": "Snowboarding",
+   "aliases": [],
+   "year": 1965,
+   "year_basis": "exact",
+   "year_span": null,
+   "year_note": "波彭1965年自制雪上滑水板",
+   "era": "atomic_electronic",
+   "category": "culture_media",
+   "kind": "制度",
+   "importance": 4,
+   "prereqs": [
+    "ski"
+   ],
+   "related": [
+    "modern_olympic_games"
+   ],
+   "desc": "一块宽板双足横立滑下坡，从后院玩具长成冬奥正式项目。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 0,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 129,
+   "desc_rank_pct": 0.8658,
+   "desc_zero_share": 0.698,
+   "tier_rank_pct": 0.8333,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=制度、category=culture_media、era=atomic_electronic、year=1965（year_basis=exact）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=0（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 129/149（desc_rank_pct=86.6%）；本域 149 条中 descendants==0 占 69.8%。 档位相对位置：tier_rank_pct=83.3%（同域同代 culture_media+atomic_electronic 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "sovereignty_principle",
+   "name": "主权原则",
+   "nameEn": "Sovereignty",
+   "wikiEn": "Sovereignty",
+   "aliases": [
+    "主权",
+    "最高治权"
+   ],
+   "year": 1576,
+   "year_basis": "circa",
+   "year_span": null,
+   "year_note": "博丹《国家六论》1576年提出，取该年",
+   "era": "renaissance",
+   "category": "governance",
+   "kind": "原理",
+   "importance": 1,
+   "prereqs": [
+    "justinian_digest",
+    "roman_citizenship"
+   ],
+   "related": [
+    "nation_state",
+    "peace_of_westphalia",
+    "international_law",
+    "movable_type_printing"
+   ],
+   "desc": "认定国内只有一个不受外来指令约束的最高决断点，为国家与条约给出可识别的单位。",
+   "out_deg": 2,
+   "pf": 0,
+   "rf": 1,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 105,
+   "desc_rank_pct": 0.9052,
+   "desc_zero_share": 0.3534,
+   "tier_rank_pct": 0.3,
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "机械事实：importance=1、kind=原理、category=governance、era=renaissance、year=1576（year_basis=circa）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=2（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 105/116（desc_rank_pct=90.5%）；本域 116 条中 descendants==0 占 35.3%。 档位相对位置：tier_rank_pct=30.0%（同域同代 governance+renaissance 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：【基石尾组：P1 且 域内下游 0 ≤ 本域 P1 的 20 分位 0】"
+  },
+  {
+   "id": "space_shuttle",
+   "name": "航天飞机",
+   "nameEn": "Space Shuttle",
+   "wikiEn": "Space Shuttle",
+   "aliases": [
+    "太空梭",
+    "Space Transportation System",
+    "STS"
+   ],
+   "year": 1981,
+   "year_basis": "exact",
+   "year_span": null,
+   "year_note": "年份可在该词条正文/信息框检得（脚本取证）",
+   "era": "information",
+   "category": "space_exploration",
+   "kind": "器物",
+   "importance": 1,
+   "prereqs": [
+    "rocket_engine",
+    "blunt_body_heat_shield"
+   ],
+   "related": [
+    "apollo_11",
+    "hubble_space_telescope",
+    "iss"
+   ],
+   "desc": "哥伦比亚号首飞，可重复使用天地往返系统投入使用。",
+   "out_deg": 2,
+   "pf": 0,
+   "rf": 2,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 45,
+   "desc_rank_pct": 0.8654,
+   "desc_zero_share": 0.6154,
+   "tier_rank_pct": 0.0909,
+   "channels": [
+    "基石尾组"
+   ],
+   "why": "机械事实：importance=1、kind=器物、category=space_exploration、era=information、year=1981（year_basis=exact）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=2（prereq+related 被引总数）、out_deg=2（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 45/52（desc_rank_pct=86.5%）；本域 52 条中 descendants==0 占 61.5%。 档位相对位置：tier_rank_pct=9.1%（同域同代 space_exploration+information 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：【基石尾组：P1 且 域内下游 0 ≤ 本域 P1 的 20 分位 0】"
+  },
+  {
+   "id": "stablecoin",
+   "name": "稳定币",
+   "nameEn": "Stablecoin",
+   "wikiEn": "Stablecoin",
+   "aliases": [
+    "Stablecoins",
+    "Tether",
+    "USDT",
+    "锚定型加密货币"
+   ],
+   "year": 2014,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "",
+   "era": "intelligent",
+   "category": "economy",
+   "kind": "工艺",
+   "importance": 4,
+   "prereqs": [
+    "bitcoin"
+   ],
+   "related": [
+    "ethereum",
+    "decentralized_finance"
+   ],
+   "desc": "锚定法币或资产以保持币值稳定的加密货币，2014年Tether率先推出。",
+   "out_deg": 1,
+   "pf": 1,
+   "rf": 3,
+   "descendants": 1,
+   "direct_downstream": [
+    {
+     "id": "decentralized_finance",
+     "name": "去中心化金融",
+     "importance": 4
+    }
+   ],
+   "desc_rank": 67,
+   "desc_rank_pct": 0.5403,
+   "desc_zero_share": 0.4113,
+   "tier_rank_pct": 1,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=工艺、category=economy、era=intelligent、year=2014（year_basis=batch_asserted）。 引用侧：pf=1（作为他人 prereq 终点次数）、rf=3（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=1（prereq 传递闭包），域内排名 67/124（desc_rank_pct=54.0%）；本域 124 条中 descendants==0 占 41.1%。 档位相对位置：tier_rank_pct=100.0%（同域同代 economy+intelligent 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 1 条：去中心化金融(decentralized_finance, P4)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "starlink",
+   "name": "星链",
+   "nameEn": "Starlink",
+   "wikiEn": "Starlink",
+   "aliases": [
+    "Starlink",
+    "星链卫星互联网",
+    "卫星宽带星座"
+   ],
+   "year": 2019,
+   "year_basis": "exact",
+   "year_span": null,
+   "year_note": "年份可在该词条正文/信息框检得（脚本取证）",
+   "era": "intelligent",
+   "category": "space_exploration",
+   "kind": "媒介",
+   "importance": 2,
+   "prereqs": [
+    "reusable_rocket",
+    "artificial_satellite"
+   ],
+   "related": [
+    "beidou_navigation",
+    "commercial_space_station",
+    "internet"
+   ],
+   "desc": "2019年首批组网，万颗级低轨卫星互联网全球服务。",
+   "out_deg": 2,
+   "pf": 0,
+   "rf": 4,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 46,
+   "desc_rank_pct": 0.8846,
+   "desc_zero_share": 0.6154,
+   "tier_rank_pct": 0.1875,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=媒介、category=space_exploration、era=intelligent、year=2019（year_basis=exact）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=4（prereq+related 被引总数）、out_deg=2（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 46/52（desc_rank_pct=88.5%）；本域 52 条中 descendants==0 占 61.5%。 档位相对位置：tier_rank_pct=18.8%（同域同代 space_exploration+intelligent 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "taixue_han",
+   "name": "太学",
+   "nameEn": "Taixue",
+   "wikiEn": "Taixue",
+   "aliases": [
+    "汉代太学"
+   ],
+   "year": -124,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "汉武帝元朔五年立；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "antiquity",
+   "category": "education_knowledge",
+   "kind": "制度",
+   "importance": 2,
+   "prereqs": [
+    "jixia_academy"
+   ],
+   "related": [
+    "guozijian",
+    "imperial_examination"
+   ],
+   "desc": "汉武帝设五经博士置弟子的中央官学，儒学入仕开端",
+   "out_deg": 1,
+   "pf": 1,
+   "rf": 1,
+   "descendants": 1,
+   "direct_downstream": [
+    {
+     "id": "academy_chinese",
+     "name": "书院",
+     "importance": 2
+    }
+   ],
+   "desc_rank": 41,
+   "desc_rank_pct": 0.4362,
+   "desc_zero_share": 0.5532,
+   "tier_rank_pct": 0.5,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=制度、category=education_knowledge、era=antiquity、year=-124（year_basis=batch_asserted）。 引用侧：pf=1（作为他人 prereq 终点次数）、rf=1（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=1（prereq 传递闭包），域内排名 41/94（desc_rank_pct=43.6%）；本域 94 条中 descendants==0 占 55.3%。 档位相对位置：tier_rank_pct=50.0%（同域同代 education_knowledge+antiquity 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 1 条：书院(academy_chinese, P2)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "tea_bag",
+   "name": "茶包",
+   "nameEn": "Tea bag",
+   "wikiEn": "Tea bag",
+   "aliases": [],
+   "year": 1908,
+   "year_basis": "circa",
+   "year_span": null,
+   "year_note": "纽约茶商分装小袋意外走红",
+   "era": "second_industrial",
+   "category": "daily_life",
+   "kind": "器物",
+   "importance": 3,
+   "prereqs": [
+    "tea"
+   ],
+   "related": [
+    "teapot",
+    "rayon"
+   ],
+   "desc": "碎茶装小袋一泡即弃，省去茶具与称量，茶叶进入办公室与旅途。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 0,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 113,
+   "desc_rank_pct": 0.876,
+   "desc_zero_share": 0.7597,
+   "tier_rank_pct": 0.7556,
+   "channels": [],
+   "why": "机械事实：importance=3、kind=器物、category=daily_life、era=second_industrial、year=1908（year_basis=circa）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=0（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 113/129（desc_rank_pct=87.6%）；本域 129 条中 descendants==0 占 76.0%。 档位相对位置：tier_rank_pct=75.6%（同域同代 daily_life+second_industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "toilet_paper",
+   "name": "卫生纸",
+   "nameEn": "Toilet paper",
+   "wikiEn": "Toilet paper",
+   "aliases": [
+    "厕纸",
+    "草纸"
+   ],
+   "year": 589,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "",
+   "era": "middle_ages",
+   "category": "daily_life",
+   "kind": "媒介",
+   "importance": 4,
+   "prereqs": [
+    "papermaking"
+   ],
+   "related": [
+    "paper_money"
+   ],
+   "desc": "隋代已有用纸拭秽的记载，后在宋元广泛使用。",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 3,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 118,
+   "desc_rank_pct": 0.9147,
+   "desc_zero_share": 0.7597,
+   "tier_rank_pct": 0.8333,
+   "channels": [],
+   "why": "机械事实：importance=4、kind=媒介、category=daily_life、era=middle_ages、year=589（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=3（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 118/129（desc_rank_pct=91.5%）；本域 129 条中 descendants==0 占 76.0%。 档位相对位置：tier_rank_pct=83.3%（同域同代 daily_life+middle_ages 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "type_theory",
+   "name": "类型论",
+   "nameEn": "Type theory",
+   "wikiEn": "Type theory",
+   "aliases": [
+    "分层类型论",
+    "罗素类型论"
+   ],
+   "year": 1908,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "罗素《数学原理》第二卷1908年提出分支类型论；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "second_industrial",
+   "category": "logic_foundations",
+   "kind": "原理",
+   "importance": 2,
+   "prereqs": [
+    "russell_paradox"
+   ],
+   "related": [
+    "curry_howard_correspondence",
+    "intuitionistic_logic",
+    "zermelo_zfc",
+    "peano_axioms"
+   ],
+   "desc": "把对象按层级分类型以禁绝自指悖论，后成证明助手与函数式编程语言的语法底座。",
+   "out_deg": 1,
+   "pf": 1,
+   "rf": 3,
+   "descendants": 1,
+   "direct_downstream": [
+    {
+     "id": "curry_howard_correspondence",
+     "name": "柯里—霍华德对应",
+     "importance": 2
+    }
+   ],
+   "desc_rank": 21,
+   "desc_rank_pct": 0.5833,
+   "desc_zero_share": 0.3889,
+   "tier_rank_pct": 0.8571,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=原理、category=logic_foundations、era=second_industrial、year=1908（year_basis=batch_asserted）。 引用侧：pf=1（作为他人 prereq 终点次数）、rf=3（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=1（prereq 传递闭包），域内排名 21/36（desc_rank_pct=58.3%）；本域 36 条中 descendants==0 占 38.9%。 档位相对位置：tier_rank_pct=85.7%（同域同代 logic_foundations+second_industrial 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 1 条：柯里—霍华德对应(curry_howard_correspondence, P2)。 命中通道：无（契约 §4 六条规则均未触发）。"
+  },
+  {
+   "id": "uranium_thorium_dating",
+   "name": "铀钍测年法",
+   "nameEn": "Uranium-Thorium Dating",
+   "wikiEn": "Uranium-thorium dating",
+   "aliases": [
+    "U-Th定年",
+    "钍230定年"
+   ],
+   "year": 1963,
+   "year_basis": "batch_asserted",
+   "year_span": null,
+   "year_note": "；词条导语与信息框均未检得该年份，降为批次断言",
+   "era": "atomic_electronic",
+   "category": "earth_space",
+   "kind": "工艺",
+   "importance": 2,
+   "prereqs": [
+    "radiometric_dating"
+   ],
+   "related": [
+    "nuclear_reactor"
+   ],
+   "desc": "以铀234与钍230不平衡定珊瑚方解石年龄，核燃料处理亦依赖同一衰变链同位素数据",
+   "out_deg": 1,
+   "pf": 0,
+   "rf": 0,
+   "descendants": 0,
+   "direct_downstream": [],
+   "desc_rank": 139,
+   "desc_rank_pct": 0.972,
+   "desc_zero_share": 0.6573,
+   "tier_rank_pct": 0.7391,
+   "channels": [],
+   "why": "机械事实：importance=2、kind=工艺、category=earth_space、era=atomic_electronic、year=1963（year_basis=batch_asserted）。 引用侧：pf=0（作为他人 prereq 终点次数）、rf=0（prereq+related 被引总数）、out_deg=1（prereq 出边）。 下游侧：descendants=0（prereq 传递闭包），域内排名 139/143（desc_rank_pct=97.2%）；本域 143 条中 descendants==0 占 65.7%。 档位相对位置：tier_rank_pct=73.9%（同域同代 earth_space+atomic_electronic 内 importance 升序位次/组内条数）。 wikiEn 有；直接下游前 0 条：无。 命中通道：无（契约 §4 六条规则均未触发）。"
+  }
+ ],
+ "seed": 20260927
+}
